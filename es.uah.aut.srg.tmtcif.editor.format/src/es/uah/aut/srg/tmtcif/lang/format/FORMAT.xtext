@@ -1,0 +1,263 @@
+grammar es.uah.aut.srg.tmtcif.lang.format.FORMAT with org.eclipse.xtext.common.Terminals
+
+import "http://srg.aut.uah.es/tmtcif/format" 
+import "http://srg.aut.uah.es/tmtcif/common" as common 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+TMTCIFModelFile returns common::TMTCIFModelFile:
+	(imports+=TMTCIFModelFileImport)*
+	element=TMTCIFFormatFormat
+;
+
+TMTCIFModelFileImport returns common::TMTCIFModelFileImport: 
+	'import' ':=' importURI=STRING ';'
+;
+
+TMTCIFFormatFormat returns TMTCIFFormatFormat:
+	'TMTCIFFormatFormat'
+	name=ID
+	 '{'
+		(('uri' ':=' uri=QualifiedName ';')
+		& ('version' ':=' version=Version ';')
+		& ('protocol' ':=' protocol=ID ';')
+		& ('type' ':=' type=TMTCIFFormatFormatType ';')
+		((CSField+=TMTCIFFormatCSField) |
+		 (CSFormulaField+=TMTCIFFormatCSFormulaField) |
+		 (VSField+=TMTCIFFormatVSField) |
+		 (FDICField+=TMTCIFFormatFDICField) |
+		 (VRFieldSize+=TMTCIFFormatVRFieldSize) |
+		 (AField+=TMTCIFFormatAField) |
+		 (AIField+=TMTCIFFormatAIField))*)
+	'}' ';'
+;
+
+enum TMTCIFFormatFormatType returns TMTCIFFormatFormatType:
+	TM = 'TM' | TC = 'TC'
+;
+
+TMTCIFFormatField returns TMTCIFFormatField:
+	TMTCIFFormatCSField | TMTCIFFormatCSFormulaField |
+	TMTCIFFormatVSField | TMTCIFFormatVRFieldSize| TMTCIFFormatFDICField
+;
+
+TMTCIFFormatCSField returns TMTCIFFormatCSField:
+	'TMTCIFFormatCSField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=TMTCIFFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=TMTCIFFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=TMTCIFFormatSFieldFirstBit ';'
+		size=TMTCIFFormatSize
+		globalOffset=TMTCIFFormatGlobalOffset
+	'}' ';'
+;
+
+TMTCIFFormatCSFormulaField returns TMTCIFFormatCSFormulaField:
+	'TMTCIFFormatCSFormulaField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=TMTCIFFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=TMTCIFFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=TMTCIFFormatSFieldFirstBit ';'
+		size=TMTCIFFormatSize
+		globalOffset=TMTCIFFormatGlobalOffset
+		formula=TMTCIFFormatFormula
+	'}' ';'
+;
+
+TMTCIFFormatVSField returns TMTCIFFormatVSField:
+	'TMTCIFFormatVSField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=TMTCIFFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=TMTCIFFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=TMTCIFFormatSFieldFirstBit ';'
+		constSize=TMTCIFFormatConstSize
+		variableSize=TMTCIFFormatVariableSize
+		maxSize=TMTCIFFormatMaxSize
+		globalOffset=TMTCIFFormatGlobalOffset
+	'}' ';'
+;
+
+TMTCIFFormatVRFieldSize returns TMTCIFFormatVRFieldSize:
+	'TMTCIFFormatVRFieldSize' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+	'}' ';'
+;
+
+TMTCIFFormatFDICField returns TMTCIFFormatFDICField:
+	'TMTCIFFormatFDICField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'checkType' ':=' checkType=TMTCIFFormatCheckType ';'
+		'byteOrder' ':=' byteOrder=TMTCIFFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=TMTCIFFormatSFieldFirstBit ';'
+		size=TMTCIFFormatSize
+		floatingOffset=TMTCIFFormatFloatingOffset
+		sortedFieldsToCheck=TMTCIFFormatSortedFieldsToCheck
+	'}' ';'
+;
+
+TMTCIFFormatAField returns TMTCIFFormatAField:
+	'TMTCIFFormatAField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=TMTCIFFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=TMTCIFFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=TMTCIFFormatSFieldFirstBit ';'
+		arrayDimension=TMTCIFFormatArrayDimension
+		size=TMTCIFFormatSize
+		globalOffset=TMTCIFFormatGlobalOffset
+	'}' ';'
+;
+
+TMTCIFFormatAIField returns TMTCIFFormatAIField:
+	'TMTCIFFormatAIField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=TMTCIFFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=TMTCIFFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=TMTCIFFormatSFieldFirstBit ';'
+		arrayRef=TMTCIFFormatArrayRef
+		size=TMTCIFFormatSize
+		localOffset=TMTCIFFormatLocalOffset
+	'}' ';'
+;
+
+enum TMTCIFFormatFieldType returns TMTCIFFormatFieldType:
+	structured = 'structured' | uint = 'uint' | flag = 'flag' |
+	enumerated = 'enumerated' | bit_vector = 'bit_vector' |
+	byte_vector = 'byte_vector' | float = 'float' | deduced = 'deduced'
+;
+
+enum TMTCIFFormatFieldByteOrder returns TMTCIFFormatFieldByteOrder:
+	big_endian = 'big_endian' | little_endian = 'little_endian' | na = 'na'
+;
+
+enum TMTCIFFormatSFieldFirstBit returns TMTCIFFormatSFieldFirstBit:
+	MSB = 'MSB' | LSB = 'LSB'
+;
+
+TMTCIFFormatSize returns TMTCIFFormatBytesBits:
+	'TMTCIFFormatSize'
+	'{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+TMTCIFFormatGlobalOffset returns TMTCIFFormatBytesBits:
+	'TMTCIFFormatGlobalOffset' '{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+TMTCIFFormatFormula returns TMTCIFFormatFormula:
+	'TMTCIFFormatFormula' '{'
+		'slope' ':=' slope=STRING ';'
+		'intercept' ':=' intercept=STRING ';'
+	'}' ';'
+;
+
+TMTCIFFormatConstSize returns TMTCIFFormatBytesBits:
+	'TMTCIFFormatConstSize' '{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+TMTCIFFormatMaxSize returns TMTCIFFormatBytesBits:
+	'TMTCIFFormatMaxSize' '{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+TMTCIFFormatVariableSize returns TMTCIFFormatVariableSize:
+	'TMTCIFFormatVariableSize' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+		'unit' ':=' unit=TMTCIFFormatUnit ';'
+		('power' ':=' power=TMTCIFFormatPower ';')?
+	'}' ';'
+;
+
+enum TMTCIFFormatUnit returns TMTCIFFormatUnit:
+	bytes = 'bytes' | bits = 'bits' |
+	halfword = 'halfword' | string10 = 'string10' |
+	string17 = 'string17' | string69 = 'string69'
+;
+
+enum TMTCIFFormatPower returns TMTCIFFormatPower:
+	_2 = '2bits' | _2_with_0 = '2bits_with_0'
+;
+
+enum TMTCIFFormatCheckType returns TMTCIFFormatCheckType:
+	crc16 = 'crc16' | checksum16 = 'checksum16'
+;
+
+TMTCIFFormatFloatingOffset returns TMTCIFFormatFloatingOffset:
+	'TMTCIFFormatFloatingOffset' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+	'}' ';'
+;
+
+TMTCIFFormatSortedFieldsToCheck returns TMTCIFFormatSortedFieldsToCheck:
+	{TMTCIFFormatSortedFieldsToCheck}
+	'TMTCIFFormatSortedFieldsToCheck' '{'
+		(fieldToCheck+=TMTCIFFormatFieldToCheck)+
+	'}' ';'
+;
+
+TMTCIFFormatFieldToCheck returns TMTCIFFormatFieldToCheck:
+	'TMTCIFFormatFieldToCheck' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+	'}' ';'
+;
+
+TMTCIFFormatArrayDimension returns TMTCIFFormatArrayDimension:
+	'TMTCIFFormatArrayDimension' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+		'maxItems' ':=' maxItems=INTEGER ';'
+	'}' ';'
+;
+
+TMTCIFFormatLocalOffset returns TMTCIFFormatBytesBits:
+	'TMTCIFFormatLocalOffset' '{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+TMTCIFFormatArrayRef returns TMTCIFFormatArrayRef:
+	'TMTCIFFormatArrayRef' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+	'}' ';'
+;
+
+QualifiedName returns ecore::EString:
+	ID ('.' ID)*;
+
+Version returns ecore::EString:
+	(INT | ((INT)? ID)) ('.' (INT | ((INT)? ID)))*
+	;
+
+terminal HEXADECIMAL returns ecore::EString:
+	('0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+);
+
+INTEGER returns ecore::EString:
+	('-'? INT | HEXADECIMAL);
