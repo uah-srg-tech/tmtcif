@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="export" nsURI="http://srg.aut.uah.es/tmtcif/export" nsPrefix="tmtcif">
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportExport" eSuperTypes="common.ecore#//TMTCIFModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="ecore:EClass format.ecore#//TMTCIFFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="ecore:EClass format.ecore#//TMTCIFFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Sizes" eType="#//TMTCIFExportSizes"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settings" lowerBound="1"
+        eType="#//TMTCIFExportSettings" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activateDICs" eType="#//TMTCIFExportActivateDICs"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSizes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sizeFromFileLength" upperBound="-1"
+        eType="#//TMTCIFExportSizeFromFileLength" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sizeFromFileLine" upperBound="-1"
+        eType="#//TMTCIFExportSizeFromFileLine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sizeInBits" upperBound="-1"
+        eType="#//TMTCIFExportSizeInBits" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TMTCIFExportUnit">
+    <eLiterals name="bits"/>
+    <eLiterals name="bytes" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSize">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//TMTCIFExportUnit"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSizeFromFileLength" eSuperTypes="#//TMTCIFExportSize">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSizeFromFileLine" eSuperTypes="#//TMTCIFExportSize">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSizeInBits" eSuperTypes="#//TMTCIFExportSize">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settingFromConst" upperBound="-1"
+        eType="#//TMTCIFExportSettingFromConst" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settingFromSize" upperBound="-1"
+        eType="#//TMTCIFExportSettingFromSize" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settingFromFile" upperBound="-1"
+        eType="#//TMTCIFExportSettingFromFile" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settingFromField" upperBound="-1"
+        eType="#//TMTCIFExportSettingFromField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settingAIFromConst" upperBound="-1"
+        eType="#//TMTCIFExportSettingAIFromConst" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settingAIFromFile" upperBound="-1"
+        eType="#//TMTCIFExportSettingAIFromFile" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSetting">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toFieldRef" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatField"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingFromConst" eSuperTypes="#//TMTCIFExportSetting">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingFromSize" eSuperTypes="#//TMTCIFExportSetting">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingFromFile" eSuperTypes="#//TMTCIFExportSetting">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingFromField" eSuperTypes="#//TMTCIFExportSetting">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatField"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingAIFromConst" eSuperTypes="#//TMTCIFExportSetting">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toArrayIndex" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingAIFromFile" eSuperTypes="#//TMTCIFExportSetting">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toArrayIndex" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportActivateDICs">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DIC" lowerBound="1" upperBound="10"
+        eType="#//TMTCIFExportDIC" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportDIC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DICRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

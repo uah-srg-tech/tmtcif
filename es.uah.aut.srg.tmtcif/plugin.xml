@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2019 UAH Space Research Group.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v2.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v20.html
+ 
+ Contributors:
+     SRG Team - Initial API and implementation
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated filters -->
+      <package
+            uri="http://srg.aut.uah.es/tmtcif/filters"
+            class="filters.FiltersPackage"
+            genModel="model/filters.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated import -->
+      <package
+            uri="http://srg.aut.uah.es/tmtcif/import"
+            class="es.uah.aut.srg.tmtcif.import_.importPackage"
+            genModel="model/import.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated common -->
+      <package
+            uri="http://srg.aut.uah.es/tmtcif/common"
+            class="es.uah.aut.srg.tmtcif.common.commonPackage"
+            genModel="model/common.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated export -->
+      <package
+            uri="http://srg.aut.uah.es/tmtcif/export"
+            class="es.uah.aut.srg.tmtcif.export.exportPackage"
+            genModel="model/export.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated format -->
+      <package
+            uri="http://srg.aut.uah.es/tmtcif/format"
+            class="es.uah.aut.srg.tmtcif.format.formatPackage"
+            genModel="model/format.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated filter -->
+      <package
+            uri="http://srg.aut.uah.es/tmtcif/filter"
+            class="es.uah.aut.srg.tmtcif.filter.filterPackage"
+            genModel="model/filter.genmodel"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.tmtcif/src" modelPluginID="es.uah.aut.srg.tmtcif"
+    modelName="Filter" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    language="" usedGenPackages="common.genmodel#//common format.genmodel#//format"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>filter.ecore</foreignModel>
+  <genPackages prefix="filter" basePackage="es.uah.aut.srg.tmtcif" disposableProviderFactory="true"
+      ecorePackage="filter.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="filter.ecore#//TMTCIFFilterConstantType">
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterConstantType/decimal"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterConstantType/hex"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterConstantType/binary"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterConstantType/char"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterConstantType/string"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="filter.ecore#//TMTCIFFilterOPType">
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterOPType/equal"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterOPType/different"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterOPType/bigger_than"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterOPType/smaller_than"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterOPType/bigger_or_equal"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterOPType/smaller_or_equal"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="filter.ecore#//TMTCIFFilterSelectType">
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterSelectType/data"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterSelectType/size"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//TMTCIFFilterSelectType/crc"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="filter.ecore#//TMTCIFFilterFilter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterFilter/formatFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterFilter/BoolVar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterFilter/BoolVarFromArrayItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterFilter/BoolVarFromGroupedArrayItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterFilter/BoolVarFDIC"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterMaxtermFilter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterMaxtermFilter/Maxterm"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterMintermFilter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterMintermFilter/Minterm"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterBoolVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVar/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVar/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVar/constantType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVar/FieldRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVar/Op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVar/Constant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVar/Select"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVar/SelectLine"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterFieldOp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterFieldOp/type"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterConstant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterConstant/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterConstant/mask"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterSelect">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelect/fromFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelect/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelect/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelect/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelect/mask"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterSelectLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelectLine/fromFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelectLine/line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelectLine/leftTrim"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelectLine/rightTrim"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterSelectLine/mask"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterBoolVarFromArrayItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFromArrayItem/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFromArrayItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFromArrayItem/constantType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromArrayItem/AIFieldRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromArrayItem/Op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromArrayItem/Constant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromArrayItem/Select"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromArrayItem/SelectLine"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/constantType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/AIFieldRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/Op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/Constant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/Select"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFromGroupedArrayItem/SelectLine"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterBoolVarFDIC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFDIC/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarFDIC/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFDIC/FieldRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterBoolVarFDIC/Op"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterMaxterm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterMaxterm/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterMaxterm/BoolVarRef"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterMinterm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterMinterm/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//TMTCIFFilterMinterm/BoolVarRef"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//TMTCIFFilterBoolVarRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//TMTCIFFilterBoolVarRef/idRef"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
