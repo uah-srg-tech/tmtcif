@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="filter" nsURI="http://srg.aut.uah.es/tmtcif/filter" nsPrefix="tmtcif">
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterFilter" abstract="true"
+      eSuperTypes="common.ecore#//TMTCIFModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formatFile" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVar" upperBound="-1"
+        eType="#//TMTCIFFilterBoolVar" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFromArrayItem" upperBound="-1"
+        eType="#//TMTCIFFilterBoolVarFromArrayItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFromGroupedArrayItem"
+        upperBound="-1" eType="#//TMTCIFFilterBoolVarFromGroupedArrayItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFDIC" upperBound="-1"
+        eType="#//TMTCIFFilterBoolVarFDIC" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterMaxtermFilter" eSuperTypes="#//TMTCIFFilterFilter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Maxterm" lowerBound="1"
+        upperBound="10" eType="#//TMTCIFFilterMaxterm" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterMintermFilter" eSuperTypes="#//TMTCIFFilterFilter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Minterm" lowerBound="1"
+        upperBound="10" eType="#//TMTCIFFilterMinterm" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TMTCIFFilterConstantType">
+    <eLiterals name="decimal"/>
+    <eLiterals name="hex" value="1"/>
+    <eLiterals name="binary" value="2"/>
+    <eLiterals name="char" value="3"/>
+    <eLiterals name="string" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterBoolVar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constantType" lowerBound="1"
+        eType="#//TMTCIFFilterConstantType" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FieldRef" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//TMTCIFFilterFieldOp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Constant" eType="#//TMTCIFFilterConstant"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Select" eType="#//TMTCIFFilterSelect"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectLine" eType="#//TMTCIFFilterSelectLine"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TMTCIFFilterOPType">
+    <eLiterals name="equal"/>
+    <eLiterals name="different" value="1"/>
+    <eLiterals name="bigger_than" value="2"/>
+    <eLiterals name="smaller_than" value="3"/>
+    <eLiterals name="bigger_or_equal" value="4"/>
+    <eLiterals name="smaller_or_equal" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterFieldOp">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//TMTCIFFilterOPType"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterConstant">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TMTCIFFilterSelectType">
+    <eLiterals name="data"/>
+    <eLiterals name="size" value="1"/>
+    <eLiterals name="crc" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterSelect">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//TMTCIFFilterSelectType"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterSelectLine">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftTrim" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightTrim" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterBoolVarFromArrayItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constantType" lowerBound="1"
+        eType="#//TMTCIFFilterConstantType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AIFieldRef" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatAIField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//TMTCIFFilterFieldOp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Constant" eType="#//TMTCIFFilterConstant"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Select" eType="#//TMTCIFFilterSelect"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectLine" eType="#//TMTCIFFilterSelectLine"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterBoolVarFromGroupedArrayItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constantType" lowerBound="1"
+        eType="#//TMTCIFFilterConstantType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="group" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AIFieldRefs" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatAField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//TMTCIFFilterFieldOp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Constant" eType="#//TMTCIFFilterConstant"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Select" eType="#//TMTCIFFilterSelect"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectLine" eType="#//TMTCIFFilterSelectLine"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterBoolVarFDIC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FieldRef" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatFDICField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//TMTCIFFilterFieldOp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterMaxterm">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarRef" lowerBound="1"
+        upperBound="-1" eType="#//TMTCIFFilterBoolVarRef" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterMinterm">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarRef" lowerBound="1"
+        upperBound="-1" eType="#//TMTCIFFilterBoolVarRef" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFFilterBoolVarRef">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="import" nsURI="http://srg.aut.uah.es/tmtcif/import" nsPrefix="tmtcif">
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFImportImport" eSuperTypes="common.ecore#//TMTCIFModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="ecore:EClass format.ecore#//TMTCIFFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="ecore:EClass format.ecore#//TMTCIFFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataSource" lowerBound="1"
+        upperBound="-1" eType="#//TMTCIFImportDataSource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualSize" eType="#//TMTCIFImportVirtualSize"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFImportDataSource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FieldRef" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatField"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftTrim" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightTrim" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TMTCIFImportUnit">
+    <eLiterals name="bits"/>
+    <eLiterals name="bytes" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFImportVirtualSize">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FieldRef" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="ecore:EClass format.ecore#//TMTCIFFormatField"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//TMTCIFImportUnit"
+        unsettable="true"/>
+  </eClassifiers>
+</ecore:EPackage>

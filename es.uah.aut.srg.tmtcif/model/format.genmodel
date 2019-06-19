@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.tmtcif/src" modelPluginID="es.uah.aut.srg.tmtcif"
+    modelName="Format" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="common.genmodel#//common" operationReflection="true" importOrganizing="true">
+  <foreignModel>format.ecore</foreignModel>
+  <genPackages prefix="format" basePackage="es.uah.aut.srg.tmtcif" disposableProviderFactory="true"
+      ecorePackage="format.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//TMTCIFFormatFormatType">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFormatType/TM"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFormatType/TC"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//TMTCIFFormatFieldType">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldType/structured"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldType/uint"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldType/flag"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldType/enumerated"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldType/bit_vector"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldType/byte_vector"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldType/deduced"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//TMTCIFFormatFieldByteOrder">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldByteOrder/big_endian"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldByteOrder/little_endian"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatFieldByteOrder/na"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//TMTCIFFormatSFieldFirstBit">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatSFieldFirstBit/MSB"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatSFieldFirstBit/LSB"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//TMTCIFFormatCheckType">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatCheckType/crc16"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatCheckType/checksum16"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//TMTCIFFormatUnit">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatUnit/bytes"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatUnit/bits"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatUnit/halfword"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatUnit/string10"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatUnit/string17"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatUnit/string69"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//TMTCIFFormatPower">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatPower/_2"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//TMTCIFFormatPower/_2_with_0"/>
+    </genEnums>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatFormat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFormat/protocol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFormat/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFormat/CSField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFormat/CSFormulaField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFormat/VSField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFormat/FDICField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFormat/VRFieldSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFormat/AField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFormat/AIField"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="format.ecore#//TMTCIFFormatField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatField/fid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatField/pfid"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatCSField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatCSField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatCSField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatCSField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatCSField/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatCSField/globalOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatCSFormulaField">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatCSFormulaField/formula"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatVSField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatVSField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatVSField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatVSField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatVSField/constSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatVSField/variableSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatVSField/maxSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatVSField/globalOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatVRFieldSize"/>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatFDICField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFDICField/checkType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFDICField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFDICField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFDICField/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFDICField/floatingOffset"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatFDICField/sortedFieldsToCheck"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatAField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatAField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatAField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatAField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatAField/arrayDimension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatAField/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatAField/globalOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatAIField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatAIField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatAIField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatAIField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatAIField/arrayRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatAIField/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatAIField/localOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatBytesBits">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatBytesBits/bytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatBytesBits/bits"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatFormula">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFormula/slope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFormula/intercept"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatVariableSize">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatVariableSize/fidRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatVariableSize/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatVariableSize/power"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatFloatingOffset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFloatingOffset/fidRef"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatSortedFieldsToCheck">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//TMTCIFFormatSortedFieldsToCheck/fieldToCheck"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatFieldToCheck">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatFieldToCheck/fidRef"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatArrayDimension">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatArrayDimension/fidRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatArrayDimension/maxItems"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//TMTCIFFormatArrayRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//TMTCIFFormatArrayRef/fidRef"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
