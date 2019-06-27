@@ -48,7 +48,7 @@ import es.uah.aut.srg.tmtcif.xtext.xml.XMLGeneratorUtil;
 
 public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfigurationDelegate {
 
-	static final boolean createXMI=false;
+	static final boolean createXMI=true;
 	
 	@Override
 	public void launch(ILaunchConfiguration configuration, String mode, ILaunch launch, IProgressMonitor monitor)
