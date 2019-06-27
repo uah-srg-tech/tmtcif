@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="es.uah.aut.srg.tmtcif.generator.ui.TMTCIFGeneratorLaunchConfigurationDelegate"
+            id="es.uah.aut.srg.tmtcif.generator.ui.TMTCIFGeneratorLaunchConfigurationType"
+            modes="run, debug"
+            name="TMTCIF Generator">
+      </launchConfigurationType>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="es.uah.aut.srg.tmtcif.generator.ui.TMTCIFGeneratorTabGroup"
+            id="es.uah.aut.srg.tmtcif.generator.ui.TMTCIFGeneratorTabGroup"
+            type="es.uah.aut.srg.tmtcif.generator.ui.TMTCIFGeneratorLaunchConfigurationType">
+      </launchConfigurationTabGroup>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="es.uah.aut.srg.tmtcif.generator.ui.TMTCIFGeneratorLaunchConfigurationType"
+            icon="icons/full/obj16/ddbb.png"
+            id="es.uah.aut.srg.tmtcif.generator.ui.TMTCIFGeneratorLaunchConfigurationTypeImage">
+      </launchConfigurationTypeImage>
+   </extension>
+
+</plugin>

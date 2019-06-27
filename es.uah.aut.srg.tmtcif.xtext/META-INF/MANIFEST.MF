@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TMTCIF Xtext Adapters
+Bundle-SymbolicName: es.uah.aut.srg.tmtcif.xtext
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: es.uah.aut.srg.tmtcif;visibility:=reexport,
+ org.eclipse.xtext
+Export-Package: es.uah.aut.srg.tmtcif.xtext,
+ es.uah.aut.srg.tmtcif.xtext.xml
