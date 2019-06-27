@@ -21,4 +21,5 @@ Export-Package: es.uah.aut.srg.tmtcif.lang.filter.services,
  es.uah.aut.srg.tmtcif.lang.filter.scoping,
  es.uah.aut.srg.tmtcif.lang.filter,
  es.uah.aut.srg.tmtcif.lang.filter.validation
-Import-Package: org.apache.log4j
+Import-Package: es.uah.aut.srg.tmtcif.xtext,
+ org.apache.log4j

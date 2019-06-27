@@ -1,4 +1,4 @@
-grammar es.uah.aut.srg.tmtcif.lang.imports.IMPORTS with org.eclipse.xtext.common.Terminals
+grammar es.uah.aut.srg.tmtcif.lang.import_.IMPORT with org.eclipse.xtext.common.Terminals
 
 import "http://srg.aut.uah.es/tmtcif/import" 
 import "http://srg.aut.uah.es/tmtcif/common" as common 

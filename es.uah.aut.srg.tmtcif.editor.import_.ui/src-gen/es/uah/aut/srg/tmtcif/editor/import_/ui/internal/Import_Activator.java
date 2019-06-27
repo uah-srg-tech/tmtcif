@@ -14,8 +14,8 @@ import com.google.common.collect.Maps;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
-import es.uah.aut.srg.tmtcif.lang.imports.IMPORTSRuntimeModule;
-import es.uah.aut.srg.tmtcif.lang.imports.ui.IMPORTSUiModule;
+import es.uah.aut.srg.tmtcif.lang.import_.IMPORTRuntimeModule;
+import es.uah.aut.srg.tmtcif.lang.import_.ui.IMPORTUiModule;
 import java.util.Collections;
 import java.util.Map;
 import org.apache.log4j.Logger;
@@ -30,7 +30,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Import_Activator extends AbstractUIPlugin {
 
-	public static final String ES_UAH_AUT_SRG_TMTCIF_LANG_IMPORTS_IMPORTS = "es.uah.aut.srg.tmtcif.lang.imports.IMPORTS";
+	public static final String ES_UAH_AUT_SRG_TMTCIF_LANG_IMPORT__IMPORT = "es.uah.aut.srg.tmtcif.lang.import_.IMPORT";
 	
 	private static final Logger logger = Logger.getLogger(Import_Activator.class);
 	
@@ -80,15 +80,15 @@ public class Import_Activator extends AbstractUIPlugin {
 	}
 	
 	protected Module getRuntimeModule(String grammar) {
-		if (ES_UAH_AUT_SRG_TMTCIF_LANG_IMPORTS_IMPORTS.equals(grammar)) {
-			return new IMPORTSRuntimeModule();
+		if (ES_UAH_AUT_SRG_TMTCIF_LANG_IMPORT__IMPORT.equals(grammar)) {
+			return new IMPORTRuntimeModule();
 		}
 		throw new IllegalArgumentException(grammar);
 	}
 	
 	protected Module getUiModule(String grammar) {
-		if (ES_UAH_AUT_SRG_TMTCIF_LANG_IMPORTS_IMPORTS.equals(grammar)) {
-			return new IMPORTSUiModule(this);
+		if (ES_UAH_AUT_SRG_TMTCIF_LANG_IMPORT__IMPORT.equals(grammar)) {
+			return new IMPORTUiModule(this);
 		}
 		throw new IllegalArgumentException(grammar);
 	}

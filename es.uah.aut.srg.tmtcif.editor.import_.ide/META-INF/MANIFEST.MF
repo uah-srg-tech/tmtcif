@@ -10,6 +10,6 @@ Require-Bundle: es.uah.aut.srg.tmtcif.editor.import_,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: es.uah.aut.srg.tmtcif.lang.imports.ide.contentassist.antlr,
- es.uah.aut.srg.tmtcif.lang.imports.ide.contentassist.antlr.internal
+Export-Package: es.uah.aut.srg.tmtcif.lang.import_.ide.contentassist.antlr.internal,
+ es.uah.aut.srg.tmtcif.lang.import_.ide.contentassist.antlr
 

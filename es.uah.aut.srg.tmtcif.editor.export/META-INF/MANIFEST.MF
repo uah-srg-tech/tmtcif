@@ -21,4 +21,5 @@ Export-Package: es.uah.aut.srg.tmtcif.lang.export.scoping,
  es.uah.aut.srg.tmtcif.lang.export.serializer,
  es.uah.aut.srg.tmtcif.lang.export.parser.antlr.internal,
  es.uah.aut.srg.tmtcif.lang.export
-Import-Package: org.apache.log4j
+Import-Package: es.uah.aut.srg.tmtcif.xtext,
+ org.apache.log4j

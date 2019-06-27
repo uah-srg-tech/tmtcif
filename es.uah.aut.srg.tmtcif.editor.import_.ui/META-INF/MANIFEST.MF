@@ -19,7 +19,7 @@ Require-Bundle: es.uah.aut.srg.tmtcif.editor.import_,
  org.eclipse.xtend.lib
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: es.uah.aut.srg.tmtcif.lang.imports.ui.quickfix,
- es.uah.aut.srg.tmtcif.lang.imports.ui.contentassist,
- es.uah.aut.srg.tmtcif.editor.import_.ui.internal
+Export-Package: es.uah.aut.srg.tmtcif.editor.import_.ui.internal,
+ es.uah.aut.srg.tmtcif.lang.import_.ui.contentassist,
+ es.uah.aut.srg.tmtcif.lang.import_.ui.quickfix
 Bundle-Activator: es.uah.aut.srg.tmtcif.editor.import_.ui.internal.Import_Activator

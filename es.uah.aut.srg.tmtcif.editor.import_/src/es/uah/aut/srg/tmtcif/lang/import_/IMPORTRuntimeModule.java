@@ -8,7 +8,7 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  ******************************************************************************/
-package es.uah.aut.srg.tmtcif.lang.filter;
+package es.uah.aut.srg.tmtcif.lang.import_;
 
 import org.eclipse.xtext.linking.ILinker;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
@@ -18,10 +18,12 @@ import es.uah.aut.srg.tmtcif.xtext.TMTCIFDescriptionAssociator;
 import es.uah.aut.srg.tmtcif.xtext.TMTCIFLazyLinker;
 import es.uah.aut.srg.tmtcif.xtext.TMTCIFQualifiedNameProvider;
 
+
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
-public class FILTERRuntimeModule extends AbstractFILTERRuntimeModule {
+public class IMPORTRuntimeModule extends AbstractIMPORTRuntimeModule {
+	
 	public Class<? extends IQualifiedNameConverter> bindIQualifiedNameConverter() {
 		return TMTCIFQualifiedNameProvider.TMTCIFDefaultNameConverter.class;
 	}

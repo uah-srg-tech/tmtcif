@@ -10,6 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: es.uah.aut.srg.tmtcif.common,
  es.uah.aut.srg.tmtcif.common.impl,
  es.uah.aut.srg.tmtcif.common.util,
+ es.uah.aut.srg.tmtcif.util,
  es.uah.aut.srg.tmtcif.format,
  es.uah.aut.srg.tmtcif.format.impl,
  es.uah.aut.srg.tmtcif.format.util,

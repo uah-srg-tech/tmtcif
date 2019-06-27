@@ -21,4 +21,5 @@ Export-Package: es.uah.aut.srg.tmtcif.lang.format,
  es.uah.aut.srg.tmtcif.lang.format.validation,
  es.uah.aut.srg.tmtcif.lang.format.scoping,
  es.uah.aut.srg.tmtcif.lang.format.parser.antlr
-Import-Package: org.apache.log4j
+Import-Package: es.uah.aut.srg.tmtcif.xtext,
+ org.apache.log4j
