@@ -1833,13 +1833,44 @@ ruleTMTCIFExportSettingAIFromConst returns [EObject current=null]
 		{
 			newLeafNode(otherlv_9, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_9());
 		}
-		otherlv_10='}'
+		otherlv_10='toArrayIndex'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getRightCurlyBracketKeyword_10());
+			newLeafNode(otherlv_10, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexKeyword_10());
 		}
-		otherlv_11=';'
+		otherlv_11=':='
 		{
-			newLeafNode(otherlv_11, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_11());
+			newLeafNode(otherlv_11, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getColonEqualsSignKeyword_11());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexINTEGERParserRuleCall_12_0());
+				}
+				lv_toArrayIndex_12_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTMTCIFExportSettingAIFromConstRule());
+					}
+					set(
+						$current,
+						"toArrayIndex",
+						lv_toArrayIndex_12_0,
+						"es.uah.aut.srg.tmtcif.lang.export.EXPORT.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_13=';'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_13());
+		}
+		otherlv_14='}'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getRightCurlyBracketKeyword_14());
+		}
+		otherlv_15=';'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_15());
 		}
 	)
 ;

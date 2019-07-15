@@ -136,6 +136,7 @@ public class EXPORTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTMTCIFExportSettingFromFieldAccess().getToFieldRefAssignment_8(), "rule__TMTCIFExportSettingFromField__ToFieldRefAssignment_8");
 					put(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getValueAssignment_4(), "rule__TMTCIFExportSettingAIFromConst__ValueAssignment_4");
 					put(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToFieldRefAssignment_8(), "rule__TMTCIFExportSettingAIFromConst__ToFieldRefAssignment_8");
+					put(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexAssignment_12(), "rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12");
 					put(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getFileAssignment_4(), "rule__TMTCIFExportSettingAIFromFile__FileAssignment_4");
 					put(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToFieldRefAssignment_8(), "rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8");
 					put(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToArrayIndexAssignment_12(), "rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12");

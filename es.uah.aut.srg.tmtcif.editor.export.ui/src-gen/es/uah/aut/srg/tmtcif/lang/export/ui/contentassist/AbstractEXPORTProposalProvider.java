@@ -163,6 +163,9 @@ public abstract class AbstractEXPORTProposalProvider extends TerminalsProposalPr
 	public void completeTMTCIFExportSettingAIFromConst_ToFieldRef(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		lookupCrossReference(((CrossReference)assignment.getTerminal()), context, acceptor);
 	}
+	public void completeTMTCIFExportSettingAIFromConst_ToArrayIndex(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
+	}
 	public void completeTMTCIFExportSettingAIFromFile_File(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}

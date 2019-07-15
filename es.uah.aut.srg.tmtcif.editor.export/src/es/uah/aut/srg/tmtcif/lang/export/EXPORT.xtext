@@ -116,6 +116,7 @@ TMTCIFExportSettingAIFromConst returns TMTCIFExportSettingAIFromConst:
 	'TMTCIFExportSettingAIFromConst' '{'
 		'value' ':=' value=INTEGER ';'
 		'toFieldRef' ':=' toFieldRef=[format::TMTCIFFormatAIField|VersionedQualifiedReferenceName] ';'
+		'toArrayIndex' ':=' toArrayIndex=INTEGER ';'
 	'}' ';'
 ;
 

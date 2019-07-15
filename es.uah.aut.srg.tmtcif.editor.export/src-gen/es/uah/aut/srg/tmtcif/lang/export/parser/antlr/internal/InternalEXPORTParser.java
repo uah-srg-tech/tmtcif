@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalEXPORTParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'TMTCIFExportExport'", "'{'", "'uri'", "'version'", "'from'", "'NULL'", "'to'", "'}'", "'TMTCIFExportSizes'", "'TMTCIFExportSizeFromFileLength'", "'id'", "'fromFile'", "'addSize'", "'unit'", "'TMTCIFExportSizeFromFileLine'", "'line'", "'TMTCIFExportSizeInBits'", "'TMTCIFExportSettings'", "'TMTCIFExportSettingFromConst'", "'value'", "'toFieldRef'", "'TMTCIFExportSettingFromSize'", "'sizeRef'", "'TMTCIFExportSettingFromFile'", "'file'", "'offset'", "'size'", "'TMTCIFExportSettingFromField'", "'fieldRef'", "'TMTCIFExportSettingAIFromConst'", "'TMTCIFExportSettingAIFromFile'", "'toArrayIndex'", "'TMTCIFExportActivateDICs'", "'TMTCIFExportDIC'", "'DICRef'", "'.'", "'('", "')'", "'::'", "'-'", "'bits'", "'bytes'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'TMTCIFExportExport'", "'{'", "'uri'", "'version'", "'from'", "'NULL'", "'to'", "'}'", "'TMTCIFExportSizes'", "'TMTCIFExportSizeFromFileLength'", "'id'", "'fromFile'", "'addSize'", "'unit'", "'TMTCIFExportSizeFromFileLine'", "'line'", "'TMTCIFExportSizeInBits'", "'TMTCIFExportSettings'", "'TMTCIFExportSettingFromConst'", "'value'", "'toFieldRef'", "'TMTCIFExportSettingFromSize'", "'sizeRef'", "'TMTCIFExportSettingFromFile'", "'file'", "'offset'", "'size'", "'TMTCIFExportSettingFromField'", "'fieldRef'", "'TMTCIFExportSettingAIFromConst'", "'toArrayIndex'", "'TMTCIFExportSettingAIFromFile'", "'TMTCIFExportActivateDICs'", "'TMTCIFExportDIC'", "'DICRef'", "'.'", "'('", "')'", "'::'", "'-'", "'bits'", "'bytes'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -2717,7 +2717,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     alt13=5;
                     }
                     break;
-                case 45:
+                case 46:
                     {
                     alt13=6;
                     }
@@ -4180,7 +4180,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTMTCIFExportSettingAIFromConst"
-    // InternalEXPORT.g:1758:1: ruleTMTCIFExportSettingAIFromConst returns [EObject current=null] : (otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalEXPORT.g:1758:1: ruleTMTCIFExportSettingAIFromConst returns [EObject current=null] : (otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) ;
     public final EObject ruleTMTCIFExportSettingAIFromConst() throws RecognitionException {
         EObject current = null;
 
@@ -4194,18 +4194,23 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         Token otherlv_9=null;
         Token otherlv_10=null;
         Token otherlv_11=null;
+        Token otherlv_13=null;
+        Token otherlv_14=null;
+        Token otherlv_15=null;
         AntlrDatatypeRuleToken lv_value_4_0 = null;
+
+        AntlrDatatypeRuleToken lv_toArrayIndex_12_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1764:2: ( (otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalEXPORT.g:1765:2: (otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1764:2: ( (otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) )
+            // InternalEXPORT.g:1765:2: (otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
             {
-            // InternalEXPORT.g:1765:2: (otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalEXPORT.g:1766:3: otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalEXPORT.g:1765:2: (otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
+            // InternalEXPORT.g:1766:3: otherlv_0= 'TMTCIFExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';'
             {
             otherlv_0=(Token)match(input,44,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4323,22 +4328,75 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_36); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_9());
               		
             }
-            otherlv_10=(Token)match(input,22,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            otherlv_10=(Token)match(input,45,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_10, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getRightCurlyBracketKeyword_10());
+              			newLeafNode(otherlv_10, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_11, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_11());
+              			newLeafNode(otherlv_11, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getColonEqualsSignKeyword_11());
+              		
+            }
+            // InternalEXPORT.g:1844:3: ( (lv_toArrayIndex_12_0= ruleINTEGER ) )
+            // InternalEXPORT.g:1845:4: (lv_toArrayIndex_12_0= ruleINTEGER )
+            {
+            // InternalEXPORT.g:1845:4: (lv_toArrayIndex_12_0= ruleINTEGER )
+            // InternalEXPORT.g:1846:5: lv_toArrayIndex_12_0= ruleINTEGER
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexINTEGERParserRuleCall_12_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_6);
+            lv_toArrayIndex_12_0=ruleINTEGER();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getTMTCIFExportSettingAIFromConstRule());
+              					}
+              					set(
+              						current,
+              						"toArrayIndex",
+              						lv_toArrayIndex_12_0,
+              						"es.uah.aut.srg.tmtcif.lang.export.EXPORT.INTEGER");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_13, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_13());
+              		
+            }
+            otherlv_14=(Token)match(input,22,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_14, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getRightCurlyBracketKeyword_14());
+              		
+            }
+            otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_15, grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_15());
               		
             }
 
@@ -4366,7 +4424,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTMTCIFExportSettingAIFromFile"
-    // InternalEXPORT.g:1848:1: entryRuleTMTCIFExportSettingAIFromFile returns [EObject current=null] : iv_ruleTMTCIFExportSettingAIFromFile= ruleTMTCIFExportSettingAIFromFile EOF ;
+    // InternalEXPORT.g:1879:1: entryRuleTMTCIFExportSettingAIFromFile returns [EObject current=null] : iv_ruleTMTCIFExportSettingAIFromFile= ruleTMTCIFExportSettingAIFromFile EOF ;
     public final EObject entryRuleTMTCIFExportSettingAIFromFile() throws RecognitionException {
         EObject current = null;
 
@@ -4374,8 +4432,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:1848:70: (iv_ruleTMTCIFExportSettingAIFromFile= ruleTMTCIFExportSettingAIFromFile EOF )
-            // InternalEXPORT.g:1849:2: iv_ruleTMTCIFExportSettingAIFromFile= ruleTMTCIFExportSettingAIFromFile EOF
+            // InternalEXPORT.g:1879:70: (iv_ruleTMTCIFExportSettingAIFromFile= ruleTMTCIFExportSettingAIFromFile EOF )
+            // InternalEXPORT.g:1880:2: iv_ruleTMTCIFExportSettingAIFromFile= ruleTMTCIFExportSettingAIFromFile EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTMTCIFExportSettingAIFromFileRule()); 
@@ -4406,7 +4464,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTMTCIFExportSettingAIFromFile"
-    // InternalEXPORT.g:1855:1: ruleTMTCIFExportSettingAIFromFile returns [EObject current=null] : (otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' ) ;
+    // InternalEXPORT.g:1886:1: ruleTMTCIFExportSettingAIFromFile returns [EObject current=null] : (otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' ) ;
     public final EObject ruleTMTCIFExportSettingAIFromFile() throws RecognitionException {
         EObject current = null;
 
@@ -4446,13 +4504,13 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1861:2: ( (otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' ) )
-            // InternalEXPORT.g:1862:2: (otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' )
+            // InternalEXPORT.g:1892:2: ( (otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' ) )
+            // InternalEXPORT.g:1893:2: (otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' )
             {
-            // InternalEXPORT.g:1862:2: (otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' )
-            // InternalEXPORT.g:1863:3: otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';'
+            // InternalEXPORT.g:1893:2: (otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' )
+            // InternalEXPORT.g:1894:3: otherlv_0= 'TMTCIFExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';'
             {
-            otherlv_0=(Token)match(input,45,FollowSets000.FOLLOW_8); if (state.failed) return current;
+            otherlv_0=(Token)match(input,46,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getTMTCIFExportSettingAIFromFileKeyword_0());
@@ -4476,11 +4534,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:1879:3: ( (lv_file_4_0= RULE_ID ) )
-            // InternalEXPORT.g:1880:4: (lv_file_4_0= RULE_ID )
+            // InternalEXPORT.g:1910:3: ( (lv_file_4_0= RULE_ID ) )
+            // InternalEXPORT.g:1911:4: (lv_file_4_0= RULE_ID )
             {
-            // InternalEXPORT.g:1880:4: (lv_file_4_0= RULE_ID )
-            // InternalEXPORT.g:1881:5: lv_file_4_0= RULE_ID
+            // InternalEXPORT.g:1911:4: (lv_file_4_0= RULE_ID )
+            // InternalEXPORT.g:1912:5: lv_file_4_0= RULE_ID
             {
             lv_file_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4524,11 +4582,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:1909:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalEXPORT.g:1910:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:1940:3: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:1941:4: ( ruleVersionedQualifiedReferenceName )
             {
-            // InternalEXPORT.g:1910:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalEXPORT.g:1911:5: ruleVersionedQualifiedReferenceName
+            // InternalEXPORT.g:1941:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:1942:5: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
 
@@ -4569,7 +4627,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_9());
               		
             }
-            otherlv_10=(Token)match(input,46,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            otherlv_10=(Token)match(input,45,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_10, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToArrayIndexKeyword_10());
@@ -4581,11 +4639,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalEXPORT.g:1940:3: ( (lv_toArrayIndex_12_0= ruleINTEGER ) )
-            // InternalEXPORT.g:1941:4: (lv_toArrayIndex_12_0= ruleINTEGER )
+            // InternalEXPORT.g:1971:3: ( (lv_toArrayIndex_12_0= ruleINTEGER ) )
+            // InternalEXPORT.g:1972:4: (lv_toArrayIndex_12_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:1941:4: (lv_toArrayIndex_12_0= ruleINTEGER )
-            // InternalEXPORT.g:1942:5: lv_toArrayIndex_12_0= ruleINTEGER
+            // InternalEXPORT.g:1972:4: (lv_toArrayIndex_12_0= ruleINTEGER )
+            // InternalEXPORT.g:1973:5: lv_toArrayIndex_12_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -4622,7 +4680,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_13, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalEXPORT.g:1963:3: (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
+            // InternalEXPORT.g:1994:3: (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -4631,7 +4689,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // InternalEXPORT.g:1964:4: otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';'
+                    // InternalEXPORT.g:1995:4: otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';'
                     {
                     otherlv_14=(Token)match(input,40,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4645,11 +4703,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_15, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_14_1());
                       			
                     }
-                    // InternalEXPORT.g:1972:4: ( (lv_offset_16_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:1973:5: (lv_offset_16_0= ruleINTEGER )
+                    // InternalEXPORT.g:2003:4: ( (lv_offset_16_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:2004:5: (lv_offset_16_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:1973:5: (lv_offset_16_0= ruleINTEGER )
-                    // InternalEXPORT.g:1974:6: lv_offset_16_0= ruleINTEGER
+                    // InternalEXPORT.g:2004:5: (lv_offset_16_0= ruleINTEGER )
+                    // InternalEXPORT.g:2005:6: lv_offset_16_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4692,7 +4750,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:1996:3: (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )?
+            // InternalEXPORT.g:2027:3: (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -4701,7 +4759,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // InternalEXPORT.g:1997:4: otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';'
+                    // InternalEXPORT.g:2028:4: otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';'
                     {
                     otherlv_18=(Token)match(input,41,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4715,11 +4773,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_19, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_15_1());
                       			
                     }
-                    // InternalEXPORT.g:2005:4: ( (lv_size_20_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:2006:5: (lv_size_20_0= ruleINTEGER )
+                    // InternalEXPORT.g:2036:4: ( (lv_size_20_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:2037:5: (lv_size_20_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:2006:5: (lv_size_20_0= ruleINTEGER )
-                    // InternalEXPORT.g:2007:6: lv_size_20_0= ruleINTEGER
+                    // InternalEXPORT.g:2037:5: (lv_size_20_0= ruleINTEGER )
+                    // InternalEXPORT.g:2038:6: lv_size_20_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4762,7 +4820,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:2029:3: (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )?
+            // InternalEXPORT.g:2060:3: (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -4771,7 +4829,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt19) {
                 case 1 :
-                    // InternalEXPORT.g:2030:4: otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';'
+                    // InternalEXPORT.g:2061:4: otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';'
                     {
                     otherlv_22=(Token)match(input,30,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4785,11 +4843,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_23, grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_16_1());
                       			
                     }
-                    // InternalEXPORT.g:2038:4: ( (lv_line_24_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:2039:5: (lv_line_24_0= ruleINTEGER )
+                    // InternalEXPORT.g:2069:4: ( (lv_line_24_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:2070:5: (lv_line_24_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:2039:5: (lv_line_24_0= ruleINTEGER )
-                    // InternalEXPORT.g:2040:6: lv_line_24_0= ruleINTEGER
+                    // InternalEXPORT.g:2070:5: (lv_line_24_0= ruleINTEGER )
+                    // InternalEXPORT.g:2071:6: lv_line_24_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4869,7 +4927,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTMTCIFExportActivateDICs"
-    // InternalEXPORT.g:2074:1: entryRuleTMTCIFExportActivateDICs returns [EObject current=null] : iv_ruleTMTCIFExportActivateDICs= ruleTMTCIFExportActivateDICs EOF ;
+    // InternalEXPORT.g:2105:1: entryRuleTMTCIFExportActivateDICs returns [EObject current=null] : iv_ruleTMTCIFExportActivateDICs= ruleTMTCIFExportActivateDICs EOF ;
     public final EObject entryRuleTMTCIFExportActivateDICs() throws RecognitionException {
         EObject current = null;
 
@@ -4877,8 +4935,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2074:65: (iv_ruleTMTCIFExportActivateDICs= ruleTMTCIFExportActivateDICs EOF )
-            // InternalEXPORT.g:2075:2: iv_ruleTMTCIFExportActivateDICs= ruleTMTCIFExportActivateDICs EOF
+            // InternalEXPORT.g:2105:65: (iv_ruleTMTCIFExportActivateDICs= ruleTMTCIFExportActivateDICs EOF )
+            // InternalEXPORT.g:2106:2: iv_ruleTMTCIFExportActivateDICs= ruleTMTCIFExportActivateDICs EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTMTCIFExportActivateDICsRule()); 
@@ -4909,7 +4967,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTMTCIFExportActivateDICs"
-    // InternalEXPORT.g:2081:1: ruleTMTCIFExportActivateDICs returns [EObject current=null] : ( () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' ) ;
+    // InternalEXPORT.g:2112:1: ruleTMTCIFExportActivateDICs returns [EObject current=null] : ( () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' ) ;
     public final EObject ruleTMTCIFExportActivateDICs() throws RecognitionException {
         EObject current = null;
 
@@ -4924,14 +4982,14 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2087:2: ( ( () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' ) )
-            // InternalEXPORT.g:2088:2: ( () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' )
+            // InternalEXPORT.g:2118:2: ( ( () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' ) )
+            // InternalEXPORT.g:2119:2: ( () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' )
             {
-            // InternalEXPORT.g:2088:2: ( () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' )
-            // InternalEXPORT.g:2089:3: () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';'
+            // InternalEXPORT.g:2119:2: ( () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' )
+            // InternalEXPORT.g:2120:3: () otherlv_1= 'TMTCIFExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+ otherlv_4= '}' otherlv_5= ';'
             {
-            // InternalEXPORT.g:2089:3: ()
-            // InternalEXPORT.g:2090:4: 
+            // InternalEXPORT.g:2120:3: ()
+            // InternalEXPORT.g:2121:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -4960,7 +5018,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getTMTCIFExportActivateDICsAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalEXPORT.g:2107:3: ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+
+            // InternalEXPORT.g:2138:3: ( (lv_DIC_3_0= ruleTMTCIFExportDIC ) )+
             int cnt20=0;
             loop20:
             do {
@@ -4974,10 +5032,10 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // InternalEXPORT.g:2108:4: (lv_DIC_3_0= ruleTMTCIFExportDIC )
+            	    // InternalEXPORT.g:2139:4: (lv_DIC_3_0= ruleTMTCIFExportDIC )
             	    {
-            	    // InternalEXPORT.g:2108:4: (lv_DIC_3_0= ruleTMTCIFExportDIC )
-            	    // InternalEXPORT.g:2109:5: lv_DIC_3_0= ruleTMTCIFExportDIC
+            	    // InternalEXPORT.g:2139:4: (lv_DIC_3_0= ruleTMTCIFExportDIC )
+            	    // InternalEXPORT.g:2140:5: lv_DIC_3_0= ruleTMTCIFExportDIC
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5056,7 +5114,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTMTCIFExportDIC"
-    // InternalEXPORT.g:2138:1: entryRuleTMTCIFExportDIC returns [EObject current=null] : iv_ruleTMTCIFExportDIC= ruleTMTCIFExportDIC EOF ;
+    // InternalEXPORT.g:2169:1: entryRuleTMTCIFExportDIC returns [EObject current=null] : iv_ruleTMTCIFExportDIC= ruleTMTCIFExportDIC EOF ;
     public final EObject entryRuleTMTCIFExportDIC() throws RecognitionException {
         EObject current = null;
 
@@ -5064,8 +5122,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2138:56: (iv_ruleTMTCIFExportDIC= ruleTMTCIFExportDIC EOF )
-            // InternalEXPORT.g:2139:2: iv_ruleTMTCIFExportDIC= ruleTMTCIFExportDIC EOF
+            // InternalEXPORT.g:2169:56: (iv_ruleTMTCIFExportDIC= ruleTMTCIFExportDIC EOF )
+            // InternalEXPORT.g:2170:2: iv_ruleTMTCIFExportDIC= ruleTMTCIFExportDIC EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTMTCIFExportDICRule()); 
@@ -5096,7 +5154,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTMTCIFExportDIC"
-    // InternalEXPORT.g:2145:1: ruleTMTCIFExportDIC returns [EObject current=null] : (otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalEXPORT.g:2176:1: ruleTMTCIFExportDIC returns [EObject current=null] : (otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleTMTCIFExportDIC() throws RecognitionException {
         EObject current = null;
 
@@ -5118,11 +5176,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2151:2: ( (otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalEXPORT.g:2152:2: (otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:2182:2: ( (otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalEXPORT.g:2183:2: (otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalEXPORT.g:2152:2: (otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalEXPORT.g:2153:3: otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalEXPORT.g:2183:2: (otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:2184:3: otherlv_0= 'TMTCIFExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,48,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5148,11 +5206,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getTMTCIFExportDICAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:2169:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalEXPORT.g:2170:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:2200:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalEXPORT.g:2201:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:2170:4: (lv_id_4_0= ruleINTEGER )
-            // InternalEXPORT.g:2171:5: lv_id_4_0= ruleINTEGER
+            // InternalEXPORT.g:2201:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:2202:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -5201,11 +5259,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getTMTCIFExportDICAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:2200:3: ( (lv_DICRef_8_0= RULE_ID ) )
-            // InternalEXPORT.g:2201:4: (lv_DICRef_8_0= RULE_ID )
+            // InternalEXPORT.g:2231:3: ( (lv_DICRef_8_0= RULE_ID ) )
+            // InternalEXPORT.g:2232:4: (lv_DICRef_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:2201:4: (lv_DICRef_8_0= RULE_ID )
-            // InternalEXPORT.g:2202:5: lv_DICRef_8_0= RULE_ID
+            // InternalEXPORT.g:2232:4: (lv_DICRef_8_0= RULE_ID )
+            // InternalEXPORT.g:2233:5: lv_DICRef_8_0= RULE_ID
             {
             lv_DICRef_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5274,7 +5332,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalEXPORT.g:2234:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalEXPORT.g:2265:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -5282,8 +5340,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2234:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalEXPORT.g:2235:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalEXPORT.g:2265:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalEXPORT.g:2266:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -5314,7 +5372,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalEXPORT.g:2241:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalEXPORT.g:2272:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5326,11 +5384,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2247:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalEXPORT.g:2248:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalEXPORT.g:2278:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalEXPORT.g:2279:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalEXPORT.g:2248:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalEXPORT.g:2249:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalEXPORT.g:2279:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalEXPORT.g:2280:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_40); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5343,7 +5401,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalEXPORT.g:2256:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalEXPORT.g:2287:3: (kw= '.' this_ID_2= RULE_ID )*
             loop21:
             do {
                 int alt21=2;
@@ -5356,7 +5414,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalEXPORT.g:2257:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalEXPORT.g:2288:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,50,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5410,7 +5468,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalEXPORT.g:2274:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalEXPORT.g:2305:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -5418,8 +5476,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2274:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalEXPORT.g:2275:2: iv_ruleVersion= ruleVersion EOF
+            // InternalEXPORT.g:2305:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalEXPORT.g:2306:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -5450,7 +5508,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalEXPORT.g:2281:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalEXPORT.g:2312:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5466,24 +5524,24 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2287:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalEXPORT.g:2288:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalEXPORT.g:2318:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalEXPORT.g:2319:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalEXPORT.g:2288:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalEXPORT.g:2289:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalEXPORT.g:2319:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalEXPORT.g:2320:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalEXPORT.g:2289:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            // InternalEXPORT.g:2320:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
             if ( (LA23_0==RULE_INT) ) {
                 int LA23_1 = input.LA(2);
 
-                if ( (LA23_1==RULE_ID) ) {
-                    alt23=2;
-                }
-                else if ( (LA23_1==EOF||LA23_1==14||LA23_1==50||LA23_1==52) ) {
+                if ( (LA23_1==EOF||LA23_1==14||LA23_1==50||LA23_1==52) ) {
                     alt23=1;
+                }
+                else if ( (LA23_1==RULE_ID) ) {
+                    alt23=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -5505,7 +5563,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalEXPORT.g:2290:4: this_INT_0= RULE_INT
+                    // InternalEXPORT.g:2321:4: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_40); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5522,12 +5580,12 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEXPORT.g:2298:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalEXPORT.g:2329:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalEXPORT.g:2298:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalEXPORT.g:2299:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalEXPORT.g:2329:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalEXPORT.g:2330:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalEXPORT.g:2299:5: (this_INT_1= RULE_INT )?
+                    // InternalEXPORT.g:2330:5: (this_INT_1= RULE_INT )?
                     int alt22=2;
                     int LA22_0 = input.LA(1);
 
@@ -5536,7 +5594,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt22) {
                         case 1 :
-                            // InternalEXPORT.g:2300:6: this_INT_1= RULE_INT
+                            // InternalEXPORT.g:2331:6: this_INT_1= RULE_INT
                             {
                             this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -5575,7 +5633,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:2317:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalEXPORT.g:2348:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             loop26:
             do {
                 int alt26=2;
@@ -5588,7 +5646,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                 switch (alt26) {
             	case 1 :
-            	    // InternalEXPORT.g:2318:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalEXPORT.g:2349:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
             	    kw=(Token)match(input,50,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5597,7 +5655,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalEXPORT.g:2323:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalEXPORT.g:2354:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    int alt25=2;
             	    int LA25_0 = input.LA(1);
 
@@ -5630,7 +5688,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt25) {
             	        case 1 :
-            	            // InternalEXPORT.g:2324:5: this_INT_4= RULE_INT
+            	            // InternalEXPORT.g:2355:5: this_INT_4= RULE_INT
             	            {
             	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_40); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5647,12 +5705,12 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalEXPORT.g:2332:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalEXPORT.g:2363:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalEXPORT.g:2332:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalEXPORT.g:2333:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalEXPORT.g:2363:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalEXPORT.g:2364:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalEXPORT.g:2333:6: (this_INT_5= RULE_INT )?
+            	            // InternalEXPORT.g:2364:6: (this_INT_5= RULE_INT )?
             	            int alt24=2;
             	            int LA24_0 = input.LA(1);
 
@@ -5661,7 +5719,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	            }
             	            switch (alt24) {
             	                case 1 :
-            	                    // InternalEXPORT.g:2334:7: this_INT_5= RULE_INT
+            	                    // InternalEXPORT.g:2365:7: this_INT_5= RULE_INT
             	                    {
             	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
@@ -5734,7 +5792,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalEXPORT.g:2356:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalEXPORT.g:2387:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -5742,8 +5800,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2356:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalEXPORT.g:2357:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalEXPORT.g:2387:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalEXPORT.g:2388:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -5774,7 +5832,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalEXPORT.g:2363:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalEXPORT.g:2394:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5788,11 +5846,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2369:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalEXPORT.g:2370:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalEXPORT.g:2400:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalEXPORT.g:2401:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalEXPORT.g:2370:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalEXPORT.g:2371:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalEXPORT.g:2401:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalEXPORT.g:2402:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
@@ -5873,7 +5931,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedReferenceName"
-    // InternalEXPORT.g:2405:1: entryRuleVersionedQualifiedReferenceName returns [String current=null] : iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF ;
+    // InternalEXPORT.g:2436:1: entryRuleVersionedQualifiedReferenceName returns [String current=null] : iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF ;
     public final String entryRuleVersionedQualifiedReferenceName() throws RecognitionException {
         String current = null;
 
@@ -5881,8 +5939,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2405:71: (iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF )
-            // InternalEXPORT.g:2406:2: iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF
+            // InternalEXPORT.g:2436:71: (iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF )
+            // InternalEXPORT.g:2437:2: iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); 
@@ -5913,7 +5971,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedReferenceName"
-    // InternalEXPORT.g:2412:1: ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) ;
+    // InternalEXPORT.g:2443:1: ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedReferenceName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5927,13 +5985,13 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2418:2: ( ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) )
-            // InternalEXPORT.g:2419:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
+            // InternalEXPORT.g:2449:2: ( ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) )
+            // InternalEXPORT.g:2450:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
             {
-            // InternalEXPORT.g:2419:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
-            // InternalEXPORT.g:2420:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )*
+            // InternalEXPORT.g:2450:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
+            // InternalEXPORT.g:2451:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )*
             {
-            // InternalEXPORT.g:2420:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )?
+            // InternalEXPORT.g:2451:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -5946,7 +6004,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // InternalEXPORT.g:2421:4: this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::'
+                    // InternalEXPORT.g:2452:4: this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::'
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5992,7 +6050,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
               		
             }
-            // InternalEXPORT.g:2444:3: (kw= '::' this_ID_4= RULE_ID )*
+            // InternalEXPORT.g:2475:3: (kw= '::' this_ID_4= RULE_ID )*
             loop28:
             do {
                 int alt28=2;
@@ -6005,7 +6063,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // InternalEXPORT.g:2445:4: kw= '::' this_ID_4= RULE_ID
+            	    // InternalEXPORT.g:2476:4: kw= '::' this_ID_4= RULE_ID
             	    {
             	    kw=(Token)match(input,53,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -6059,7 +6117,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleINTEGER"
-    // InternalEXPORT.g:2462:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
+    // InternalEXPORT.g:2493:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
     public final String entryRuleINTEGER() throws RecognitionException {
         String current = null;
 
@@ -6067,8 +6125,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2462:47: (iv_ruleINTEGER= ruleINTEGER EOF )
-            // InternalEXPORT.g:2463:2: iv_ruleINTEGER= ruleINTEGER EOF
+            // InternalEXPORT.g:2493:47: (iv_ruleINTEGER= ruleINTEGER EOF )
+            // InternalEXPORT.g:2494:2: iv_ruleINTEGER= ruleINTEGER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getINTEGERRule()); 
@@ -6099,7 +6157,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleINTEGER"
-    // InternalEXPORT.g:2469:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
+    // InternalEXPORT.g:2500:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
     public final AntlrDatatypeRuleToken ruleINTEGER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6111,10 +6169,10 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2475:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
-            // InternalEXPORT.g:2476:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalEXPORT.g:2506:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
+            // InternalEXPORT.g:2507:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             {
-            // InternalEXPORT.g:2476:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalEXPORT.g:2507:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -6133,12 +6191,12 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt30) {
                 case 1 :
-                    // InternalEXPORT.g:2477:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalEXPORT.g:2508:3: ( (kw= '-' )? this_INT_1= RULE_INT )
                     {
-                    // InternalEXPORT.g:2477:3: ( (kw= '-' )? this_INT_1= RULE_INT )
-                    // InternalEXPORT.g:2478:4: (kw= '-' )? this_INT_1= RULE_INT
+                    // InternalEXPORT.g:2508:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalEXPORT.g:2509:4: (kw= '-' )? this_INT_1= RULE_INT
                     {
-                    // InternalEXPORT.g:2478:4: (kw= '-' )?
+                    // InternalEXPORT.g:2509:4: (kw= '-' )?
                     int alt29=2;
                     int LA29_0 = input.LA(1);
 
@@ -6147,7 +6205,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt29) {
                         case 1 :
-                            // InternalEXPORT.g:2479:5: kw= '-'
+                            // InternalEXPORT.g:2510:5: kw= '-'
                             {
                             kw=(Token)match(input,54,FollowSets000.FOLLOW_45); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -6180,7 +6238,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEXPORT.g:2494:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
+                    // InternalEXPORT.g:2525:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
                     {
                     this_HEXADECIMAL_2=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6221,7 +6279,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTMTCIFExportUnit"
-    // InternalEXPORT.g:2505:1: ruleTMTCIFExportUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) ) ;
+    // InternalEXPORT.g:2536:1: ruleTMTCIFExportUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) ) ;
     public final Enumerator ruleTMTCIFExportUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -6232,10 +6290,10 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2511:2: ( ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) ) )
-            // InternalEXPORT.g:2512:2: ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) )
+            // InternalEXPORT.g:2542:2: ( ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) ) )
+            // InternalEXPORT.g:2543:2: ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) )
             {
-            // InternalEXPORT.g:2512:2: ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) )
+            // InternalEXPORT.g:2543:2: ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -6254,10 +6312,10 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalEXPORT.g:2513:3: (enumLiteral_0= 'bits' )
+                    // InternalEXPORT.g:2544:3: (enumLiteral_0= 'bits' )
                     {
-                    // InternalEXPORT.g:2513:3: (enumLiteral_0= 'bits' )
-                    // InternalEXPORT.g:2514:4: enumLiteral_0= 'bits'
+                    // InternalEXPORT.g:2544:3: (enumLiteral_0= 'bits' )
+                    // InternalEXPORT.g:2545:4: enumLiteral_0= 'bits'
                     {
                     enumLiteral_0=(Token)match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6273,10 +6331,10 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEXPORT.g:2521:3: (enumLiteral_1= 'bytes' )
+                    // InternalEXPORT.g:2552:3: (enumLiteral_1= 'bytes' )
                     {
-                    // InternalEXPORT.g:2521:3: (enumLiteral_1= 'bytes' )
-                    // InternalEXPORT.g:2522:4: enumLiteral_1= 'bytes'
+                    // InternalEXPORT.g:2552:3: (enumLiteral_1= 'bytes' )
+                    // InternalEXPORT.g:2553:4: enumLiteral_1= 'bytes'
                     {
                     enumLiteral_1=(Token)match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6524,7 +6582,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0180000000000000L});
         public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000040000000L});
         public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000345200400000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000545200400000L});
         public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000400000000L});
         public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000800000000L});
         public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000002000000000L});
@@ -6533,7 +6591,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000020040400000L});
         public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000040400000L});
         public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000080000000000L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000200000000000L});
         public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0001000000000000L});
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0001000000400000L});
         public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0002000000000000L});

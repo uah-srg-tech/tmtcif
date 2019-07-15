@@ -1201,18 +1201,25 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cToFieldRefTMTCIFFormatAIFieldCrossReference_8_0 = (CrossReference)cToFieldRefAssignment_8.eContents().get(0);
 		private final RuleCall cToFieldRefTMTCIFFormatAIFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1 = (RuleCall)cToFieldRefTMTCIFFormatAIFieldCrossReference_8_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cToArrayIndexKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cToArrayIndexAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cToArrayIndexINTEGERParserRuleCall_12_0 = (RuleCall)cToArrayIndexAssignment_12.eContents().get(0);
+		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Keyword cSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//TMTCIFExportSettingAIFromConst:
 		//	'TMTCIFExportSettingAIFromConst' '{'
 		//	'value' ':=' value=INTEGER ';'
 		//	'toFieldRef' ':=' toFieldRef=[format::TMTCIFFormatAIField|VersionedQualifiedReferenceName] ';'
+		//	'toArrayIndex' ':=' toArrayIndex=INTEGER ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'TMTCIFExportSettingAIFromConst' '{' 'value' ':=' value=INTEGER ';' 'toFieldRef' ':='
-		//toFieldRef=[format::TMTCIFFormatAIField|VersionedQualifiedReferenceName] ';' '}' ';'
+		//toFieldRef=[format::TMTCIFFormatAIField|VersionedQualifiedReferenceName] ';' 'toArrayIndex' ':=' toArrayIndex=INTEGER
+		//';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'TMTCIFExportSettingAIFromConst'
@@ -1254,11 +1261,26 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		//'toArrayIndex'
+		public Keyword getToArrayIndexKeyword_10() { return cToArrayIndexKeyword_10; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
+		
+		//toArrayIndex=INTEGER
+		public Assignment getToArrayIndexAssignment_12() { return cToArrayIndexAssignment_12; }
+		
+		//INTEGER
+		public RuleCall getToArrayIndexINTEGERParserRuleCall_12_0() { return cToArrayIndexINTEGERParserRuleCall_12_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_11() { return cSemicolonKeyword_11; }
+		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_14() { return cRightCurlyBracketKeyword_14; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_15() { return cSemicolonKeyword_15; }
 	}
 	public class TMTCIFExportSettingAIFromFileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.tmtcif.lang.export.EXPORT.TMTCIFExportSettingAIFromFile");
@@ -2009,6 +2031,7 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'TMTCIFExportSettingAIFromConst' '{'
 	//	'value' ':=' value=INTEGER ';'
 	//	'toFieldRef' ':=' toFieldRef=[format::TMTCIFFormatAIField|VersionedQualifiedReferenceName] ';'
+	//	'toArrayIndex' ':=' toArrayIndex=INTEGER ';'
 	//	'}' ';';
 	public TMTCIFExportSettingAIFromConstElements getTMTCIFExportSettingAIFromConstAccess() {
 		return pTMTCIFExportSettingAIFromConst;

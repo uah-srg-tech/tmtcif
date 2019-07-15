@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'NULL'", "'bits'", "'bytes'", "'import'", "':='", "';'", "'TMTCIFExportExport'", "'{'", "'from'", "'to'", "'}'", "'uri'", "'version'", "'TMTCIFExportSizes'", "'TMTCIFExportSizeFromFileLength'", "'id'", "'fromFile'", "'addSize'", "'unit'", "'TMTCIFExportSizeFromFileLine'", "'line'", "'TMTCIFExportSizeInBits'", "'TMTCIFExportSettings'", "'TMTCIFExportSettingFromConst'", "'value'", "'toFieldRef'", "'TMTCIFExportSettingFromSize'", "'sizeRef'", "'TMTCIFExportSettingFromFile'", "'file'", "'offset'", "'size'", "'TMTCIFExportSettingFromField'", "'fieldRef'", "'TMTCIFExportSettingAIFromConst'", "'TMTCIFExportSettingAIFromFile'", "'toArrayIndex'", "'TMTCIFExportActivateDICs'", "'TMTCIFExportDIC'", "'DICRef'", "'.'", "'('", "')'", "'::'", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'NULL'", "'bits'", "'bytes'", "'import'", "':='", "';'", "'TMTCIFExportExport'", "'{'", "'from'", "'to'", "'}'", "'uri'", "'version'", "'TMTCIFExportSizes'", "'TMTCIFExportSizeFromFileLength'", "'id'", "'fromFile'", "'addSize'", "'unit'", "'TMTCIFExportSizeFromFileLine'", "'line'", "'TMTCIFExportSizeInBits'", "'TMTCIFExportSettings'", "'TMTCIFExportSettingFromConst'", "'value'", "'toFieldRef'", "'TMTCIFExportSettingFromSize'", "'sizeRef'", "'TMTCIFExportSettingFromFile'", "'file'", "'offset'", "'size'", "'TMTCIFExportSettingFromField'", "'fieldRef'", "'TMTCIFExportSettingAIFromConst'", "'toArrayIndex'", "'TMTCIFExportSettingAIFromFile'", "'TMTCIFExportActivateDICs'", "'TMTCIFExportDIC'", "'DICRef'", "'.'", "'('", "')'", "'::'", "'-'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -2224,7 +2224,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
                 alt3=5;
                 }
                 break;
-            case 47:
+            case 48:
                 {
                 alt3=6;
                 }
@@ -2443,11 +2443,11 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             if ( (LA4_0==RULE_INT) ) {
                 int LA4_1 = input.LA(2);
 
-                if ( (LA4_1==RULE_ID) ) {
-                    alt4=2;
-                }
-                else if ( (LA4_1==EOF||LA4_1==17||LA4_1==52||LA4_1==54) ) {
+                if ( (LA4_1==EOF||LA4_1==17||LA4_1==52||LA4_1==54) ) {
                     alt4=1;
+                }
+                else if ( (LA4_1==RULE_ID) ) {
+                    alt4=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -11967,7 +11967,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
                 int alt18=2;
                 int LA18_0 = input.LA(1);
 
-                if ( (LA18_0==35||LA18_0==38||LA18_0==40||LA18_0==44||(LA18_0>=46 && LA18_0<=47)) ) {
+                if ( (LA18_0==35||LA18_0==38||LA18_0==40||LA18_0==44||LA18_0==46||LA18_0==48) ) {
                     alt18=1;
                 }
 
@@ -18023,7 +18023,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             // InternalEXPORT.g:5784:1: ( rule__TMTCIFExportSettingAIFromConst__Group__9__Impl rule__TMTCIFExportSettingAIFromConst__Group__10 )
             // InternalEXPORT.g:5785:2: rule__TMTCIFExportSettingAIFromConst__Group__9__Impl rule__TMTCIFExportSettingAIFromConst__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_35);
             rule__TMTCIFExportSettingAIFromConst__Group__9__Impl();
 
             state._fsp--;
@@ -18102,7 +18102,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             // InternalEXPORT.g:5811:1: ( rule__TMTCIFExportSettingAIFromConst__Group__10__Impl rule__TMTCIFExportSettingAIFromConst__Group__11 )
             // InternalEXPORT.g:5812:2: rule__TMTCIFExportSettingAIFromConst__Group__10__Impl rule__TMTCIFExportSettingAIFromConst__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_7);
+            pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportSettingAIFromConst__Group__10__Impl();
 
             state._fsp--;
@@ -18131,24 +18131,24 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__10__Impl"
-    // InternalEXPORT.g:5819:1: rule__TMTCIFExportSettingAIFromConst__Group__10__Impl : ( '}' ) ;
+    // InternalEXPORT.g:5819:1: rule__TMTCIFExportSettingAIFromConst__Group__10__Impl : ( 'toArrayIndex' ) ;
     public final void rule__TMTCIFExportSettingAIFromConst__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5823:1: ( ( '}' ) )
-            // InternalEXPORT.g:5824:1: ( '}' )
+            // InternalEXPORT.g:5823:1: ( ( 'toArrayIndex' ) )
+            // InternalEXPORT.g:5824:1: ( 'toArrayIndex' )
             {
-            // InternalEXPORT.g:5824:1: ( '}' )
-            // InternalEXPORT.g:5825:2: '}'
+            // InternalEXPORT.g:5824:1: ( 'toArrayIndex' )
+            // InternalEXPORT.g:5825:2: 'toArrayIndex'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getRightCurlyBracketKeyword_10()); 
+               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexKeyword_10()); 
             }
-            match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getRightCurlyBracketKeyword_10()); 
+               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexKeyword_10()); 
             }
 
             }
@@ -18172,17 +18172,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__11"
-    // InternalEXPORT.g:5834:1: rule__TMTCIFExportSettingAIFromConst__Group__11 : rule__TMTCIFExportSettingAIFromConst__Group__11__Impl ;
+    // InternalEXPORT.g:5834:1: rule__TMTCIFExportSettingAIFromConst__Group__11 : rule__TMTCIFExportSettingAIFromConst__Group__11__Impl rule__TMTCIFExportSettingAIFromConst__Group__12 ;
     public final void rule__TMTCIFExportSettingAIFromConst__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5838:1: ( rule__TMTCIFExportSettingAIFromConst__Group__11__Impl )
-            // InternalEXPORT.g:5839:2: rule__TMTCIFExportSettingAIFromConst__Group__11__Impl
+            // InternalEXPORT.g:5838:1: ( rule__TMTCIFExportSettingAIFromConst__Group__11__Impl rule__TMTCIFExportSettingAIFromConst__Group__12 )
+            // InternalEXPORT.g:5839:2: rule__TMTCIFExportSettingAIFromConst__Group__11__Impl rule__TMTCIFExportSettingAIFromConst__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_2);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__TMTCIFExportSettingAIFromConst__Group__11__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__TMTCIFExportSettingAIFromConst__Group__12();
 
             state._fsp--;
             if (state.failed) return ;
@@ -18205,24 +18210,24 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__11__Impl"
-    // InternalEXPORT.g:5845:1: rule__TMTCIFExportSettingAIFromConst__Group__11__Impl : ( ';' ) ;
+    // InternalEXPORT.g:5846:1: rule__TMTCIFExportSettingAIFromConst__Group__11__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportSettingAIFromConst__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5849:1: ( ( ';' ) )
-            // InternalEXPORT.g:5850:1: ( ';' )
+            // InternalEXPORT.g:5850:1: ( ( ':=' ) )
+            // InternalEXPORT.g:5851:1: ( ':=' )
             {
-            // InternalEXPORT.g:5850:1: ( ';' )
-            // InternalEXPORT.g:5851:2: ';'
+            // InternalEXPORT.g:5851:1: ( ':=' )
+            // InternalEXPORT.g:5852:2: ':='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_11()); 
+               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getColonEqualsSignKeyword_11()); 
             }
-            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_11()); 
+               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getColonEqualsSignKeyword_11()); 
             }
 
             }
@@ -18245,15 +18250,336 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__11__Impl"
 
 
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__12"
+    // InternalEXPORT.g:5861:1: rule__TMTCIFExportSettingAIFromConst__Group__12 : rule__TMTCIFExportSettingAIFromConst__Group__12__Impl rule__TMTCIFExportSettingAIFromConst__Group__13 ;
+    public final void rule__TMTCIFExportSettingAIFromConst__Group__12() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:5865:1: ( rule__TMTCIFExportSettingAIFromConst__Group__12__Impl rule__TMTCIFExportSettingAIFromConst__Group__13 )
+            // InternalEXPORT.g:5866:2: rule__TMTCIFExportSettingAIFromConst__Group__12__Impl rule__TMTCIFExportSettingAIFromConst__Group__13
+            {
+            pushFollow(FollowSets000.FOLLOW_7);
+            rule__TMTCIFExportSettingAIFromConst__Group__12__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__TMTCIFExportSettingAIFromConst__Group__13();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__12"
+
+
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__12__Impl"
+    // InternalEXPORT.g:5873:1: rule__TMTCIFExportSettingAIFromConst__Group__12__Impl : ( ( rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12 ) ) ;
+    public final void rule__TMTCIFExportSettingAIFromConst__Group__12__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:5877:1: ( ( ( rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12 ) ) )
+            // InternalEXPORT.g:5878:1: ( ( rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12 ) )
+            {
+            // InternalEXPORT.g:5878:1: ( ( rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12 ) )
+            // InternalEXPORT.g:5879:2: ( rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexAssignment_12()); 
+            }
+            // InternalEXPORT.g:5880:2: ( rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12 )
+            // InternalEXPORT.g:5880:3: rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexAssignment_12()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__12__Impl"
+
+
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__13"
+    // InternalEXPORT.g:5888:1: rule__TMTCIFExportSettingAIFromConst__Group__13 : rule__TMTCIFExportSettingAIFromConst__Group__13__Impl rule__TMTCIFExportSettingAIFromConst__Group__14 ;
+    public final void rule__TMTCIFExportSettingAIFromConst__Group__13() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:5892:1: ( rule__TMTCIFExportSettingAIFromConst__Group__13__Impl rule__TMTCIFExportSettingAIFromConst__Group__14 )
+            // InternalEXPORT.g:5893:2: rule__TMTCIFExportSettingAIFromConst__Group__13__Impl rule__TMTCIFExportSettingAIFromConst__Group__14
+            {
+            pushFollow(FollowSets000.FOLLOW_19);
+            rule__TMTCIFExportSettingAIFromConst__Group__13__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__TMTCIFExportSettingAIFromConst__Group__14();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__13"
+
+
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__13__Impl"
+    // InternalEXPORT.g:5900:1: rule__TMTCIFExportSettingAIFromConst__Group__13__Impl : ( ';' ) ;
+    public final void rule__TMTCIFExportSettingAIFromConst__Group__13__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:5904:1: ( ( ';' ) )
+            // InternalEXPORT.g:5905:1: ( ';' )
+            {
+            // InternalEXPORT.g:5905:1: ( ';' )
+            // InternalEXPORT.g:5906:2: ';'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_13()); 
+            }
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_13()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__13__Impl"
+
+
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__14"
+    // InternalEXPORT.g:5915:1: rule__TMTCIFExportSettingAIFromConst__Group__14 : rule__TMTCIFExportSettingAIFromConst__Group__14__Impl rule__TMTCIFExportSettingAIFromConst__Group__15 ;
+    public final void rule__TMTCIFExportSettingAIFromConst__Group__14() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:5919:1: ( rule__TMTCIFExportSettingAIFromConst__Group__14__Impl rule__TMTCIFExportSettingAIFromConst__Group__15 )
+            // InternalEXPORT.g:5920:2: rule__TMTCIFExportSettingAIFromConst__Group__14__Impl rule__TMTCIFExportSettingAIFromConst__Group__15
+            {
+            pushFollow(FollowSets000.FOLLOW_7);
+            rule__TMTCIFExportSettingAIFromConst__Group__14__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__TMTCIFExportSettingAIFromConst__Group__15();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__14"
+
+
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__14__Impl"
+    // InternalEXPORT.g:5927:1: rule__TMTCIFExportSettingAIFromConst__Group__14__Impl : ( '}' ) ;
+    public final void rule__TMTCIFExportSettingAIFromConst__Group__14__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:5931:1: ( ( '}' ) )
+            // InternalEXPORT.g:5932:1: ( '}' )
+            {
+            // InternalEXPORT.g:5932:1: ( '}' )
+            // InternalEXPORT.g:5933:2: '}'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getRightCurlyBracketKeyword_14()); 
+            }
+            match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getRightCurlyBracketKeyword_14()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__14__Impl"
+
+
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__15"
+    // InternalEXPORT.g:5942:1: rule__TMTCIFExportSettingAIFromConst__Group__15 : rule__TMTCIFExportSettingAIFromConst__Group__15__Impl ;
+    public final void rule__TMTCIFExportSettingAIFromConst__Group__15() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:5946:1: ( rule__TMTCIFExportSettingAIFromConst__Group__15__Impl )
+            // InternalEXPORT.g:5947:2: rule__TMTCIFExportSettingAIFromConst__Group__15__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__TMTCIFExportSettingAIFromConst__Group__15__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__15"
+
+
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__Group__15__Impl"
+    // InternalEXPORT.g:5953:1: rule__TMTCIFExportSettingAIFromConst__Group__15__Impl : ( ';' ) ;
+    public final void rule__TMTCIFExportSettingAIFromConst__Group__15__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:5957:1: ( ( ';' ) )
+            // InternalEXPORT.g:5958:1: ( ';' )
+            {
+            // InternalEXPORT.g:5958:1: ( ';' )
+            // InternalEXPORT.g:5959:2: ';'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_15()); 
+            }
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getSemicolonKeyword_15()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__Group__15__Impl"
+
+
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__0"
-    // InternalEXPORT.g:5861:1: rule__TMTCIFExportSettingAIFromFile__Group__0 : rule__TMTCIFExportSettingAIFromFile__Group__0__Impl rule__TMTCIFExportSettingAIFromFile__Group__1 ;
+    // InternalEXPORT.g:5969:1: rule__TMTCIFExportSettingAIFromFile__Group__0 : rule__TMTCIFExportSettingAIFromFile__Group__0__Impl rule__TMTCIFExportSettingAIFromFile__Group__1 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5865:1: ( rule__TMTCIFExportSettingAIFromFile__Group__0__Impl rule__TMTCIFExportSettingAIFromFile__Group__1 )
-            // InternalEXPORT.g:5866:2: rule__TMTCIFExportSettingAIFromFile__Group__0__Impl rule__TMTCIFExportSettingAIFromFile__Group__1
+            // InternalEXPORT.g:5973:1: ( rule__TMTCIFExportSettingAIFromFile__Group__0__Impl rule__TMTCIFExportSettingAIFromFile__Group__1 )
+            // InternalEXPORT.g:5974:2: rule__TMTCIFExportSettingAIFromFile__Group__0__Impl rule__TMTCIFExportSettingAIFromFile__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__TMTCIFExportSettingAIFromFile__Group__0__Impl();
@@ -18284,22 +18610,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__0__Impl"
-    // InternalEXPORT.g:5873:1: rule__TMTCIFExportSettingAIFromFile__Group__0__Impl : ( 'TMTCIFExportSettingAIFromFile' ) ;
+    // InternalEXPORT.g:5981:1: rule__TMTCIFExportSettingAIFromFile__Group__0__Impl : ( 'TMTCIFExportSettingAIFromFile' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5877:1: ( ( 'TMTCIFExportSettingAIFromFile' ) )
-            // InternalEXPORT.g:5878:1: ( 'TMTCIFExportSettingAIFromFile' )
+            // InternalEXPORT.g:5985:1: ( ( 'TMTCIFExportSettingAIFromFile' ) )
+            // InternalEXPORT.g:5986:1: ( 'TMTCIFExportSettingAIFromFile' )
             {
-            // InternalEXPORT.g:5878:1: ( 'TMTCIFExportSettingAIFromFile' )
-            // InternalEXPORT.g:5879:2: 'TMTCIFExportSettingAIFromFile'
+            // InternalEXPORT.g:5986:1: ( 'TMTCIFExportSettingAIFromFile' )
+            // InternalEXPORT.g:5987:2: 'TMTCIFExportSettingAIFromFile'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getTMTCIFExportSettingAIFromFileKeyword_0()); 
             }
-            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getTMTCIFExportSettingAIFromFileKeyword_0()); 
             }
@@ -18325,14 +18651,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__1"
-    // InternalEXPORT.g:5888:1: rule__TMTCIFExportSettingAIFromFile__Group__1 : rule__TMTCIFExportSettingAIFromFile__Group__1__Impl rule__TMTCIFExportSettingAIFromFile__Group__2 ;
+    // InternalEXPORT.g:5996:1: rule__TMTCIFExportSettingAIFromFile__Group__1 : rule__TMTCIFExportSettingAIFromFile__Group__1__Impl rule__TMTCIFExportSettingAIFromFile__Group__2 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5892:1: ( rule__TMTCIFExportSettingAIFromFile__Group__1__Impl rule__TMTCIFExportSettingAIFromFile__Group__2 )
-            // InternalEXPORT.g:5893:2: rule__TMTCIFExportSettingAIFromFile__Group__1__Impl rule__TMTCIFExportSettingAIFromFile__Group__2
+            // InternalEXPORT.g:6000:1: ( rule__TMTCIFExportSettingAIFromFile__Group__1__Impl rule__TMTCIFExportSettingAIFromFile__Group__2 )
+            // InternalEXPORT.g:6001:2: rule__TMTCIFExportSettingAIFromFile__Group__1__Impl rule__TMTCIFExportSettingAIFromFile__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_32);
             rule__TMTCIFExportSettingAIFromFile__Group__1__Impl();
@@ -18363,17 +18689,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__1__Impl"
-    // InternalEXPORT.g:5900:1: rule__TMTCIFExportSettingAIFromFile__Group__1__Impl : ( '{' ) ;
+    // InternalEXPORT.g:6008:1: rule__TMTCIFExportSettingAIFromFile__Group__1__Impl : ( '{' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5904:1: ( ( '{' ) )
-            // InternalEXPORT.g:5905:1: ( '{' )
+            // InternalEXPORT.g:6012:1: ( ( '{' ) )
+            // InternalEXPORT.g:6013:1: ( '{' )
             {
-            // InternalEXPORT.g:5905:1: ( '{' )
-            // InternalEXPORT.g:5906:2: '{'
+            // InternalEXPORT.g:6013:1: ( '{' )
+            // InternalEXPORT.g:6014:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getLeftCurlyBracketKeyword_1()); 
@@ -18404,14 +18730,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__2"
-    // InternalEXPORT.g:5915:1: rule__TMTCIFExportSettingAIFromFile__Group__2 : rule__TMTCIFExportSettingAIFromFile__Group__2__Impl rule__TMTCIFExportSettingAIFromFile__Group__3 ;
+    // InternalEXPORT.g:6023:1: rule__TMTCIFExportSettingAIFromFile__Group__2 : rule__TMTCIFExportSettingAIFromFile__Group__2__Impl rule__TMTCIFExportSettingAIFromFile__Group__3 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5919:1: ( rule__TMTCIFExportSettingAIFromFile__Group__2__Impl rule__TMTCIFExportSettingAIFromFile__Group__3 )
-            // InternalEXPORT.g:5920:2: rule__TMTCIFExportSettingAIFromFile__Group__2__Impl rule__TMTCIFExportSettingAIFromFile__Group__3
+            // InternalEXPORT.g:6027:1: ( rule__TMTCIFExportSettingAIFromFile__Group__2__Impl rule__TMTCIFExportSettingAIFromFile__Group__3 )
+            // InternalEXPORT.g:6028:2: rule__TMTCIFExportSettingAIFromFile__Group__2__Impl rule__TMTCIFExportSettingAIFromFile__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportSettingAIFromFile__Group__2__Impl();
@@ -18442,17 +18768,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__2__Impl"
-    // InternalEXPORT.g:5927:1: rule__TMTCIFExportSettingAIFromFile__Group__2__Impl : ( 'file' ) ;
+    // InternalEXPORT.g:6035:1: rule__TMTCIFExportSettingAIFromFile__Group__2__Impl : ( 'file' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5931:1: ( ( 'file' ) )
-            // InternalEXPORT.g:5932:1: ( 'file' )
+            // InternalEXPORT.g:6039:1: ( ( 'file' ) )
+            // InternalEXPORT.g:6040:1: ( 'file' )
             {
-            // InternalEXPORT.g:5932:1: ( 'file' )
-            // InternalEXPORT.g:5933:2: 'file'
+            // InternalEXPORT.g:6040:1: ( 'file' )
+            // InternalEXPORT.g:6041:2: 'file'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getFileKeyword_2()); 
@@ -18483,14 +18809,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__3"
-    // InternalEXPORT.g:5942:1: rule__TMTCIFExportSettingAIFromFile__Group__3 : rule__TMTCIFExportSettingAIFromFile__Group__3__Impl rule__TMTCIFExportSettingAIFromFile__Group__4 ;
+    // InternalEXPORT.g:6050:1: rule__TMTCIFExportSettingAIFromFile__Group__3 : rule__TMTCIFExportSettingAIFromFile__Group__3__Impl rule__TMTCIFExportSettingAIFromFile__Group__4 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5946:1: ( rule__TMTCIFExportSettingAIFromFile__Group__3__Impl rule__TMTCIFExportSettingAIFromFile__Group__4 )
-            // InternalEXPORT.g:5947:2: rule__TMTCIFExportSettingAIFromFile__Group__3__Impl rule__TMTCIFExportSettingAIFromFile__Group__4
+            // InternalEXPORT.g:6054:1: ( rule__TMTCIFExportSettingAIFromFile__Group__3__Impl rule__TMTCIFExportSettingAIFromFile__Group__4 )
+            // InternalEXPORT.g:6055:2: rule__TMTCIFExportSettingAIFromFile__Group__3__Impl rule__TMTCIFExportSettingAIFromFile__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__TMTCIFExportSettingAIFromFile__Group__3__Impl();
@@ -18521,17 +18847,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__3__Impl"
-    // InternalEXPORT.g:5954:1: rule__TMTCIFExportSettingAIFromFile__Group__3__Impl : ( ':=' ) ;
+    // InternalEXPORT.g:6062:1: rule__TMTCIFExportSettingAIFromFile__Group__3__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5958:1: ( ( ':=' ) )
-            // InternalEXPORT.g:5959:1: ( ':=' )
+            // InternalEXPORT.g:6066:1: ( ( ':=' ) )
+            // InternalEXPORT.g:6067:1: ( ':=' )
             {
-            // InternalEXPORT.g:5959:1: ( ':=' )
-            // InternalEXPORT.g:5960:2: ':='
+            // InternalEXPORT.g:6067:1: ( ':=' )
+            // InternalEXPORT.g:6068:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_3()); 
@@ -18562,14 +18888,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__4"
-    // InternalEXPORT.g:5969:1: rule__TMTCIFExportSettingAIFromFile__Group__4 : rule__TMTCIFExportSettingAIFromFile__Group__4__Impl rule__TMTCIFExportSettingAIFromFile__Group__5 ;
+    // InternalEXPORT.g:6077:1: rule__TMTCIFExportSettingAIFromFile__Group__4 : rule__TMTCIFExportSettingAIFromFile__Group__4__Impl rule__TMTCIFExportSettingAIFromFile__Group__5 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5973:1: ( rule__TMTCIFExportSettingAIFromFile__Group__4__Impl rule__TMTCIFExportSettingAIFromFile__Group__5 )
-            // InternalEXPORT.g:5974:2: rule__TMTCIFExportSettingAIFromFile__Group__4__Impl rule__TMTCIFExportSettingAIFromFile__Group__5
+            // InternalEXPORT.g:6081:1: ( rule__TMTCIFExportSettingAIFromFile__Group__4__Impl rule__TMTCIFExportSettingAIFromFile__Group__5 )
+            // InternalEXPORT.g:6082:2: rule__TMTCIFExportSettingAIFromFile__Group__4__Impl rule__TMTCIFExportSettingAIFromFile__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportSettingAIFromFile__Group__4__Impl();
@@ -18600,23 +18926,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__4__Impl"
-    // InternalEXPORT.g:5981:1: rule__TMTCIFExportSettingAIFromFile__Group__4__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 ) ) ;
+    // InternalEXPORT.g:6089:1: rule__TMTCIFExportSettingAIFromFile__Group__4__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 ) ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:5985:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 ) ) )
-            // InternalEXPORT.g:5986:1: ( ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 ) )
+            // InternalEXPORT.g:6093:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 ) ) )
+            // InternalEXPORT.g:6094:1: ( ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 ) )
             {
-            // InternalEXPORT.g:5986:1: ( ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 ) )
-            // InternalEXPORT.g:5987:2: ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 )
+            // InternalEXPORT.g:6094:1: ( ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 ) )
+            // InternalEXPORT.g:6095:2: ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getFileAssignment_4()); 
             }
-            // InternalEXPORT.g:5988:2: ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 )
-            // InternalEXPORT.g:5988:3: rule__TMTCIFExportSettingAIFromFile__FileAssignment_4
+            // InternalEXPORT.g:6096:2: ( rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 )
+            // InternalEXPORT.g:6096:3: rule__TMTCIFExportSettingAIFromFile__FileAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__FileAssignment_4();
@@ -18651,14 +18977,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__5"
-    // InternalEXPORT.g:5996:1: rule__TMTCIFExportSettingAIFromFile__Group__5 : rule__TMTCIFExportSettingAIFromFile__Group__5__Impl rule__TMTCIFExportSettingAIFromFile__Group__6 ;
+    // InternalEXPORT.g:6104:1: rule__TMTCIFExportSettingAIFromFile__Group__5 : rule__TMTCIFExportSettingAIFromFile__Group__5__Impl rule__TMTCIFExportSettingAIFromFile__Group__6 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6000:1: ( rule__TMTCIFExportSettingAIFromFile__Group__5__Impl rule__TMTCIFExportSettingAIFromFile__Group__6 )
-            // InternalEXPORT.g:6001:2: rule__TMTCIFExportSettingAIFromFile__Group__5__Impl rule__TMTCIFExportSettingAIFromFile__Group__6
+            // InternalEXPORT.g:6108:1: ( rule__TMTCIFExportSettingAIFromFile__Group__5__Impl rule__TMTCIFExportSettingAIFromFile__Group__6 )
+            // InternalEXPORT.g:6109:2: rule__TMTCIFExportSettingAIFromFile__Group__5__Impl rule__TMTCIFExportSettingAIFromFile__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_30);
             rule__TMTCIFExportSettingAIFromFile__Group__5__Impl();
@@ -18689,17 +19015,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__5__Impl"
-    // InternalEXPORT.g:6008:1: rule__TMTCIFExportSettingAIFromFile__Group__5__Impl : ( ';' ) ;
+    // InternalEXPORT.g:6116:1: rule__TMTCIFExportSettingAIFromFile__Group__5__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6012:1: ( ( ';' ) )
-            // InternalEXPORT.g:6013:1: ( ';' )
+            // InternalEXPORT.g:6120:1: ( ( ';' ) )
+            // InternalEXPORT.g:6121:1: ( ';' )
             {
-            // InternalEXPORT.g:6013:1: ( ';' )
-            // InternalEXPORT.g:6014:2: ';'
+            // InternalEXPORT.g:6121:1: ( ';' )
+            // InternalEXPORT.g:6122:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_5()); 
@@ -18730,14 +19056,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__6"
-    // InternalEXPORT.g:6023:1: rule__TMTCIFExportSettingAIFromFile__Group__6 : rule__TMTCIFExportSettingAIFromFile__Group__6__Impl rule__TMTCIFExportSettingAIFromFile__Group__7 ;
+    // InternalEXPORT.g:6131:1: rule__TMTCIFExportSettingAIFromFile__Group__6 : rule__TMTCIFExportSettingAIFromFile__Group__6__Impl rule__TMTCIFExportSettingAIFromFile__Group__7 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6027:1: ( rule__TMTCIFExportSettingAIFromFile__Group__6__Impl rule__TMTCIFExportSettingAIFromFile__Group__7 )
-            // InternalEXPORT.g:6028:2: rule__TMTCIFExportSettingAIFromFile__Group__6__Impl rule__TMTCIFExportSettingAIFromFile__Group__7
+            // InternalEXPORT.g:6135:1: ( rule__TMTCIFExportSettingAIFromFile__Group__6__Impl rule__TMTCIFExportSettingAIFromFile__Group__7 )
+            // InternalEXPORT.g:6136:2: rule__TMTCIFExportSettingAIFromFile__Group__6__Impl rule__TMTCIFExportSettingAIFromFile__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportSettingAIFromFile__Group__6__Impl();
@@ -18768,17 +19094,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__6__Impl"
-    // InternalEXPORT.g:6035:1: rule__TMTCIFExportSettingAIFromFile__Group__6__Impl : ( 'toFieldRef' ) ;
+    // InternalEXPORT.g:6143:1: rule__TMTCIFExportSettingAIFromFile__Group__6__Impl : ( 'toFieldRef' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6039:1: ( ( 'toFieldRef' ) )
-            // InternalEXPORT.g:6040:1: ( 'toFieldRef' )
+            // InternalEXPORT.g:6147:1: ( ( 'toFieldRef' ) )
+            // InternalEXPORT.g:6148:1: ( 'toFieldRef' )
             {
-            // InternalEXPORT.g:6040:1: ( 'toFieldRef' )
-            // InternalEXPORT.g:6041:2: 'toFieldRef'
+            // InternalEXPORT.g:6148:1: ( 'toFieldRef' )
+            // InternalEXPORT.g:6149:2: 'toFieldRef'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToFieldRefKeyword_6()); 
@@ -18809,14 +19135,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__7"
-    // InternalEXPORT.g:6050:1: rule__TMTCIFExportSettingAIFromFile__Group__7 : rule__TMTCIFExportSettingAIFromFile__Group__7__Impl rule__TMTCIFExportSettingAIFromFile__Group__8 ;
+    // InternalEXPORT.g:6158:1: rule__TMTCIFExportSettingAIFromFile__Group__7 : rule__TMTCIFExportSettingAIFromFile__Group__7__Impl rule__TMTCIFExportSettingAIFromFile__Group__8 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6054:1: ( rule__TMTCIFExportSettingAIFromFile__Group__7__Impl rule__TMTCIFExportSettingAIFromFile__Group__8 )
-            // InternalEXPORT.g:6055:2: rule__TMTCIFExportSettingAIFromFile__Group__7__Impl rule__TMTCIFExportSettingAIFromFile__Group__8
+            // InternalEXPORT.g:6162:1: ( rule__TMTCIFExportSettingAIFromFile__Group__7__Impl rule__TMTCIFExportSettingAIFromFile__Group__8 )
+            // InternalEXPORT.g:6163:2: rule__TMTCIFExportSettingAIFromFile__Group__7__Impl rule__TMTCIFExportSettingAIFromFile__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__TMTCIFExportSettingAIFromFile__Group__7__Impl();
@@ -18847,17 +19173,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__7__Impl"
-    // InternalEXPORT.g:6062:1: rule__TMTCIFExportSettingAIFromFile__Group__7__Impl : ( ':=' ) ;
+    // InternalEXPORT.g:6170:1: rule__TMTCIFExportSettingAIFromFile__Group__7__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6066:1: ( ( ':=' ) )
-            // InternalEXPORT.g:6067:1: ( ':=' )
+            // InternalEXPORT.g:6174:1: ( ( ':=' ) )
+            // InternalEXPORT.g:6175:1: ( ':=' )
             {
-            // InternalEXPORT.g:6067:1: ( ':=' )
-            // InternalEXPORT.g:6068:2: ':='
+            // InternalEXPORT.g:6175:1: ( ':=' )
+            // InternalEXPORT.g:6176:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_7()); 
@@ -18888,14 +19214,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__8"
-    // InternalEXPORT.g:6077:1: rule__TMTCIFExportSettingAIFromFile__Group__8 : rule__TMTCIFExportSettingAIFromFile__Group__8__Impl rule__TMTCIFExportSettingAIFromFile__Group__9 ;
+    // InternalEXPORT.g:6185:1: rule__TMTCIFExportSettingAIFromFile__Group__8 : rule__TMTCIFExportSettingAIFromFile__Group__8__Impl rule__TMTCIFExportSettingAIFromFile__Group__9 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6081:1: ( rule__TMTCIFExportSettingAIFromFile__Group__8__Impl rule__TMTCIFExportSettingAIFromFile__Group__9 )
-            // InternalEXPORT.g:6082:2: rule__TMTCIFExportSettingAIFromFile__Group__8__Impl rule__TMTCIFExportSettingAIFromFile__Group__9
+            // InternalEXPORT.g:6189:1: ( rule__TMTCIFExportSettingAIFromFile__Group__8__Impl rule__TMTCIFExportSettingAIFromFile__Group__9 )
+            // InternalEXPORT.g:6190:2: rule__TMTCIFExportSettingAIFromFile__Group__8__Impl rule__TMTCIFExportSettingAIFromFile__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportSettingAIFromFile__Group__8__Impl();
@@ -18926,23 +19252,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__8__Impl"
-    // InternalEXPORT.g:6089:1: rule__TMTCIFExportSettingAIFromFile__Group__8__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 ) ) ;
+    // InternalEXPORT.g:6197:1: rule__TMTCIFExportSettingAIFromFile__Group__8__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 ) ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6093:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 ) ) )
-            // InternalEXPORT.g:6094:1: ( ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 ) )
+            // InternalEXPORT.g:6201:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 ) ) )
+            // InternalEXPORT.g:6202:1: ( ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 ) )
             {
-            // InternalEXPORT.g:6094:1: ( ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 ) )
-            // InternalEXPORT.g:6095:2: ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 )
+            // InternalEXPORT.g:6202:1: ( ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 ) )
+            // InternalEXPORT.g:6203:2: ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToFieldRefAssignment_8()); 
             }
-            // InternalEXPORT.g:6096:2: ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 )
-            // InternalEXPORT.g:6096:3: rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8
+            // InternalEXPORT.g:6204:2: ( rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 )
+            // InternalEXPORT.g:6204:3: rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8();
@@ -18977,14 +19303,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__9"
-    // InternalEXPORT.g:6104:1: rule__TMTCIFExportSettingAIFromFile__Group__9 : rule__TMTCIFExportSettingAIFromFile__Group__9__Impl rule__TMTCIFExportSettingAIFromFile__Group__10 ;
+    // InternalEXPORT.g:6212:1: rule__TMTCIFExportSettingAIFromFile__Group__9 : rule__TMTCIFExportSettingAIFromFile__Group__9__Impl rule__TMTCIFExportSettingAIFromFile__Group__10 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6108:1: ( rule__TMTCIFExportSettingAIFromFile__Group__9__Impl rule__TMTCIFExportSettingAIFromFile__Group__10 )
-            // InternalEXPORT.g:6109:2: rule__TMTCIFExportSettingAIFromFile__Group__9__Impl rule__TMTCIFExportSettingAIFromFile__Group__10
+            // InternalEXPORT.g:6216:1: ( rule__TMTCIFExportSettingAIFromFile__Group__9__Impl rule__TMTCIFExportSettingAIFromFile__Group__10 )
+            // InternalEXPORT.g:6217:2: rule__TMTCIFExportSettingAIFromFile__Group__9__Impl rule__TMTCIFExportSettingAIFromFile__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_35);
             rule__TMTCIFExportSettingAIFromFile__Group__9__Impl();
@@ -19015,17 +19341,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__9__Impl"
-    // InternalEXPORT.g:6116:1: rule__TMTCIFExportSettingAIFromFile__Group__9__Impl : ( ';' ) ;
+    // InternalEXPORT.g:6224:1: rule__TMTCIFExportSettingAIFromFile__Group__9__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6120:1: ( ( ';' ) )
-            // InternalEXPORT.g:6121:1: ( ';' )
+            // InternalEXPORT.g:6228:1: ( ( ';' ) )
+            // InternalEXPORT.g:6229:1: ( ';' )
             {
-            // InternalEXPORT.g:6121:1: ( ';' )
-            // InternalEXPORT.g:6122:2: ';'
+            // InternalEXPORT.g:6229:1: ( ';' )
+            // InternalEXPORT.g:6230:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_9()); 
@@ -19056,14 +19382,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__10"
-    // InternalEXPORT.g:6131:1: rule__TMTCIFExportSettingAIFromFile__Group__10 : rule__TMTCIFExportSettingAIFromFile__Group__10__Impl rule__TMTCIFExportSettingAIFromFile__Group__11 ;
+    // InternalEXPORT.g:6239:1: rule__TMTCIFExportSettingAIFromFile__Group__10 : rule__TMTCIFExportSettingAIFromFile__Group__10__Impl rule__TMTCIFExportSettingAIFromFile__Group__11 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6135:1: ( rule__TMTCIFExportSettingAIFromFile__Group__10__Impl rule__TMTCIFExportSettingAIFromFile__Group__11 )
-            // InternalEXPORT.g:6136:2: rule__TMTCIFExportSettingAIFromFile__Group__10__Impl rule__TMTCIFExportSettingAIFromFile__Group__11
+            // InternalEXPORT.g:6243:1: ( rule__TMTCIFExportSettingAIFromFile__Group__10__Impl rule__TMTCIFExportSettingAIFromFile__Group__11 )
+            // InternalEXPORT.g:6244:2: rule__TMTCIFExportSettingAIFromFile__Group__10__Impl rule__TMTCIFExportSettingAIFromFile__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportSettingAIFromFile__Group__10__Impl();
@@ -19094,22 +19420,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__10__Impl"
-    // InternalEXPORT.g:6143:1: rule__TMTCIFExportSettingAIFromFile__Group__10__Impl : ( 'toArrayIndex' ) ;
+    // InternalEXPORT.g:6251:1: rule__TMTCIFExportSettingAIFromFile__Group__10__Impl : ( 'toArrayIndex' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6147:1: ( ( 'toArrayIndex' ) )
-            // InternalEXPORT.g:6148:1: ( 'toArrayIndex' )
+            // InternalEXPORT.g:6255:1: ( ( 'toArrayIndex' ) )
+            // InternalEXPORT.g:6256:1: ( 'toArrayIndex' )
             {
-            // InternalEXPORT.g:6148:1: ( 'toArrayIndex' )
-            // InternalEXPORT.g:6149:2: 'toArrayIndex'
+            // InternalEXPORT.g:6256:1: ( 'toArrayIndex' )
+            // InternalEXPORT.g:6257:2: 'toArrayIndex'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToArrayIndexKeyword_10()); 
             }
-            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToArrayIndexKeyword_10()); 
             }
@@ -19135,14 +19461,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__11"
-    // InternalEXPORT.g:6158:1: rule__TMTCIFExportSettingAIFromFile__Group__11 : rule__TMTCIFExportSettingAIFromFile__Group__11__Impl rule__TMTCIFExportSettingAIFromFile__Group__12 ;
+    // InternalEXPORT.g:6266:1: rule__TMTCIFExportSettingAIFromFile__Group__11 : rule__TMTCIFExportSettingAIFromFile__Group__11__Impl rule__TMTCIFExportSettingAIFromFile__Group__12 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6162:1: ( rule__TMTCIFExportSettingAIFromFile__Group__11__Impl rule__TMTCIFExportSettingAIFromFile__Group__12 )
-            // InternalEXPORT.g:6163:2: rule__TMTCIFExportSettingAIFromFile__Group__11__Impl rule__TMTCIFExportSettingAIFromFile__Group__12
+            // InternalEXPORT.g:6270:1: ( rule__TMTCIFExportSettingAIFromFile__Group__11__Impl rule__TMTCIFExportSettingAIFromFile__Group__12 )
+            // InternalEXPORT.g:6271:2: rule__TMTCIFExportSettingAIFromFile__Group__11__Impl rule__TMTCIFExportSettingAIFromFile__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_22);
             rule__TMTCIFExportSettingAIFromFile__Group__11__Impl();
@@ -19173,17 +19499,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__11__Impl"
-    // InternalEXPORT.g:6170:1: rule__TMTCIFExportSettingAIFromFile__Group__11__Impl : ( ':=' ) ;
+    // InternalEXPORT.g:6278:1: rule__TMTCIFExportSettingAIFromFile__Group__11__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6174:1: ( ( ':=' ) )
-            // InternalEXPORT.g:6175:1: ( ':=' )
+            // InternalEXPORT.g:6282:1: ( ( ':=' ) )
+            // InternalEXPORT.g:6283:1: ( ':=' )
             {
-            // InternalEXPORT.g:6175:1: ( ':=' )
-            // InternalEXPORT.g:6176:2: ':='
+            // InternalEXPORT.g:6283:1: ( ':=' )
+            // InternalEXPORT.g:6284:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_11()); 
@@ -19214,14 +19540,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__12"
-    // InternalEXPORT.g:6185:1: rule__TMTCIFExportSettingAIFromFile__Group__12 : rule__TMTCIFExportSettingAIFromFile__Group__12__Impl rule__TMTCIFExportSettingAIFromFile__Group__13 ;
+    // InternalEXPORT.g:6293:1: rule__TMTCIFExportSettingAIFromFile__Group__12 : rule__TMTCIFExportSettingAIFromFile__Group__12__Impl rule__TMTCIFExportSettingAIFromFile__Group__13 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6189:1: ( rule__TMTCIFExportSettingAIFromFile__Group__12__Impl rule__TMTCIFExportSettingAIFromFile__Group__13 )
-            // InternalEXPORT.g:6190:2: rule__TMTCIFExportSettingAIFromFile__Group__12__Impl rule__TMTCIFExportSettingAIFromFile__Group__13
+            // InternalEXPORT.g:6297:1: ( rule__TMTCIFExportSettingAIFromFile__Group__12__Impl rule__TMTCIFExportSettingAIFromFile__Group__13 )
+            // InternalEXPORT.g:6298:2: rule__TMTCIFExportSettingAIFromFile__Group__12__Impl rule__TMTCIFExportSettingAIFromFile__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportSettingAIFromFile__Group__12__Impl();
@@ -19252,23 +19578,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__12__Impl"
-    // InternalEXPORT.g:6197:1: rule__TMTCIFExportSettingAIFromFile__Group__12__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 ) ) ;
+    // InternalEXPORT.g:6305:1: rule__TMTCIFExportSettingAIFromFile__Group__12__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 ) ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6201:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 ) ) )
-            // InternalEXPORT.g:6202:1: ( ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 ) )
+            // InternalEXPORT.g:6309:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 ) ) )
+            // InternalEXPORT.g:6310:1: ( ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 ) )
             {
-            // InternalEXPORT.g:6202:1: ( ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 ) )
-            // InternalEXPORT.g:6203:2: ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 )
+            // InternalEXPORT.g:6310:1: ( ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 ) )
+            // InternalEXPORT.g:6311:2: ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToArrayIndexAssignment_12()); 
             }
-            // InternalEXPORT.g:6204:2: ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 )
-            // InternalEXPORT.g:6204:3: rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12
+            // InternalEXPORT.g:6312:2: ( rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 )
+            // InternalEXPORT.g:6312:3: rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12();
@@ -19303,14 +19629,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__13"
-    // InternalEXPORT.g:6212:1: rule__TMTCIFExportSettingAIFromFile__Group__13 : rule__TMTCIFExportSettingAIFromFile__Group__13__Impl rule__TMTCIFExportSettingAIFromFile__Group__14 ;
+    // InternalEXPORT.g:6320:1: rule__TMTCIFExportSettingAIFromFile__Group__13 : rule__TMTCIFExportSettingAIFromFile__Group__13__Impl rule__TMTCIFExportSettingAIFromFile__Group__14 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6216:1: ( rule__TMTCIFExportSettingAIFromFile__Group__13__Impl rule__TMTCIFExportSettingAIFromFile__Group__14 )
-            // InternalEXPORT.g:6217:2: rule__TMTCIFExportSettingAIFromFile__Group__13__Impl rule__TMTCIFExportSettingAIFromFile__Group__14
+            // InternalEXPORT.g:6324:1: ( rule__TMTCIFExportSettingAIFromFile__Group__13__Impl rule__TMTCIFExportSettingAIFromFile__Group__14 )
+            // InternalEXPORT.g:6325:2: rule__TMTCIFExportSettingAIFromFile__Group__13__Impl rule__TMTCIFExportSettingAIFromFile__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_33);
             rule__TMTCIFExportSettingAIFromFile__Group__13__Impl();
@@ -19341,17 +19667,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__13__Impl"
-    // InternalEXPORT.g:6224:1: rule__TMTCIFExportSettingAIFromFile__Group__13__Impl : ( ';' ) ;
+    // InternalEXPORT.g:6332:1: rule__TMTCIFExportSettingAIFromFile__Group__13__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6228:1: ( ( ';' ) )
-            // InternalEXPORT.g:6229:1: ( ';' )
+            // InternalEXPORT.g:6336:1: ( ( ';' ) )
+            // InternalEXPORT.g:6337:1: ( ';' )
             {
-            // InternalEXPORT.g:6229:1: ( ';' )
-            // InternalEXPORT.g:6230:2: ';'
+            // InternalEXPORT.g:6337:1: ( ';' )
+            // InternalEXPORT.g:6338:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_13()); 
@@ -19382,14 +19708,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__14"
-    // InternalEXPORT.g:6239:1: rule__TMTCIFExportSettingAIFromFile__Group__14 : rule__TMTCIFExportSettingAIFromFile__Group__14__Impl rule__TMTCIFExportSettingAIFromFile__Group__15 ;
+    // InternalEXPORT.g:6347:1: rule__TMTCIFExportSettingAIFromFile__Group__14 : rule__TMTCIFExportSettingAIFromFile__Group__14__Impl rule__TMTCIFExportSettingAIFromFile__Group__15 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6243:1: ( rule__TMTCIFExportSettingAIFromFile__Group__14__Impl rule__TMTCIFExportSettingAIFromFile__Group__15 )
-            // InternalEXPORT.g:6244:2: rule__TMTCIFExportSettingAIFromFile__Group__14__Impl rule__TMTCIFExportSettingAIFromFile__Group__15
+            // InternalEXPORT.g:6351:1: ( rule__TMTCIFExportSettingAIFromFile__Group__14__Impl rule__TMTCIFExportSettingAIFromFile__Group__15 )
+            // InternalEXPORT.g:6352:2: rule__TMTCIFExportSettingAIFromFile__Group__14__Impl rule__TMTCIFExportSettingAIFromFile__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_33);
             rule__TMTCIFExportSettingAIFromFile__Group__14__Impl();
@@ -19420,22 +19746,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__14__Impl"
-    // InternalEXPORT.g:6251:1: rule__TMTCIFExportSettingAIFromFile__Group__14__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )? ) ;
+    // InternalEXPORT.g:6359:1: rule__TMTCIFExportSettingAIFromFile__Group__14__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )? ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6255:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )? ) )
-            // InternalEXPORT.g:6256:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )? )
+            // InternalEXPORT.g:6363:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )? ) )
+            // InternalEXPORT.g:6364:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )? )
             {
-            // InternalEXPORT.g:6256:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )? )
-            // InternalEXPORT.g:6257:2: ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )?
+            // InternalEXPORT.g:6364:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )? )
+            // InternalEXPORT.g:6365:2: ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getGroup_14()); 
             }
-            // InternalEXPORT.g:6258:2: ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )?
+            // InternalEXPORT.g:6366:2: ( rule__TMTCIFExportSettingAIFromFile__Group_14__0 )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -19444,7 +19770,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             }
             switch (alt22) {
                 case 1 :
-                    // InternalEXPORT.g:6258:3: rule__TMTCIFExportSettingAIFromFile__Group_14__0
+                    // InternalEXPORT.g:6366:3: rule__TMTCIFExportSettingAIFromFile__Group_14__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__TMTCIFExportSettingAIFromFile__Group_14__0();
@@ -19482,14 +19808,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__15"
-    // InternalEXPORT.g:6266:1: rule__TMTCIFExportSettingAIFromFile__Group__15 : rule__TMTCIFExportSettingAIFromFile__Group__15__Impl rule__TMTCIFExportSettingAIFromFile__Group__16 ;
+    // InternalEXPORT.g:6374:1: rule__TMTCIFExportSettingAIFromFile__Group__15 : rule__TMTCIFExportSettingAIFromFile__Group__15__Impl rule__TMTCIFExportSettingAIFromFile__Group__16 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6270:1: ( rule__TMTCIFExportSettingAIFromFile__Group__15__Impl rule__TMTCIFExportSettingAIFromFile__Group__16 )
-            // InternalEXPORT.g:6271:2: rule__TMTCIFExportSettingAIFromFile__Group__15__Impl rule__TMTCIFExportSettingAIFromFile__Group__16
+            // InternalEXPORT.g:6378:1: ( rule__TMTCIFExportSettingAIFromFile__Group__15__Impl rule__TMTCIFExportSettingAIFromFile__Group__16 )
+            // InternalEXPORT.g:6379:2: rule__TMTCIFExportSettingAIFromFile__Group__15__Impl rule__TMTCIFExportSettingAIFromFile__Group__16
             {
             pushFollow(FollowSets000.FOLLOW_33);
             rule__TMTCIFExportSettingAIFromFile__Group__15__Impl();
@@ -19520,22 +19846,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__15__Impl"
-    // InternalEXPORT.g:6278:1: rule__TMTCIFExportSettingAIFromFile__Group__15__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )? ) ;
+    // InternalEXPORT.g:6386:1: rule__TMTCIFExportSettingAIFromFile__Group__15__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )? ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6282:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )? ) )
-            // InternalEXPORT.g:6283:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )? )
+            // InternalEXPORT.g:6390:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )? ) )
+            // InternalEXPORT.g:6391:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )? )
             {
-            // InternalEXPORT.g:6283:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )? )
-            // InternalEXPORT.g:6284:2: ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )?
+            // InternalEXPORT.g:6391:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )? )
+            // InternalEXPORT.g:6392:2: ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getGroup_15()); 
             }
-            // InternalEXPORT.g:6285:2: ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )?
+            // InternalEXPORT.g:6393:2: ( rule__TMTCIFExportSettingAIFromFile__Group_15__0 )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -19544,7 +19870,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalEXPORT.g:6285:3: rule__TMTCIFExportSettingAIFromFile__Group_15__0
+                    // InternalEXPORT.g:6393:3: rule__TMTCIFExportSettingAIFromFile__Group_15__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__TMTCIFExportSettingAIFromFile__Group_15__0();
@@ -19582,14 +19908,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__16"
-    // InternalEXPORT.g:6293:1: rule__TMTCIFExportSettingAIFromFile__Group__16 : rule__TMTCIFExportSettingAIFromFile__Group__16__Impl rule__TMTCIFExportSettingAIFromFile__Group__17 ;
+    // InternalEXPORT.g:6401:1: rule__TMTCIFExportSettingAIFromFile__Group__16 : rule__TMTCIFExportSettingAIFromFile__Group__16__Impl rule__TMTCIFExportSettingAIFromFile__Group__17 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6297:1: ( rule__TMTCIFExportSettingAIFromFile__Group__16__Impl rule__TMTCIFExportSettingAIFromFile__Group__17 )
-            // InternalEXPORT.g:6298:2: rule__TMTCIFExportSettingAIFromFile__Group__16__Impl rule__TMTCIFExportSettingAIFromFile__Group__17
+            // InternalEXPORT.g:6405:1: ( rule__TMTCIFExportSettingAIFromFile__Group__16__Impl rule__TMTCIFExportSettingAIFromFile__Group__17 )
+            // InternalEXPORT.g:6406:2: rule__TMTCIFExportSettingAIFromFile__Group__16__Impl rule__TMTCIFExportSettingAIFromFile__Group__17
             {
             pushFollow(FollowSets000.FOLLOW_33);
             rule__TMTCIFExportSettingAIFromFile__Group__16__Impl();
@@ -19620,22 +19946,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__16__Impl"
-    // InternalEXPORT.g:6305:1: rule__TMTCIFExportSettingAIFromFile__Group__16__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )? ) ;
+    // InternalEXPORT.g:6413:1: rule__TMTCIFExportSettingAIFromFile__Group__16__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )? ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6309:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )? ) )
-            // InternalEXPORT.g:6310:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )? )
+            // InternalEXPORT.g:6417:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )? ) )
+            // InternalEXPORT.g:6418:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )? )
             {
-            // InternalEXPORT.g:6310:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )? )
-            // InternalEXPORT.g:6311:2: ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )?
+            // InternalEXPORT.g:6418:1: ( ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )? )
+            // InternalEXPORT.g:6419:2: ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getGroup_16()); 
             }
-            // InternalEXPORT.g:6312:2: ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )?
+            // InternalEXPORT.g:6420:2: ( rule__TMTCIFExportSettingAIFromFile__Group_16__0 )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -19644,7 +19970,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             }
             switch (alt24) {
                 case 1 :
-                    // InternalEXPORT.g:6312:3: rule__TMTCIFExportSettingAIFromFile__Group_16__0
+                    // InternalEXPORT.g:6420:3: rule__TMTCIFExportSettingAIFromFile__Group_16__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__TMTCIFExportSettingAIFromFile__Group_16__0();
@@ -19682,14 +20008,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__17"
-    // InternalEXPORT.g:6320:1: rule__TMTCIFExportSettingAIFromFile__Group__17 : rule__TMTCIFExportSettingAIFromFile__Group__17__Impl rule__TMTCIFExportSettingAIFromFile__Group__18 ;
+    // InternalEXPORT.g:6428:1: rule__TMTCIFExportSettingAIFromFile__Group__17 : rule__TMTCIFExportSettingAIFromFile__Group__17__Impl rule__TMTCIFExportSettingAIFromFile__Group__18 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6324:1: ( rule__TMTCIFExportSettingAIFromFile__Group__17__Impl rule__TMTCIFExportSettingAIFromFile__Group__18 )
-            // InternalEXPORT.g:6325:2: rule__TMTCIFExportSettingAIFromFile__Group__17__Impl rule__TMTCIFExportSettingAIFromFile__Group__18
+            // InternalEXPORT.g:6432:1: ( rule__TMTCIFExportSettingAIFromFile__Group__17__Impl rule__TMTCIFExportSettingAIFromFile__Group__18 )
+            // InternalEXPORT.g:6433:2: rule__TMTCIFExportSettingAIFromFile__Group__17__Impl rule__TMTCIFExportSettingAIFromFile__Group__18
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportSettingAIFromFile__Group__17__Impl();
@@ -19720,17 +20046,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__17__Impl"
-    // InternalEXPORT.g:6332:1: rule__TMTCIFExportSettingAIFromFile__Group__17__Impl : ( '}' ) ;
+    // InternalEXPORT.g:6440:1: rule__TMTCIFExportSettingAIFromFile__Group__17__Impl : ( '}' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6336:1: ( ( '}' ) )
-            // InternalEXPORT.g:6337:1: ( '}' )
+            // InternalEXPORT.g:6444:1: ( ( '}' ) )
+            // InternalEXPORT.g:6445:1: ( '}' )
             {
-            // InternalEXPORT.g:6337:1: ( '}' )
-            // InternalEXPORT.g:6338:2: '}'
+            // InternalEXPORT.g:6445:1: ( '}' )
+            // InternalEXPORT.g:6446:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getRightCurlyBracketKeyword_17()); 
@@ -19761,14 +20087,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__18"
-    // InternalEXPORT.g:6347:1: rule__TMTCIFExportSettingAIFromFile__Group__18 : rule__TMTCIFExportSettingAIFromFile__Group__18__Impl ;
+    // InternalEXPORT.g:6455:1: rule__TMTCIFExportSettingAIFromFile__Group__18 : rule__TMTCIFExportSettingAIFromFile__Group__18__Impl ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6351:1: ( rule__TMTCIFExportSettingAIFromFile__Group__18__Impl )
-            // InternalEXPORT.g:6352:2: rule__TMTCIFExportSettingAIFromFile__Group__18__Impl
+            // InternalEXPORT.g:6459:1: ( rule__TMTCIFExportSettingAIFromFile__Group__18__Impl )
+            // InternalEXPORT.g:6460:2: rule__TMTCIFExportSettingAIFromFile__Group__18__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__Group__18__Impl();
@@ -19794,17 +20120,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group__18__Impl"
-    // InternalEXPORT.g:6358:1: rule__TMTCIFExportSettingAIFromFile__Group__18__Impl : ( ';' ) ;
+    // InternalEXPORT.g:6466:1: rule__TMTCIFExportSettingAIFromFile__Group__18__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6362:1: ( ( ';' ) )
-            // InternalEXPORT.g:6363:1: ( ';' )
+            // InternalEXPORT.g:6470:1: ( ( ';' ) )
+            // InternalEXPORT.g:6471:1: ( ';' )
             {
-            // InternalEXPORT.g:6363:1: ( ';' )
-            // InternalEXPORT.g:6364:2: ';'
+            // InternalEXPORT.g:6471:1: ( ';' )
+            // InternalEXPORT.g:6472:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_18()); 
@@ -19835,14 +20161,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_14__0"
-    // InternalEXPORT.g:6374:1: rule__TMTCIFExportSettingAIFromFile__Group_14__0 : rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__1 ;
+    // InternalEXPORT.g:6482:1: rule__TMTCIFExportSettingAIFromFile__Group_14__0 : rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__1 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_14__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6378:1: ( rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__1 )
-            // InternalEXPORT.g:6379:2: rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__1
+            // InternalEXPORT.g:6486:1: ( rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__1 )
+            // InternalEXPORT.g:6487:2: rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__1
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl();
@@ -19873,17 +20199,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl"
-    // InternalEXPORT.g:6386:1: rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl : ( 'offset' ) ;
+    // InternalEXPORT.g:6494:1: rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl : ( 'offset' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_14__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6390:1: ( ( 'offset' ) )
-            // InternalEXPORT.g:6391:1: ( 'offset' )
+            // InternalEXPORT.g:6498:1: ( ( 'offset' ) )
+            // InternalEXPORT.g:6499:1: ( 'offset' )
             {
-            // InternalEXPORT.g:6391:1: ( 'offset' )
-            // InternalEXPORT.g:6392:2: 'offset'
+            // InternalEXPORT.g:6499:1: ( 'offset' )
+            // InternalEXPORT.g:6500:2: 'offset'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getOffsetKeyword_14_0()); 
@@ -19914,14 +20240,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_14__1"
-    // InternalEXPORT.g:6401:1: rule__TMTCIFExportSettingAIFromFile__Group_14__1 : rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__2 ;
+    // InternalEXPORT.g:6509:1: rule__TMTCIFExportSettingAIFromFile__Group_14__1 : rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__2 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_14__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6405:1: ( rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__2 )
-            // InternalEXPORT.g:6406:2: rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__2
+            // InternalEXPORT.g:6513:1: ( rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__2 )
+            // InternalEXPORT.g:6514:2: rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__2
             {
             pushFollow(FollowSets000.FOLLOW_22);
             rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl();
@@ -19952,17 +20278,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl"
-    // InternalEXPORT.g:6413:1: rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl : ( ':=' ) ;
+    // InternalEXPORT.g:6521:1: rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_14__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6417:1: ( ( ':=' ) )
-            // InternalEXPORT.g:6418:1: ( ':=' )
+            // InternalEXPORT.g:6525:1: ( ( ':=' ) )
+            // InternalEXPORT.g:6526:1: ( ':=' )
             {
-            // InternalEXPORT.g:6418:1: ( ':=' )
-            // InternalEXPORT.g:6419:2: ':='
+            // InternalEXPORT.g:6526:1: ( ':=' )
+            // InternalEXPORT.g:6527:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_14_1()); 
@@ -19993,14 +20319,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_14__2"
-    // InternalEXPORT.g:6428:1: rule__TMTCIFExportSettingAIFromFile__Group_14__2 : rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__3 ;
+    // InternalEXPORT.g:6536:1: rule__TMTCIFExportSettingAIFromFile__Group_14__2 : rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__3 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_14__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6432:1: ( rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__3 )
-            // InternalEXPORT.g:6433:2: rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__3
+            // InternalEXPORT.g:6540:1: ( rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__3 )
+            // InternalEXPORT.g:6541:2: rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_14__3
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl();
@@ -20031,23 +20357,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl"
-    // InternalEXPORT.g:6440:1: rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 ) ) ;
+    // InternalEXPORT.g:6548:1: rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 ) ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_14__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6444:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 ) ) )
-            // InternalEXPORT.g:6445:1: ( ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 ) )
+            // InternalEXPORT.g:6552:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 ) ) )
+            // InternalEXPORT.g:6553:1: ( ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 ) )
             {
-            // InternalEXPORT.g:6445:1: ( ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 ) )
-            // InternalEXPORT.g:6446:2: ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 )
+            // InternalEXPORT.g:6553:1: ( ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 ) )
+            // InternalEXPORT.g:6554:2: ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getOffsetAssignment_14_2()); 
             }
-            // InternalEXPORT.g:6447:2: ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 )
-            // InternalEXPORT.g:6447:3: rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2
+            // InternalEXPORT.g:6555:2: ( rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 )
+            // InternalEXPORT.g:6555:3: rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2();
@@ -20082,14 +20408,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_14__3"
-    // InternalEXPORT.g:6455:1: rule__TMTCIFExportSettingAIFromFile__Group_14__3 : rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl ;
+    // InternalEXPORT.g:6563:1: rule__TMTCIFExportSettingAIFromFile__Group_14__3 : rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_14__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6459:1: ( rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl )
-            // InternalEXPORT.g:6460:2: rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl
+            // InternalEXPORT.g:6567:1: ( rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl )
+            // InternalEXPORT.g:6568:2: rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl();
@@ -20115,17 +20441,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl"
-    // InternalEXPORT.g:6466:1: rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl : ( ';' ) ;
+    // InternalEXPORT.g:6574:1: rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_14__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6470:1: ( ( ';' ) )
-            // InternalEXPORT.g:6471:1: ( ';' )
+            // InternalEXPORT.g:6578:1: ( ( ';' ) )
+            // InternalEXPORT.g:6579:1: ( ';' )
             {
-            // InternalEXPORT.g:6471:1: ( ';' )
-            // InternalEXPORT.g:6472:2: ';'
+            // InternalEXPORT.g:6579:1: ( ';' )
+            // InternalEXPORT.g:6580:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_14_3()); 
@@ -20156,14 +20482,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_15__0"
-    // InternalEXPORT.g:6482:1: rule__TMTCIFExportSettingAIFromFile__Group_15__0 : rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__1 ;
+    // InternalEXPORT.g:6590:1: rule__TMTCIFExportSettingAIFromFile__Group_15__0 : rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__1 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_15__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6486:1: ( rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__1 )
-            // InternalEXPORT.g:6487:2: rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__1
+            // InternalEXPORT.g:6594:1: ( rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__1 )
+            // InternalEXPORT.g:6595:2: rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__1
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl();
@@ -20194,17 +20520,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl"
-    // InternalEXPORT.g:6494:1: rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl : ( 'size' ) ;
+    // InternalEXPORT.g:6602:1: rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl : ( 'size' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_15__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6498:1: ( ( 'size' ) )
-            // InternalEXPORT.g:6499:1: ( 'size' )
+            // InternalEXPORT.g:6606:1: ( ( 'size' ) )
+            // InternalEXPORT.g:6607:1: ( 'size' )
             {
-            // InternalEXPORT.g:6499:1: ( 'size' )
-            // InternalEXPORT.g:6500:2: 'size'
+            // InternalEXPORT.g:6607:1: ( 'size' )
+            // InternalEXPORT.g:6608:2: 'size'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSizeKeyword_15_0()); 
@@ -20235,14 +20561,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_15__1"
-    // InternalEXPORT.g:6509:1: rule__TMTCIFExportSettingAIFromFile__Group_15__1 : rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__2 ;
+    // InternalEXPORT.g:6617:1: rule__TMTCIFExportSettingAIFromFile__Group_15__1 : rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__2 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_15__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6513:1: ( rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__2 )
-            // InternalEXPORT.g:6514:2: rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__2
+            // InternalEXPORT.g:6621:1: ( rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__2 )
+            // InternalEXPORT.g:6622:2: rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__2
             {
             pushFollow(FollowSets000.FOLLOW_22);
             rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl();
@@ -20273,17 +20599,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl"
-    // InternalEXPORT.g:6521:1: rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl : ( ':=' ) ;
+    // InternalEXPORT.g:6629:1: rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_15__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6525:1: ( ( ':=' ) )
-            // InternalEXPORT.g:6526:1: ( ':=' )
+            // InternalEXPORT.g:6633:1: ( ( ':=' ) )
+            // InternalEXPORT.g:6634:1: ( ':=' )
             {
-            // InternalEXPORT.g:6526:1: ( ':=' )
-            // InternalEXPORT.g:6527:2: ':='
+            // InternalEXPORT.g:6634:1: ( ':=' )
+            // InternalEXPORT.g:6635:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_15_1()); 
@@ -20314,14 +20640,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_15__2"
-    // InternalEXPORT.g:6536:1: rule__TMTCIFExportSettingAIFromFile__Group_15__2 : rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__3 ;
+    // InternalEXPORT.g:6644:1: rule__TMTCIFExportSettingAIFromFile__Group_15__2 : rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__3 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_15__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6540:1: ( rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__3 )
-            // InternalEXPORT.g:6541:2: rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__3
+            // InternalEXPORT.g:6648:1: ( rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__3 )
+            // InternalEXPORT.g:6649:2: rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_15__3
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl();
@@ -20352,23 +20678,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl"
-    // InternalEXPORT.g:6548:1: rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 ) ) ;
+    // InternalEXPORT.g:6656:1: rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 ) ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_15__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6552:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 ) ) )
-            // InternalEXPORT.g:6553:1: ( ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 ) )
+            // InternalEXPORT.g:6660:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 ) ) )
+            // InternalEXPORT.g:6661:1: ( ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 ) )
             {
-            // InternalEXPORT.g:6553:1: ( ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 ) )
-            // InternalEXPORT.g:6554:2: ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 )
+            // InternalEXPORT.g:6661:1: ( ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 ) )
+            // InternalEXPORT.g:6662:2: ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSizeAssignment_15_2()); 
             }
-            // InternalEXPORT.g:6555:2: ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 )
-            // InternalEXPORT.g:6555:3: rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2
+            // InternalEXPORT.g:6663:2: ( rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 )
+            // InternalEXPORT.g:6663:3: rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2();
@@ -20403,14 +20729,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_15__3"
-    // InternalEXPORT.g:6563:1: rule__TMTCIFExportSettingAIFromFile__Group_15__3 : rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl ;
+    // InternalEXPORT.g:6671:1: rule__TMTCIFExportSettingAIFromFile__Group_15__3 : rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_15__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6567:1: ( rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl )
-            // InternalEXPORT.g:6568:2: rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl
+            // InternalEXPORT.g:6675:1: ( rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl )
+            // InternalEXPORT.g:6676:2: rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl();
@@ -20436,17 +20762,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl"
-    // InternalEXPORT.g:6574:1: rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl : ( ';' ) ;
+    // InternalEXPORT.g:6682:1: rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_15__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6578:1: ( ( ';' ) )
-            // InternalEXPORT.g:6579:1: ( ';' )
+            // InternalEXPORT.g:6686:1: ( ( ';' ) )
+            // InternalEXPORT.g:6687:1: ( ';' )
             {
-            // InternalEXPORT.g:6579:1: ( ';' )
-            // InternalEXPORT.g:6580:2: ';'
+            // InternalEXPORT.g:6687:1: ( ';' )
+            // InternalEXPORT.g:6688:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_15_3()); 
@@ -20477,14 +20803,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_16__0"
-    // InternalEXPORT.g:6590:1: rule__TMTCIFExportSettingAIFromFile__Group_16__0 : rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__1 ;
+    // InternalEXPORT.g:6698:1: rule__TMTCIFExportSettingAIFromFile__Group_16__0 : rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__1 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_16__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6594:1: ( rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__1 )
-            // InternalEXPORT.g:6595:2: rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__1
+            // InternalEXPORT.g:6702:1: ( rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__1 )
+            // InternalEXPORT.g:6703:2: rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__1
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl();
@@ -20515,17 +20841,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl"
-    // InternalEXPORT.g:6602:1: rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl : ( 'line' ) ;
+    // InternalEXPORT.g:6710:1: rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl : ( 'line' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_16__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6606:1: ( ( 'line' ) )
-            // InternalEXPORT.g:6607:1: ( 'line' )
+            // InternalEXPORT.g:6714:1: ( ( 'line' ) )
+            // InternalEXPORT.g:6715:1: ( 'line' )
             {
-            // InternalEXPORT.g:6607:1: ( 'line' )
-            // InternalEXPORT.g:6608:2: 'line'
+            // InternalEXPORT.g:6715:1: ( 'line' )
+            // InternalEXPORT.g:6716:2: 'line'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getLineKeyword_16_0()); 
@@ -20556,14 +20882,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_16__1"
-    // InternalEXPORT.g:6617:1: rule__TMTCIFExportSettingAIFromFile__Group_16__1 : rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__2 ;
+    // InternalEXPORT.g:6725:1: rule__TMTCIFExportSettingAIFromFile__Group_16__1 : rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__2 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_16__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6621:1: ( rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__2 )
-            // InternalEXPORT.g:6622:2: rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__2
+            // InternalEXPORT.g:6729:1: ( rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__2 )
+            // InternalEXPORT.g:6730:2: rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__2
             {
             pushFollow(FollowSets000.FOLLOW_22);
             rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl();
@@ -20594,17 +20920,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl"
-    // InternalEXPORT.g:6629:1: rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl : ( ':=' ) ;
+    // InternalEXPORT.g:6737:1: rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_16__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6633:1: ( ( ':=' ) )
-            // InternalEXPORT.g:6634:1: ( ':=' )
+            // InternalEXPORT.g:6741:1: ( ( ':=' ) )
+            // InternalEXPORT.g:6742:1: ( ':=' )
             {
-            // InternalEXPORT.g:6634:1: ( ':=' )
-            // InternalEXPORT.g:6635:2: ':='
+            // InternalEXPORT.g:6742:1: ( ':=' )
+            // InternalEXPORT.g:6743:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getColonEqualsSignKeyword_16_1()); 
@@ -20635,14 +20961,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_16__2"
-    // InternalEXPORT.g:6644:1: rule__TMTCIFExportSettingAIFromFile__Group_16__2 : rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__3 ;
+    // InternalEXPORT.g:6752:1: rule__TMTCIFExportSettingAIFromFile__Group_16__2 : rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__3 ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_16__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6648:1: ( rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__3 )
-            // InternalEXPORT.g:6649:2: rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__3
+            // InternalEXPORT.g:6756:1: ( rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__3 )
+            // InternalEXPORT.g:6757:2: rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl rule__TMTCIFExportSettingAIFromFile__Group_16__3
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl();
@@ -20673,23 +20999,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl"
-    // InternalEXPORT.g:6656:1: rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 ) ) ;
+    // InternalEXPORT.g:6764:1: rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl : ( ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 ) ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_16__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6660:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 ) ) )
-            // InternalEXPORT.g:6661:1: ( ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 ) )
+            // InternalEXPORT.g:6768:1: ( ( ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 ) ) )
+            // InternalEXPORT.g:6769:1: ( ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 ) )
             {
-            // InternalEXPORT.g:6661:1: ( ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 ) )
-            // InternalEXPORT.g:6662:2: ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 )
+            // InternalEXPORT.g:6769:1: ( ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 ) )
+            // InternalEXPORT.g:6770:2: ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getLineAssignment_16_2()); 
             }
-            // InternalEXPORT.g:6663:2: ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 )
-            // InternalEXPORT.g:6663:3: rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2
+            // InternalEXPORT.g:6771:2: ( rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 )
+            // InternalEXPORT.g:6771:3: rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2();
@@ -20724,14 +21050,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_16__3"
-    // InternalEXPORT.g:6671:1: rule__TMTCIFExportSettingAIFromFile__Group_16__3 : rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl ;
+    // InternalEXPORT.g:6779:1: rule__TMTCIFExportSettingAIFromFile__Group_16__3 : rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_16__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6675:1: ( rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl )
-            // InternalEXPORT.g:6676:2: rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl
+            // InternalEXPORT.g:6783:1: ( rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl )
+            // InternalEXPORT.g:6784:2: rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl();
@@ -20757,17 +21083,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl"
-    // InternalEXPORT.g:6682:1: rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl : ( ';' ) ;
+    // InternalEXPORT.g:6790:1: rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__Group_16__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6686:1: ( ( ';' ) )
-            // InternalEXPORT.g:6687:1: ( ';' )
+            // InternalEXPORT.g:6794:1: ( ( ';' ) )
+            // InternalEXPORT.g:6795:1: ( ';' )
             {
-            // InternalEXPORT.g:6687:1: ( ';' )
-            // InternalEXPORT.g:6688:2: ';'
+            // InternalEXPORT.g:6795:1: ( ';' )
+            // InternalEXPORT.g:6796:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSemicolonKeyword_16_3()); 
@@ -20798,14 +21124,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__0"
-    // InternalEXPORT.g:6698:1: rule__TMTCIFExportActivateDICs__Group__0 : rule__TMTCIFExportActivateDICs__Group__0__Impl rule__TMTCIFExportActivateDICs__Group__1 ;
+    // InternalEXPORT.g:6806:1: rule__TMTCIFExportActivateDICs__Group__0 : rule__TMTCIFExportActivateDICs__Group__0__Impl rule__TMTCIFExportActivateDICs__Group__1 ;
     public final void rule__TMTCIFExportActivateDICs__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6702:1: ( rule__TMTCIFExportActivateDICs__Group__0__Impl rule__TMTCIFExportActivateDICs__Group__1 )
-            // InternalEXPORT.g:6703:2: rule__TMTCIFExportActivateDICs__Group__0__Impl rule__TMTCIFExportActivateDICs__Group__1
+            // InternalEXPORT.g:6810:1: ( rule__TMTCIFExportActivateDICs__Group__0__Impl rule__TMTCIFExportActivateDICs__Group__1 )
+            // InternalEXPORT.g:6811:2: rule__TMTCIFExportActivateDICs__Group__0__Impl rule__TMTCIFExportActivateDICs__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_36);
             rule__TMTCIFExportActivateDICs__Group__0__Impl();
@@ -20836,23 +21162,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__0__Impl"
-    // InternalEXPORT.g:6710:1: rule__TMTCIFExportActivateDICs__Group__0__Impl : ( () ) ;
+    // InternalEXPORT.g:6818:1: rule__TMTCIFExportActivateDICs__Group__0__Impl : ( () ) ;
     public final void rule__TMTCIFExportActivateDICs__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6714:1: ( ( () ) )
-            // InternalEXPORT.g:6715:1: ( () )
+            // InternalEXPORT.g:6822:1: ( ( () ) )
+            // InternalEXPORT.g:6823:1: ( () )
             {
-            // InternalEXPORT.g:6715:1: ( () )
-            // InternalEXPORT.g:6716:2: ()
+            // InternalEXPORT.g:6823:1: ( () )
+            // InternalEXPORT.g:6824:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportActivateDICsAccess().getTMTCIFExportActivateDICsAction_0()); 
             }
-            // InternalEXPORT.g:6717:2: ()
-            // InternalEXPORT.g:6717:3: 
+            // InternalEXPORT.g:6825:2: ()
+            // InternalEXPORT.g:6825:3: 
             {
             }
 
@@ -20877,14 +21203,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__1"
-    // InternalEXPORT.g:6725:1: rule__TMTCIFExportActivateDICs__Group__1 : rule__TMTCIFExportActivateDICs__Group__1__Impl rule__TMTCIFExportActivateDICs__Group__2 ;
+    // InternalEXPORT.g:6833:1: rule__TMTCIFExportActivateDICs__Group__1 : rule__TMTCIFExportActivateDICs__Group__1__Impl rule__TMTCIFExportActivateDICs__Group__2 ;
     public final void rule__TMTCIFExportActivateDICs__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6729:1: ( rule__TMTCIFExportActivateDICs__Group__1__Impl rule__TMTCIFExportActivateDICs__Group__2 )
-            // InternalEXPORT.g:6730:2: rule__TMTCIFExportActivateDICs__Group__1__Impl rule__TMTCIFExportActivateDICs__Group__2
+            // InternalEXPORT.g:6837:1: ( rule__TMTCIFExportActivateDICs__Group__1__Impl rule__TMTCIFExportActivateDICs__Group__2 )
+            // InternalEXPORT.g:6838:2: rule__TMTCIFExportActivateDICs__Group__1__Impl rule__TMTCIFExportActivateDICs__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__TMTCIFExportActivateDICs__Group__1__Impl();
@@ -20915,17 +21241,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__1__Impl"
-    // InternalEXPORT.g:6737:1: rule__TMTCIFExportActivateDICs__Group__1__Impl : ( 'TMTCIFExportActivateDICs' ) ;
+    // InternalEXPORT.g:6845:1: rule__TMTCIFExportActivateDICs__Group__1__Impl : ( 'TMTCIFExportActivateDICs' ) ;
     public final void rule__TMTCIFExportActivateDICs__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6741:1: ( ( 'TMTCIFExportActivateDICs' ) )
-            // InternalEXPORT.g:6742:1: ( 'TMTCIFExportActivateDICs' )
+            // InternalEXPORT.g:6849:1: ( ( 'TMTCIFExportActivateDICs' ) )
+            // InternalEXPORT.g:6850:1: ( 'TMTCIFExportActivateDICs' )
             {
-            // InternalEXPORT.g:6742:1: ( 'TMTCIFExportActivateDICs' )
-            // InternalEXPORT.g:6743:2: 'TMTCIFExportActivateDICs'
+            // InternalEXPORT.g:6850:1: ( 'TMTCIFExportActivateDICs' )
+            // InternalEXPORT.g:6851:2: 'TMTCIFExportActivateDICs'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportActivateDICsAccess().getTMTCIFExportActivateDICsKeyword_1()); 
@@ -20956,14 +21282,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__2"
-    // InternalEXPORT.g:6752:1: rule__TMTCIFExportActivateDICs__Group__2 : rule__TMTCIFExportActivateDICs__Group__2__Impl rule__TMTCIFExportActivateDICs__Group__3 ;
+    // InternalEXPORT.g:6860:1: rule__TMTCIFExportActivateDICs__Group__2 : rule__TMTCIFExportActivateDICs__Group__2__Impl rule__TMTCIFExportActivateDICs__Group__3 ;
     public final void rule__TMTCIFExportActivateDICs__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6756:1: ( rule__TMTCIFExportActivateDICs__Group__2__Impl rule__TMTCIFExportActivateDICs__Group__3 )
-            // InternalEXPORT.g:6757:2: rule__TMTCIFExportActivateDICs__Group__2__Impl rule__TMTCIFExportActivateDICs__Group__3
+            // InternalEXPORT.g:6864:1: ( rule__TMTCIFExportActivateDICs__Group__2__Impl rule__TMTCIFExportActivateDICs__Group__3 )
+            // InternalEXPORT.g:6865:2: rule__TMTCIFExportActivateDICs__Group__2__Impl rule__TMTCIFExportActivateDICs__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_37);
             rule__TMTCIFExportActivateDICs__Group__2__Impl();
@@ -20994,17 +21320,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__2__Impl"
-    // InternalEXPORT.g:6764:1: rule__TMTCIFExportActivateDICs__Group__2__Impl : ( '{' ) ;
+    // InternalEXPORT.g:6872:1: rule__TMTCIFExportActivateDICs__Group__2__Impl : ( '{' ) ;
     public final void rule__TMTCIFExportActivateDICs__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6768:1: ( ( '{' ) )
-            // InternalEXPORT.g:6769:1: ( '{' )
+            // InternalEXPORT.g:6876:1: ( ( '{' ) )
+            // InternalEXPORT.g:6877:1: ( '{' )
             {
-            // InternalEXPORT.g:6769:1: ( '{' )
-            // InternalEXPORT.g:6770:2: '{'
+            // InternalEXPORT.g:6877:1: ( '{' )
+            // InternalEXPORT.g:6878:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportActivateDICsAccess().getLeftCurlyBracketKeyword_2()); 
@@ -21035,14 +21361,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__3"
-    // InternalEXPORT.g:6779:1: rule__TMTCIFExportActivateDICs__Group__3 : rule__TMTCIFExportActivateDICs__Group__3__Impl rule__TMTCIFExportActivateDICs__Group__4 ;
+    // InternalEXPORT.g:6887:1: rule__TMTCIFExportActivateDICs__Group__3 : rule__TMTCIFExportActivateDICs__Group__3__Impl rule__TMTCIFExportActivateDICs__Group__4 ;
     public final void rule__TMTCIFExportActivateDICs__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6783:1: ( rule__TMTCIFExportActivateDICs__Group__3__Impl rule__TMTCIFExportActivateDICs__Group__4 )
-            // InternalEXPORT.g:6784:2: rule__TMTCIFExportActivateDICs__Group__3__Impl rule__TMTCIFExportActivateDICs__Group__4
+            // InternalEXPORT.g:6891:1: ( rule__TMTCIFExportActivateDICs__Group__3__Impl rule__TMTCIFExportActivateDICs__Group__4 )
+            // InternalEXPORT.g:6892:2: rule__TMTCIFExportActivateDICs__Group__3__Impl rule__TMTCIFExportActivateDICs__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__TMTCIFExportActivateDICs__Group__3__Impl();
@@ -21073,26 +21399,26 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__3__Impl"
-    // InternalEXPORT.g:6791:1: rule__TMTCIFExportActivateDICs__Group__3__Impl : ( ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* ) ) ;
+    // InternalEXPORT.g:6899:1: rule__TMTCIFExportActivateDICs__Group__3__Impl : ( ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* ) ) ;
     public final void rule__TMTCIFExportActivateDICs__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6795:1: ( ( ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* ) ) )
-            // InternalEXPORT.g:6796:1: ( ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* ) )
+            // InternalEXPORT.g:6903:1: ( ( ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* ) ) )
+            // InternalEXPORT.g:6904:1: ( ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* ) )
             {
-            // InternalEXPORT.g:6796:1: ( ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* ) )
-            // InternalEXPORT.g:6797:2: ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* )
+            // InternalEXPORT.g:6904:1: ( ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* ) )
+            // InternalEXPORT.g:6905:2: ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) ) ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* )
             {
-            // InternalEXPORT.g:6797:2: ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) )
-            // InternalEXPORT.g:6798:3: ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )
+            // InternalEXPORT.g:6905:2: ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 ) )
+            // InternalEXPORT.g:6906:3: ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportActivateDICsAccess().getDICAssignment_3()); 
             }
-            // InternalEXPORT.g:6799:3: ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )
-            // InternalEXPORT.g:6799:4: rule__TMTCIFExportActivateDICs__DICAssignment_3
+            // InternalEXPORT.g:6907:3: ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )
+            // InternalEXPORT.g:6907:4: rule__TMTCIFExportActivateDICs__DICAssignment_3
             {
             pushFollow(FollowSets000.FOLLOW_38);
             rule__TMTCIFExportActivateDICs__DICAssignment_3();
@@ -21108,13 +21434,13 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalEXPORT.g:6802:2: ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* )
-            // InternalEXPORT.g:6803:3: ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )*
+            // InternalEXPORT.g:6910:2: ( ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )* )
+            // InternalEXPORT.g:6911:3: ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportActivateDICsAccess().getDICAssignment_3()); 
             }
-            // InternalEXPORT.g:6804:3: ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )*
+            // InternalEXPORT.g:6912:3: ( rule__TMTCIFExportActivateDICs__DICAssignment_3 )*
             loop25:
             do {
                 int alt25=2;
@@ -21127,7 +21453,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
                 switch (alt25) {
             	case 1 :
-            	    // InternalEXPORT.g:6804:4: rule__TMTCIFExportActivateDICs__DICAssignment_3
+            	    // InternalEXPORT.g:6912:4: rule__TMTCIFExportActivateDICs__DICAssignment_3
             	    {
             	    pushFollow(FollowSets000.FOLLOW_38);
             	    rule__TMTCIFExportActivateDICs__DICAssignment_3();
@@ -21171,14 +21497,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__4"
-    // InternalEXPORT.g:6813:1: rule__TMTCIFExportActivateDICs__Group__4 : rule__TMTCIFExportActivateDICs__Group__4__Impl rule__TMTCIFExportActivateDICs__Group__5 ;
+    // InternalEXPORT.g:6921:1: rule__TMTCIFExportActivateDICs__Group__4 : rule__TMTCIFExportActivateDICs__Group__4__Impl rule__TMTCIFExportActivateDICs__Group__5 ;
     public final void rule__TMTCIFExportActivateDICs__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6817:1: ( rule__TMTCIFExportActivateDICs__Group__4__Impl rule__TMTCIFExportActivateDICs__Group__5 )
-            // InternalEXPORT.g:6818:2: rule__TMTCIFExportActivateDICs__Group__4__Impl rule__TMTCIFExportActivateDICs__Group__5
+            // InternalEXPORT.g:6925:1: ( rule__TMTCIFExportActivateDICs__Group__4__Impl rule__TMTCIFExportActivateDICs__Group__5 )
+            // InternalEXPORT.g:6926:2: rule__TMTCIFExportActivateDICs__Group__4__Impl rule__TMTCIFExportActivateDICs__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportActivateDICs__Group__4__Impl();
@@ -21209,17 +21535,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__4__Impl"
-    // InternalEXPORT.g:6825:1: rule__TMTCIFExportActivateDICs__Group__4__Impl : ( '}' ) ;
+    // InternalEXPORT.g:6933:1: rule__TMTCIFExportActivateDICs__Group__4__Impl : ( '}' ) ;
     public final void rule__TMTCIFExportActivateDICs__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6829:1: ( ( '}' ) )
-            // InternalEXPORT.g:6830:1: ( '}' )
+            // InternalEXPORT.g:6937:1: ( ( '}' ) )
+            // InternalEXPORT.g:6938:1: ( '}' )
             {
-            // InternalEXPORT.g:6830:1: ( '}' )
-            // InternalEXPORT.g:6831:2: '}'
+            // InternalEXPORT.g:6938:1: ( '}' )
+            // InternalEXPORT.g:6939:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportActivateDICsAccess().getRightCurlyBracketKeyword_4()); 
@@ -21250,14 +21576,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__5"
-    // InternalEXPORT.g:6840:1: rule__TMTCIFExportActivateDICs__Group__5 : rule__TMTCIFExportActivateDICs__Group__5__Impl ;
+    // InternalEXPORT.g:6948:1: rule__TMTCIFExportActivateDICs__Group__5 : rule__TMTCIFExportActivateDICs__Group__5__Impl ;
     public final void rule__TMTCIFExportActivateDICs__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6844:1: ( rule__TMTCIFExportActivateDICs__Group__5__Impl )
-            // InternalEXPORT.g:6845:2: rule__TMTCIFExportActivateDICs__Group__5__Impl
+            // InternalEXPORT.g:6952:1: ( rule__TMTCIFExportActivateDICs__Group__5__Impl )
+            // InternalEXPORT.g:6953:2: rule__TMTCIFExportActivateDICs__Group__5__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportActivateDICs__Group__5__Impl();
@@ -21283,17 +21609,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__Group__5__Impl"
-    // InternalEXPORT.g:6851:1: rule__TMTCIFExportActivateDICs__Group__5__Impl : ( ';' ) ;
+    // InternalEXPORT.g:6959:1: rule__TMTCIFExportActivateDICs__Group__5__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportActivateDICs__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6855:1: ( ( ';' ) )
-            // InternalEXPORT.g:6856:1: ( ';' )
+            // InternalEXPORT.g:6963:1: ( ( ';' ) )
+            // InternalEXPORT.g:6964:1: ( ';' )
             {
-            // InternalEXPORT.g:6856:1: ( ';' )
-            // InternalEXPORT.g:6857:2: ';'
+            // InternalEXPORT.g:6964:1: ( ';' )
+            // InternalEXPORT.g:6965:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportActivateDICsAccess().getSemicolonKeyword_5()); 
@@ -21324,14 +21650,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__0"
-    // InternalEXPORT.g:6867:1: rule__TMTCIFExportDIC__Group__0 : rule__TMTCIFExportDIC__Group__0__Impl rule__TMTCIFExportDIC__Group__1 ;
+    // InternalEXPORT.g:6975:1: rule__TMTCIFExportDIC__Group__0 : rule__TMTCIFExportDIC__Group__0__Impl rule__TMTCIFExportDIC__Group__1 ;
     public final void rule__TMTCIFExportDIC__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6871:1: ( rule__TMTCIFExportDIC__Group__0__Impl rule__TMTCIFExportDIC__Group__1 )
-            // InternalEXPORT.g:6872:2: rule__TMTCIFExportDIC__Group__0__Impl rule__TMTCIFExportDIC__Group__1
+            // InternalEXPORT.g:6979:1: ( rule__TMTCIFExportDIC__Group__0__Impl rule__TMTCIFExportDIC__Group__1 )
+            // InternalEXPORT.g:6980:2: rule__TMTCIFExportDIC__Group__0__Impl rule__TMTCIFExportDIC__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__TMTCIFExportDIC__Group__0__Impl();
@@ -21362,17 +21688,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__0__Impl"
-    // InternalEXPORT.g:6879:1: rule__TMTCIFExportDIC__Group__0__Impl : ( 'TMTCIFExportDIC' ) ;
+    // InternalEXPORT.g:6987:1: rule__TMTCIFExportDIC__Group__0__Impl : ( 'TMTCIFExportDIC' ) ;
     public final void rule__TMTCIFExportDIC__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6883:1: ( ( 'TMTCIFExportDIC' ) )
-            // InternalEXPORT.g:6884:1: ( 'TMTCIFExportDIC' )
+            // InternalEXPORT.g:6991:1: ( ( 'TMTCIFExportDIC' ) )
+            // InternalEXPORT.g:6992:1: ( 'TMTCIFExportDIC' )
             {
-            // InternalEXPORT.g:6884:1: ( 'TMTCIFExportDIC' )
-            // InternalEXPORT.g:6885:2: 'TMTCIFExportDIC'
+            // InternalEXPORT.g:6992:1: ( 'TMTCIFExportDIC' )
+            // InternalEXPORT.g:6993:2: 'TMTCIFExportDIC'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getTMTCIFExportDICKeyword_0()); 
@@ -21403,14 +21729,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__1"
-    // InternalEXPORT.g:6894:1: rule__TMTCIFExportDIC__Group__1 : rule__TMTCIFExportDIC__Group__1__Impl rule__TMTCIFExportDIC__Group__2 ;
+    // InternalEXPORT.g:7002:1: rule__TMTCIFExportDIC__Group__1 : rule__TMTCIFExportDIC__Group__1__Impl rule__TMTCIFExportDIC__Group__2 ;
     public final void rule__TMTCIFExportDIC__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6898:1: ( rule__TMTCIFExportDIC__Group__1__Impl rule__TMTCIFExportDIC__Group__2 )
-            // InternalEXPORT.g:6899:2: rule__TMTCIFExportDIC__Group__1__Impl rule__TMTCIFExportDIC__Group__2
+            // InternalEXPORT.g:7006:1: ( rule__TMTCIFExportDIC__Group__1__Impl rule__TMTCIFExportDIC__Group__2 )
+            // InternalEXPORT.g:7007:2: rule__TMTCIFExportDIC__Group__1__Impl rule__TMTCIFExportDIC__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_21);
             rule__TMTCIFExportDIC__Group__1__Impl();
@@ -21441,17 +21767,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__1__Impl"
-    // InternalEXPORT.g:6906:1: rule__TMTCIFExportDIC__Group__1__Impl : ( '{' ) ;
+    // InternalEXPORT.g:7014:1: rule__TMTCIFExportDIC__Group__1__Impl : ( '{' ) ;
     public final void rule__TMTCIFExportDIC__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6910:1: ( ( '{' ) )
-            // InternalEXPORT.g:6911:1: ( '{' )
+            // InternalEXPORT.g:7018:1: ( ( '{' ) )
+            // InternalEXPORT.g:7019:1: ( '{' )
             {
-            // InternalEXPORT.g:6911:1: ( '{' )
-            // InternalEXPORT.g:6912:2: '{'
+            // InternalEXPORT.g:7019:1: ( '{' )
+            // InternalEXPORT.g:7020:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getLeftCurlyBracketKeyword_1()); 
@@ -21482,14 +21808,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__2"
-    // InternalEXPORT.g:6921:1: rule__TMTCIFExportDIC__Group__2 : rule__TMTCIFExportDIC__Group__2__Impl rule__TMTCIFExportDIC__Group__3 ;
+    // InternalEXPORT.g:7029:1: rule__TMTCIFExportDIC__Group__2 : rule__TMTCIFExportDIC__Group__2__Impl rule__TMTCIFExportDIC__Group__3 ;
     public final void rule__TMTCIFExportDIC__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6925:1: ( rule__TMTCIFExportDIC__Group__2__Impl rule__TMTCIFExportDIC__Group__3 )
-            // InternalEXPORT.g:6926:2: rule__TMTCIFExportDIC__Group__2__Impl rule__TMTCIFExportDIC__Group__3
+            // InternalEXPORT.g:7033:1: ( rule__TMTCIFExportDIC__Group__2__Impl rule__TMTCIFExportDIC__Group__3 )
+            // InternalEXPORT.g:7034:2: rule__TMTCIFExportDIC__Group__2__Impl rule__TMTCIFExportDIC__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportDIC__Group__2__Impl();
@@ -21520,17 +21846,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__2__Impl"
-    // InternalEXPORT.g:6933:1: rule__TMTCIFExportDIC__Group__2__Impl : ( 'id' ) ;
+    // InternalEXPORT.g:7041:1: rule__TMTCIFExportDIC__Group__2__Impl : ( 'id' ) ;
     public final void rule__TMTCIFExportDIC__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6937:1: ( ( 'id' ) )
-            // InternalEXPORT.g:6938:1: ( 'id' )
+            // InternalEXPORT.g:7045:1: ( ( 'id' ) )
+            // InternalEXPORT.g:7046:1: ( 'id' )
             {
-            // InternalEXPORT.g:6938:1: ( 'id' )
-            // InternalEXPORT.g:6939:2: 'id'
+            // InternalEXPORT.g:7046:1: ( 'id' )
+            // InternalEXPORT.g:7047:2: 'id'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getIdKeyword_2()); 
@@ -21561,14 +21887,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__3"
-    // InternalEXPORT.g:6948:1: rule__TMTCIFExportDIC__Group__3 : rule__TMTCIFExportDIC__Group__3__Impl rule__TMTCIFExportDIC__Group__4 ;
+    // InternalEXPORT.g:7056:1: rule__TMTCIFExportDIC__Group__3 : rule__TMTCIFExportDIC__Group__3__Impl rule__TMTCIFExportDIC__Group__4 ;
     public final void rule__TMTCIFExportDIC__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6952:1: ( rule__TMTCIFExportDIC__Group__3__Impl rule__TMTCIFExportDIC__Group__4 )
-            // InternalEXPORT.g:6953:2: rule__TMTCIFExportDIC__Group__3__Impl rule__TMTCIFExportDIC__Group__4
+            // InternalEXPORT.g:7060:1: ( rule__TMTCIFExportDIC__Group__3__Impl rule__TMTCIFExportDIC__Group__4 )
+            // InternalEXPORT.g:7061:2: rule__TMTCIFExportDIC__Group__3__Impl rule__TMTCIFExportDIC__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_22);
             rule__TMTCIFExportDIC__Group__3__Impl();
@@ -21599,17 +21925,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__3__Impl"
-    // InternalEXPORT.g:6960:1: rule__TMTCIFExportDIC__Group__3__Impl : ( ':=' ) ;
+    // InternalEXPORT.g:7068:1: rule__TMTCIFExportDIC__Group__3__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportDIC__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6964:1: ( ( ':=' ) )
-            // InternalEXPORT.g:6965:1: ( ':=' )
+            // InternalEXPORT.g:7072:1: ( ( ':=' ) )
+            // InternalEXPORT.g:7073:1: ( ':=' )
             {
-            // InternalEXPORT.g:6965:1: ( ':=' )
-            // InternalEXPORT.g:6966:2: ':='
+            // InternalEXPORT.g:7073:1: ( ':=' )
+            // InternalEXPORT.g:7074:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getColonEqualsSignKeyword_3()); 
@@ -21640,14 +21966,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__4"
-    // InternalEXPORT.g:6975:1: rule__TMTCIFExportDIC__Group__4 : rule__TMTCIFExportDIC__Group__4__Impl rule__TMTCIFExportDIC__Group__5 ;
+    // InternalEXPORT.g:7083:1: rule__TMTCIFExportDIC__Group__4 : rule__TMTCIFExportDIC__Group__4__Impl rule__TMTCIFExportDIC__Group__5 ;
     public final void rule__TMTCIFExportDIC__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6979:1: ( rule__TMTCIFExportDIC__Group__4__Impl rule__TMTCIFExportDIC__Group__5 )
-            // InternalEXPORT.g:6980:2: rule__TMTCIFExportDIC__Group__4__Impl rule__TMTCIFExportDIC__Group__5
+            // InternalEXPORT.g:7087:1: ( rule__TMTCIFExportDIC__Group__4__Impl rule__TMTCIFExportDIC__Group__5 )
+            // InternalEXPORT.g:7088:2: rule__TMTCIFExportDIC__Group__4__Impl rule__TMTCIFExportDIC__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportDIC__Group__4__Impl();
@@ -21678,23 +22004,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__4__Impl"
-    // InternalEXPORT.g:6987:1: rule__TMTCIFExportDIC__Group__4__Impl : ( ( rule__TMTCIFExportDIC__IdAssignment_4 ) ) ;
+    // InternalEXPORT.g:7095:1: rule__TMTCIFExportDIC__Group__4__Impl : ( ( rule__TMTCIFExportDIC__IdAssignment_4 ) ) ;
     public final void rule__TMTCIFExportDIC__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:6991:1: ( ( ( rule__TMTCIFExportDIC__IdAssignment_4 ) ) )
-            // InternalEXPORT.g:6992:1: ( ( rule__TMTCIFExportDIC__IdAssignment_4 ) )
+            // InternalEXPORT.g:7099:1: ( ( ( rule__TMTCIFExportDIC__IdAssignment_4 ) ) )
+            // InternalEXPORT.g:7100:1: ( ( rule__TMTCIFExportDIC__IdAssignment_4 ) )
             {
-            // InternalEXPORT.g:6992:1: ( ( rule__TMTCIFExportDIC__IdAssignment_4 ) )
-            // InternalEXPORT.g:6993:2: ( rule__TMTCIFExportDIC__IdAssignment_4 )
+            // InternalEXPORT.g:7100:1: ( ( rule__TMTCIFExportDIC__IdAssignment_4 ) )
+            // InternalEXPORT.g:7101:2: ( rule__TMTCIFExportDIC__IdAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getIdAssignment_4()); 
             }
-            // InternalEXPORT.g:6994:2: ( rule__TMTCIFExportDIC__IdAssignment_4 )
-            // InternalEXPORT.g:6994:3: rule__TMTCIFExportDIC__IdAssignment_4
+            // InternalEXPORT.g:7102:2: ( rule__TMTCIFExportDIC__IdAssignment_4 )
+            // InternalEXPORT.g:7102:3: rule__TMTCIFExportDIC__IdAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportDIC__IdAssignment_4();
@@ -21729,14 +22055,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__5"
-    // InternalEXPORT.g:7002:1: rule__TMTCIFExportDIC__Group__5 : rule__TMTCIFExportDIC__Group__5__Impl rule__TMTCIFExportDIC__Group__6 ;
+    // InternalEXPORT.g:7110:1: rule__TMTCIFExportDIC__Group__5 : rule__TMTCIFExportDIC__Group__5__Impl rule__TMTCIFExportDIC__Group__6 ;
     public final void rule__TMTCIFExportDIC__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7006:1: ( rule__TMTCIFExportDIC__Group__5__Impl rule__TMTCIFExportDIC__Group__6 )
-            // InternalEXPORT.g:7007:2: rule__TMTCIFExportDIC__Group__5__Impl rule__TMTCIFExportDIC__Group__6
+            // InternalEXPORT.g:7114:1: ( rule__TMTCIFExportDIC__Group__5__Impl rule__TMTCIFExportDIC__Group__6 )
+            // InternalEXPORT.g:7115:2: rule__TMTCIFExportDIC__Group__5__Impl rule__TMTCIFExportDIC__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_39);
             rule__TMTCIFExportDIC__Group__5__Impl();
@@ -21767,17 +22093,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__5__Impl"
-    // InternalEXPORT.g:7014:1: rule__TMTCIFExportDIC__Group__5__Impl : ( ';' ) ;
+    // InternalEXPORT.g:7122:1: rule__TMTCIFExportDIC__Group__5__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportDIC__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7018:1: ( ( ';' ) )
-            // InternalEXPORT.g:7019:1: ( ';' )
+            // InternalEXPORT.g:7126:1: ( ( ';' ) )
+            // InternalEXPORT.g:7127:1: ( ';' )
             {
-            // InternalEXPORT.g:7019:1: ( ';' )
-            // InternalEXPORT.g:7020:2: ';'
+            // InternalEXPORT.g:7127:1: ( ';' )
+            // InternalEXPORT.g:7128:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getSemicolonKeyword_5()); 
@@ -21808,14 +22134,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__6"
-    // InternalEXPORT.g:7029:1: rule__TMTCIFExportDIC__Group__6 : rule__TMTCIFExportDIC__Group__6__Impl rule__TMTCIFExportDIC__Group__7 ;
+    // InternalEXPORT.g:7137:1: rule__TMTCIFExportDIC__Group__6 : rule__TMTCIFExportDIC__Group__6__Impl rule__TMTCIFExportDIC__Group__7 ;
     public final void rule__TMTCIFExportDIC__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7033:1: ( rule__TMTCIFExportDIC__Group__6__Impl rule__TMTCIFExportDIC__Group__7 )
-            // InternalEXPORT.g:7034:2: rule__TMTCIFExportDIC__Group__6__Impl rule__TMTCIFExportDIC__Group__7
+            // InternalEXPORT.g:7141:1: ( rule__TMTCIFExportDIC__Group__6__Impl rule__TMTCIFExportDIC__Group__7 )
+            // InternalEXPORT.g:7142:2: rule__TMTCIFExportDIC__Group__6__Impl rule__TMTCIFExportDIC__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__TMTCIFExportDIC__Group__6__Impl();
@@ -21846,17 +22172,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__6__Impl"
-    // InternalEXPORT.g:7041:1: rule__TMTCIFExportDIC__Group__6__Impl : ( 'DICRef' ) ;
+    // InternalEXPORT.g:7149:1: rule__TMTCIFExportDIC__Group__6__Impl : ( 'DICRef' ) ;
     public final void rule__TMTCIFExportDIC__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7045:1: ( ( 'DICRef' ) )
-            // InternalEXPORT.g:7046:1: ( 'DICRef' )
+            // InternalEXPORT.g:7153:1: ( ( 'DICRef' ) )
+            // InternalEXPORT.g:7154:1: ( 'DICRef' )
             {
-            // InternalEXPORT.g:7046:1: ( 'DICRef' )
-            // InternalEXPORT.g:7047:2: 'DICRef'
+            // InternalEXPORT.g:7154:1: ( 'DICRef' )
+            // InternalEXPORT.g:7155:2: 'DICRef'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getDICRefKeyword_6()); 
@@ -21887,14 +22213,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__7"
-    // InternalEXPORT.g:7056:1: rule__TMTCIFExportDIC__Group__7 : rule__TMTCIFExportDIC__Group__7__Impl rule__TMTCIFExportDIC__Group__8 ;
+    // InternalEXPORT.g:7164:1: rule__TMTCIFExportDIC__Group__7 : rule__TMTCIFExportDIC__Group__7__Impl rule__TMTCIFExportDIC__Group__8 ;
     public final void rule__TMTCIFExportDIC__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7060:1: ( rule__TMTCIFExportDIC__Group__7__Impl rule__TMTCIFExportDIC__Group__8 )
-            // InternalEXPORT.g:7061:2: rule__TMTCIFExportDIC__Group__7__Impl rule__TMTCIFExportDIC__Group__8
+            // InternalEXPORT.g:7168:1: ( rule__TMTCIFExportDIC__Group__7__Impl rule__TMTCIFExportDIC__Group__8 )
+            // InternalEXPORT.g:7169:2: rule__TMTCIFExportDIC__Group__7__Impl rule__TMTCIFExportDIC__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__TMTCIFExportDIC__Group__7__Impl();
@@ -21925,17 +22251,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__7__Impl"
-    // InternalEXPORT.g:7068:1: rule__TMTCIFExportDIC__Group__7__Impl : ( ':=' ) ;
+    // InternalEXPORT.g:7176:1: rule__TMTCIFExportDIC__Group__7__Impl : ( ':=' ) ;
     public final void rule__TMTCIFExportDIC__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7072:1: ( ( ':=' ) )
-            // InternalEXPORT.g:7073:1: ( ':=' )
+            // InternalEXPORT.g:7180:1: ( ( ':=' ) )
+            // InternalEXPORT.g:7181:1: ( ':=' )
             {
-            // InternalEXPORT.g:7073:1: ( ':=' )
-            // InternalEXPORT.g:7074:2: ':='
+            // InternalEXPORT.g:7181:1: ( ':=' )
+            // InternalEXPORT.g:7182:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getColonEqualsSignKeyword_7()); 
@@ -21966,14 +22292,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__8"
-    // InternalEXPORT.g:7083:1: rule__TMTCIFExportDIC__Group__8 : rule__TMTCIFExportDIC__Group__8__Impl rule__TMTCIFExportDIC__Group__9 ;
+    // InternalEXPORT.g:7191:1: rule__TMTCIFExportDIC__Group__8 : rule__TMTCIFExportDIC__Group__8__Impl rule__TMTCIFExportDIC__Group__9 ;
     public final void rule__TMTCIFExportDIC__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7087:1: ( rule__TMTCIFExportDIC__Group__8__Impl rule__TMTCIFExportDIC__Group__9 )
-            // InternalEXPORT.g:7088:2: rule__TMTCIFExportDIC__Group__8__Impl rule__TMTCIFExportDIC__Group__9
+            // InternalEXPORT.g:7195:1: ( rule__TMTCIFExportDIC__Group__8__Impl rule__TMTCIFExportDIC__Group__9 )
+            // InternalEXPORT.g:7196:2: rule__TMTCIFExportDIC__Group__8__Impl rule__TMTCIFExportDIC__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportDIC__Group__8__Impl();
@@ -22004,23 +22330,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__8__Impl"
-    // InternalEXPORT.g:7095:1: rule__TMTCIFExportDIC__Group__8__Impl : ( ( rule__TMTCIFExportDIC__DICRefAssignment_8 ) ) ;
+    // InternalEXPORT.g:7203:1: rule__TMTCIFExportDIC__Group__8__Impl : ( ( rule__TMTCIFExportDIC__DICRefAssignment_8 ) ) ;
     public final void rule__TMTCIFExportDIC__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7099:1: ( ( ( rule__TMTCIFExportDIC__DICRefAssignment_8 ) ) )
-            // InternalEXPORT.g:7100:1: ( ( rule__TMTCIFExportDIC__DICRefAssignment_8 ) )
+            // InternalEXPORT.g:7207:1: ( ( ( rule__TMTCIFExportDIC__DICRefAssignment_8 ) ) )
+            // InternalEXPORT.g:7208:1: ( ( rule__TMTCIFExportDIC__DICRefAssignment_8 ) )
             {
-            // InternalEXPORT.g:7100:1: ( ( rule__TMTCIFExportDIC__DICRefAssignment_8 ) )
-            // InternalEXPORT.g:7101:2: ( rule__TMTCIFExportDIC__DICRefAssignment_8 )
+            // InternalEXPORT.g:7208:1: ( ( rule__TMTCIFExportDIC__DICRefAssignment_8 ) )
+            // InternalEXPORT.g:7209:2: ( rule__TMTCIFExportDIC__DICRefAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getDICRefAssignment_8()); 
             }
-            // InternalEXPORT.g:7102:2: ( rule__TMTCIFExportDIC__DICRefAssignment_8 )
-            // InternalEXPORT.g:7102:3: rule__TMTCIFExportDIC__DICRefAssignment_8
+            // InternalEXPORT.g:7210:2: ( rule__TMTCIFExportDIC__DICRefAssignment_8 )
+            // InternalEXPORT.g:7210:3: rule__TMTCIFExportDIC__DICRefAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportDIC__DICRefAssignment_8();
@@ -22055,14 +22381,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__9"
-    // InternalEXPORT.g:7110:1: rule__TMTCIFExportDIC__Group__9 : rule__TMTCIFExportDIC__Group__9__Impl rule__TMTCIFExportDIC__Group__10 ;
+    // InternalEXPORT.g:7218:1: rule__TMTCIFExportDIC__Group__9 : rule__TMTCIFExportDIC__Group__9__Impl rule__TMTCIFExportDIC__Group__10 ;
     public final void rule__TMTCIFExportDIC__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7114:1: ( rule__TMTCIFExportDIC__Group__9__Impl rule__TMTCIFExportDIC__Group__10 )
-            // InternalEXPORT.g:7115:2: rule__TMTCIFExportDIC__Group__9__Impl rule__TMTCIFExportDIC__Group__10
+            // InternalEXPORT.g:7222:1: ( rule__TMTCIFExportDIC__Group__9__Impl rule__TMTCIFExportDIC__Group__10 )
+            // InternalEXPORT.g:7223:2: rule__TMTCIFExportDIC__Group__9__Impl rule__TMTCIFExportDIC__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__TMTCIFExportDIC__Group__9__Impl();
@@ -22093,17 +22419,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__9__Impl"
-    // InternalEXPORT.g:7122:1: rule__TMTCIFExportDIC__Group__9__Impl : ( ';' ) ;
+    // InternalEXPORT.g:7230:1: rule__TMTCIFExportDIC__Group__9__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportDIC__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7126:1: ( ( ';' ) )
-            // InternalEXPORT.g:7127:1: ( ';' )
+            // InternalEXPORT.g:7234:1: ( ( ';' ) )
+            // InternalEXPORT.g:7235:1: ( ';' )
             {
-            // InternalEXPORT.g:7127:1: ( ';' )
-            // InternalEXPORT.g:7128:2: ';'
+            // InternalEXPORT.g:7235:1: ( ';' )
+            // InternalEXPORT.g:7236:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getSemicolonKeyword_9()); 
@@ -22134,14 +22460,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__10"
-    // InternalEXPORT.g:7137:1: rule__TMTCIFExportDIC__Group__10 : rule__TMTCIFExportDIC__Group__10__Impl rule__TMTCIFExportDIC__Group__11 ;
+    // InternalEXPORT.g:7245:1: rule__TMTCIFExportDIC__Group__10 : rule__TMTCIFExportDIC__Group__10__Impl rule__TMTCIFExportDIC__Group__11 ;
     public final void rule__TMTCIFExportDIC__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7141:1: ( rule__TMTCIFExportDIC__Group__10__Impl rule__TMTCIFExportDIC__Group__11 )
-            // InternalEXPORT.g:7142:2: rule__TMTCIFExportDIC__Group__10__Impl rule__TMTCIFExportDIC__Group__11
+            // InternalEXPORT.g:7249:1: ( rule__TMTCIFExportDIC__Group__10__Impl rule__TMTCIFExportDIC__Group__11 )
+            // InternalEXPORT.g:7250:2: rule__TMTCIFExportDIC__Group__10__Impl rule__TMTCIFExportDIC__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__TMTCIFExportDIC__Group__10__Impl();
@@ -22172,17 +22498,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__10__Impl"
-    // InternalEXPORT.g:7149:1: rule__TMTCIFExportDIC__Group__10__Impl : ( '}' ) ;
+    // InternalEXPORT.g:7257:1: rule__TMTCIFExportDIC__Group__10__Impl : ( '}' ) ;
     public final void rule__TMTCIFExportDIC__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7153:1: ( ( '}' ) )
-            // InternalEXPORT.g:7154:1: ( '}' )
+            // InternalEXPORT.g:7261:1: ( ( '}' ) )
+            // InternalEXPORT.g:7262:1: ( '}' )
             {
-            // InternalEXPORT.g:7154:1: ( '}' )
-            // InternalEXPORT.g:7155:2: '}'
+            // InternalEXPORT.g:7262:1: ( '}' )
+            // InternalEXPORT.g:7263:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getRightCurlyBracketKeyword_10()); 
@@ -22213,14 +22539,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__11"
-    // InternalEXPORT.g:7164:1: rule__TMTCIFExportDIC__Group__11 : rule__TMTCIFExportDIC__Group__11__Impl ;
+    // InternalEXPORT.g:7272:1: rule__TMTCIFExportDIC__Group__11 : rule__TMTCIFExportDIC__Group__11__Impl ;
     public final void rule__TMTCIFExportDIC__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7168:1: ( rule__TMTCIFExportDIC__Group__11__Impl )
-            // InternalEXPORT.g:7169:2: rule__TMTCIFExportDIC__Group__11__Impl
+            // InternalEXPORT.g:7276:1: ( rule__TMTCIFExportDIC__Group__11__Impl )
+            // InternalEXPORT.g:7277:2: rule__TMTCIFExportDIC__Group__11__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportDIC__Group__11__Impl();
@@ -22246,17 +22572,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__Group__11__Impl"
-    // InternalEXPORT.g:7175:1: rule__TMTCIFExportDIC__Group__11__Impl : ( ';' ) ;
+    // InternalEXPORT.g:7283:1: rule__TMTCIFExportDIC__Group__11__Impl : ( ';' ) ;
     public final void rule__TMTCIFExportDIC__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7179:1: ( ( ';' ) )
-            // InternalEXPORT.g:7180:1: ( ';' )
+            // InternalEXPORT.g:7287:1: ( ( ';' ) )
+            // InternalEXPORT.g:7288:1: ( ';' )
             {
-            // InternalEXPORT.g:7180:1: ( ';' )
-            // InternalEXPORT.g:7181:2: ';'
+            // InternalEXPORT.g:7288:1: ( ';' )
+            // InternalEXPORT.g:7289:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getSemicolonKeyword_11()); 
@@ -22287,14 +22613,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // InternalEXPORT.g:7191:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // InternalEXPORT.g:7299:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7195:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // InternalEXPORT.g:7196:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // InternalEXPORT.g:7303:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // InternalEXPORT.g:7304:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_40);
             rule__QualifiedName__Group__0__Impl();
@@ -22325,17 +22651,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // InternalEXPORT.g:7203:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // InternalEXPORT.g:7311:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7207:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:7208:1: ( RULE_ID )
+            // InternalEXPORT.g:7315:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:7316:1: ( RULE_ID )
             {
-            // InternalEXPORT.g:7208:1: ( RULE_ID )
-            // InternalEXPORT.g:7209:2: RULE_ID
+            // InternalEXPORT.g:7316:1: ( RULE_ID )
+            // InternalEXPORT.g:7317:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
@@ -22366,14 +22692,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // InternalEXPORT.g:7218:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // InternalEXPORT.g:7326:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7222:1: ( rule__QualifiedName__Group__1__Impl )
-            // InternalEXPORT.g:7223:2: rule__QualifiedName__Group__1__Impl
+            // InternalEXPORT.g:7330:1: ( rule__QualifiedName__Group__1__Impl )
+            // InternalEXPORT.g:7331:2: rule__QualifiedName__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group__1__Impl();
@@ -22399,22 +22725,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // InternalEXPORT.g:7229:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // InternalEXPORT.g:7337:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7233:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // InternalEXPORT.g:7234:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalEXPORT.g:7341:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // InternalEXPORT.g:7342:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // InternalEXPORT.g:7234:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // InternalEXPORT.g:7235:2: ( rule__QualifiedName__Group_1__0 )*
+            // InternalEXPORT.g:7342:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalEXPORT.g:7343:2: ( rule__QualifiedName__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
             }
-            // InternalEXPORT.g:7236:2: ( rule__QualifiedName__Group_1__0 )*
+            // InternalEXPORT.g:7344:2: ( rule__QualifiedName__Group_1__0 )*
             loop26:
             do {
                 int alt26=2;
@@ -22427,7 +22753,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
                 switch (alt26) {
             	case 1 :
-            	    // InternalEXPORT.g:7236:3: rule__QualifiedName__Group_1__0
+            	    // InternalEXPORT.g:7344:3: rule__QualifiedName__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_41);
             	    rule__QualifiedName__Group_1__0();
@@ -22468,14 +22794,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // InternalEXPORT.g:7245:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // InternalEXPORT.g:7353:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7249:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // InternalEXPORT.g:7250:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // InternalEXPORT.g:7357:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // InternalEXPORT.g:7358:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__QualifiedName__Group_1__0__Impl();
@@ -22506,17 +22832,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // InternalEXPORT.g:7257:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // InternalEXPORT.g:7365:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7261:1: ( ( '.' ) )
-            // InternalEXPORT.g:7262:1: ( '.' )
+            // InternalEXPORT.g:7369:1: ( ( '.' ) )
+            // InternalEXPORT.g:7370:1: ( '.' )
             {
-            // InternalEXPORT.g:7262:1: ( '.' )
-            // InternalEXPORT.g:7263:2: '.'
+            // InternalEXPORT.g:7370:1: ( '.' )
+            // InternalEXPORT.g:7371:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
@@ -22547,14 +22873,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // InternalEXPORT.g:7272:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // InternalEXPORT.g:7380:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7276:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // InternalEXPORT.g:7277:2: rule__QualifiedName__Group_1__1__Impl
+            // InternalEXPORT.g:7384:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // InternalEXPORT.g:7385:2: rule__QualifiedName__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group_1__1__Impl();
@@ -22580,17 +22906,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // InternalEXPORT.g:7283:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // InternalEXPORT.g:7391:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7287:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:7288:1: ( RULE_ID )
+            // InternalEXPORT.g:7395:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:7396:1: ( RULE_ID )
             {
-            // InternalEXPORT.g:7288:1: ( RULE_ID )
-            // InternalEXPORT.g:7289:2: RULE_ID
+            // InternalEXPORT.g:7396:1: ( RULE_ID )
+            // InternalEXPORT.g:7397:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
@@ -22621,14 +22947,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0"
-    // InternalEXPORT.g:7299:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
+    // InternalEXPORT.g:7407:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
     public final void rule__Version__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7303:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
-            // InternalEXPORT.g:7304:2: rule__Version__Group__0__Impl rule__Version__Group__1
+            // InternalEXPORT.g:7411:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
+            // InternalEXPORT.g:7412:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_40);
             rule__Version__Group__0__Impl();
@@ -22659,23 +22985,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0__Impl"
-    // InternalEXPORT.g:7311:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
+    // InternalEXPORT.g:7419:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
     public final void rule__Version__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7315:1: ( ( ( rule__Version__Alternatives_0 ) ) )
-            // InternalEXPORT.g:7316:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalEXPORT.g:7423:1: ( ( ( rule__Version__Alternatives_0 ) ) )
+            // InternalEXPORT.g:7424:1: ( ( rule__Version__Alternatives_0 ) )
             {
-            // InternalEXPORT.g:7316:1: ( ( rule__Version__Alternatives_0 ) )
-            // InternalEXPORT.g:7317:2: ( rule__Version__Alternatives_0 )
+            // InternalEXPORT.g:7424:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalEXPORT.g:7425:2: ( rule__Version__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_0()); 
             }
-            // InternalEXPORT.g:7318:2: ( rule__Version__Alternatives_0 )
-            // InternalEXPORT.g:7318:3: rule__Version__Alternatives_0
+            // InternalEXPORT.g:7426:2: ( rule__Version__Alternatives_0 )
+            // InternalEXPORT.g:7426:3: rule__Version__Alternatives_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_0();
@@ -22710,14 +23036,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1"
-    // InternalEXPORT.g:7326:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
+    // InternalEXPORT.g:7434:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
     public final void rule__Version__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7330:1: ( rule__Version__Group__1__Impl )
-            // InternalEXPORT.g:7331:2: rule__Version__Group__1__Impl
+            // InternalEXPORT.g:7438:1: ( rule__Version__Group__1__Impl )
+            // InternalEXPORT.g:7439:2: rule__Version__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group__1__Impl();
@@ -22743,22 +23069,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1__Impl"
-    // InternalEXPORT.g:7337:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
+    // InternalEXPORT.g:7445:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
     public final void rule__Version__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7341:1: ( ( ( rule__Version__Group_1__0 )* ) )
-            // InternalEXPORT.g:7342:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalEXPORT.g:7449:1: ( ( ( rule__Version__Group_1__0 )* ) )
+            // InternalEXPORT.g:7450:1: ( ( rule__Version__Group_1__0 )* )
             {
-            // InternalEXPORT.g:7342:1: ( ( rule__Version__Group_1__0 )* )
-            // InternalEXPORT.g:7343:2: ( rule__Version__Group_1__0 )*
+            // InternalEXPORT.g:7450:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalEXPORT.g:7451:2: ( rule__Version__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getGroup_1()); 
             }
-            // InternalEXPORT.g:7344:2: ( rule__Version__Group_1__0 )*
+            // InternalEXPORT.g:7452:2: ( rule__Version__Group_1__0 )*
             loop27:
             do {
                 int alt27=2;
@@ -22771,7 +23097,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
                 switch (alt27) {
             	case 1 :
-            	    // InternalEXPORT.g:7344:3: rule__Version__Group_1__0
+            	    // InternalEXPORT.g:7452:3: rule__Version__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_41);
             	    rule__Version__Group_1__0();
@@ -22812,14 +23138,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__0"
-    // InternalEXPORT.g:7353:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
+    // InternalEXPORT.g:7461:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
     public final void rule__Version__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7357:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
-            // InternalEXPORT.g:7358:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
+            // InternalEXPORT.g:7465:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
+            // InternalEXPORT.g:7466:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__Version__Group_0_1__0__Impl();
@@ -22850,22 +23176,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__0__Impl"
-    // InternalEXPORT.g:7365:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalEXPORT.g:7473:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7369:1: ( ( ( RULE_INT )? ) )
-            // InternalEXPORT.g:7370:1: ( ( RULE_INT )? )
+            // InternalEXPORT.g:7477:1: ( ( ( RULE_INT )? ) )
+            // InternalEXPORT.g:7478:1: ( ( RULE_INT )? )
             {
-            // InternalEXPORT.g:7370:1: ( ( RULE_INT )? )
-            // InternalEXPORT.g:7371:2: ( RULE_INT )?
+            // InternalEXPORT.g:7478:1: ( ( RULE_INT )? )
+            // InternalEXPORT.g:7479:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_1_0()); 
             }
-            // InternalEXPORT.g:7372:2: ( RULE_INT )?
+            // InternalEXPORT.g:7480:2: ( RULE_INT )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -22874,7 +23200,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             }
             switch (alt28) {
                 case 1 :
-                    // InternalEXPORT.g:7372:3: RULE_INT
+                    // InternalEXPORT.g:7480:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -22908,14 +23234,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__1"
-    // InternalEXPORT.g:7380:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
+    // InternalEXPORT.g:7488:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
     public final void rule__Version__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7384:1: ( rule__Version__Group_0_1__1__Impl )
-            // InternalEXPORT.g:7385:2: rule__Version__Group_0_1__1__Impl
+            // InternalEXPORT.g:7492:1: ( rule__Version__Group_0_1__1__Impl )
+            // InternalEXPORT.g:7493:2: rule__Version__Group_0_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_0_1__1__Impl();
@@ -22941,17 +23267,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__1__Impl"
-    // InternalEXPORT.g:7391:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
+    // InternalEXPORT.g:7499:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7395:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:7396:1: ( RULE_ID )
+            // InternalEXPORT.g:7503:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:7504:1: ( RULE_ID )
             {
-            // InternalEXPORT.g:7396:1: ( RULE_ID )
-            // InternalEXPORT.g:7397:2: RULE_ID
+            // InternalEXPORT.g:7504:1: ( RULE_ID )
+            // InternalEXPORT.g:7505:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_0_1_1()); 
@@ -22982,14 +23308,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__0"
-    // InternalEXPORT.g:7407:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
+    // InternalEXPORT.g:7515:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
     public final void rule__Version__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7411:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
-            // InternalEXPORT.g:7412:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
+            // InternalEXPORT.g:7519:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
+            // InternalEXPORT.g:7520:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__Version__Group_1__0__Impl();
@@ -23020,17 +23346,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__0__Impl"
-    // InternalEXPORT.g:7419:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
+    // InternalEXPORT.g:7527:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
     public final void rule__Version__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7423:1: ( ( '.' ) )
-            // InternalEXPORT.g:7424:1: ( '.' )
+            // InternalEXPORT.g:7531:1: ( ( '.' ) )
+            // InternalEXPORT.g:7532:1: ( '.' )
             {
-            // InternalEXPORT.g:7424:1: ( '.' )
-            // InternalEXPORT.g:7425:2: '.'
+            // InternalEXPORT.g:7532:1: ( '.' )
+            // InternalEXPORT.g:7533:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
@@ -23061,14 +23387,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__1"
-    // InternalEXPORT.g:7434:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
+    // InternalEXPORT.g:7542:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
     public final void rule__Version__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7438:1: ( rule__Version__Group_1__1__Impl )
-            // InternalEXPORT.g:7439:2: rule__Version__Group_1__1__Impl
+            // InternalEXPORT.g:7546:1: ( rule__Version__Group_1__1__Impl )
+            // InternalEXPORT.g:7547:2: rule__Version__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1__1__Impl();
@@ -23094,23 +23420,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__1__Impl"
-    // InternalEXPORT.g:7445:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
+    // InternalEXPORT.g:7553:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
     public final void rule__Version__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7449:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
-            // InternalEXPORT.g:7450:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalEXPORT.g:7557:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
+            // InternalEXPORT.g:7558:1: ( ( rule__Version__Alternatives_1_1 ) )
             {
-            // InternalEXPORT.g:7450:1: ( ( rule__Version__Alternatives_1_1 ) )
-            // InternalEXPORT.g:7451:2: ( rule__Version__Alternatives_1_1 )
+            // InternalEXPORT.g:7558:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalEXPORT.g:7559:2: ( rule__Version__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_1_1()); 
             }
-            // InternalEXPORT.g:7452:2: ( rule__Version__Alternatives_1_1 )
-            // InternalEXPORT.g:7452:3: rule__Version__Alternatives_1_1
+            // InternalEXPORT.g:7560:2: ( rule__Version__Alternatives_1_1 )
+            // InternalEXPORT.g:7560:3: rule__Version__Alternatives_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_1_1();
@@ -23145,14 +23471,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0"
-    // InternalEXPORT.g:7461:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
+    // InternalEXPORT.g:7569:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
     public final void rule__Version__Group_1_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7465:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
-            // InternalEXPORT.g:7466:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
+            // InternalEXPORT.g:7573:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
+            // InternalEXPORT.g:7574:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__Version__Group_1_1_1__0__Impl();
@@ -23183,22 +23509,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0__Impl"
-    // InternalEXPORT.g:7473:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalEXPORT.g:7581:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_1_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7477:1: ( ( ( RULE_INT )? ) )
-            // InternalEXPORT.g:7478:1: ( ( RULE_INT )? )
+            // InternalEXPORT.g:7585:1: ( ( ( RULE_INT )? ) )
+            // InternalEXPORT.g:7586:1: ( ( RULE_INT )? )
             {
-            // InternalEXPORT.g:7478:1: ( ( RULE_INT )? )
-            // InternalEXPORT.g:7479:2: ( RULE_INT )?
+            // InternalEXPORT.g:7586:1: ( ( RULE_INT )? )
+            // InternalEXPORT.g:7587:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_1_0()); 
             }
-            // InternalEXPORT.g:7480:2: ( RULE_INT )?
+            // InternalEXPORT.g:7588:2: ( RULE_INT )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -23207,7 +23533,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             }
             switch (alt29) {
                 case 1 :
-                    // InternalEXPORT.g:7480:3: RULE_INT
+                    // InternalEXPORT.g:7588:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -23241,14 +23567,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1"
-    // InternalEXPORT.g:7488:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
+    // InternalEXPORT.g:7596:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
     public final void rule__Version__Group_1_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7492:1: ( rule__Version__Group_1_1_1__1__Impl )
-            // InternalEXPORT.g:7493:2: rule__Version__Group_1_1_1__1__Impl
+            // InternalEXPORT.g:7600:1: ( rule__Version__Group_1_1_1__1__Impl )
+            // InternalEXPORT.g:7601:2: rule__Version__Group_1_1_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1_1_1__1__Impl();
@@ -23274,17 +23600,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1__Impl"
-    // InternalEXPORT.g:7499:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
+    // InternalEXPORT.g:7607:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_1_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7503:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:7504:1: ( RULE_ID )
+            // InternalEXPORT.g:7611:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:7612:1: ( RULE_ID )
             {
-            // InternalEXPORT.g:7504:1: ( RULE_ID )
-            // InternalEXPORT.g:7505:2: RULE_ID
+            // InternalEXPORT.g:7612:1: ( RULE_ID )
+            // InternalEXPORT.g:7613:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_1_1_1_1()); 
@@ -23315,14 +23641,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0"
-    // InternalEXPORT.g:7515:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
+    // InternalEXPORT.g:7623:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
     public final void rule__VersionedQualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7519:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
-            // InternalEXPORT.g:7520:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
+            // InternalEXPORT.g:7627:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
+            // InternalEXPORT.g:7628:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_42);
             rule__VersionedQualifiedName__Group__0__Impl();
@@ -23353,17 +23679,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0__Impl"
-    // InternalEXPORT.g:7527:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
+    // InternalEXPORT.g:7635:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
     public final void rule__VersionedQualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7531:1: ( ( ruleQualifiedName ) )
-            // InternalEXPORT.g:7532:1: ( ruleQualifiedName )
+            // InternalEXPORT.g:7639:1: ( ( ruleQualifiedName ) )
+            // InternalEXPORT.g:7640:1: ( ruleQualifiedName )
             {
-            // InternalEXPORT.g:7532:1: ( ruleQualifiedName )
-            // InternalEXPORT.g:7533:2: ruleQualifiedName
+            // InternalEXPORT.g:7640:1: ( ruleQualifiedName )
+            // InternalEXPORT.g:7641:2: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0()); 
@@ -23398,14 +23724,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1"
-    // InternalEXPORT.g:7542:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
+    // InternalEXPORT.g:7650:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
     public final void rule__VersionedQualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7546:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
-            // InternalEXPORT.g:7547:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
+            // InternalEXPORT.g:7654:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
+            // InternalEXPORT.g:7655:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__VersionedQualifiedName__Group__1__Impl();
@@ -23436,17 +23762,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1__Impl"
-    // InternalEXPORT.g:7554:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
+    // InternalEXPORT.g:7662:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
     public final void rule__VersionedQualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7558:1: ( ( '(' ) )
-            // InternalEXPORT.g:7559:1: ( '(' )
+            // InternalEXPORT.g:7666:1: ( ( '(' ) )
+            // InternalEXPORT.g:7667:1: ( '(' )
             {
-            // InternalEXPORT.g:7559:1: ( '(' )
-            // InternalEXPORT.g:7560:2: '('
+            // InternalEXPORT.g:7667:1: ( '(' )
+            // InternalEXPORT.g:7668:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
@@ -23477,14 +23803,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2"
-    // InternalEXPORT.g:7569:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
+    // InternalEXPORT.g:7677:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
     public final void rule__VersionedQualifiedName__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7573:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
-            // InternalEXPORT.g:7574:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
+            // InternalEXPORT.g:7681:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
+            // InternalEXPORT.g:7682:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_43);
             rule__VersionedQualifiedName__Group__2__Impl();
@@ -23515,17 +23841,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2__Impl"
-    // InternalEXPORT.g:7581:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
+    // InternalEXPORT.g:7689:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
     public final void rule__VersionedQualifiedName__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7585:1: ( ( ruleVersion ) )
-            // InternalEXPORT.g:7586:1: ( ruleVersion )
+            // InternalEXPORT.g:7693:1: ( ( ruleVersion ) )
+            // InternalEXPORT.g:7694:1: ( ruleVersion )
             {
-            // InternalEXPORT.g:7586:1: ( ruleVersion )
-            // InternalEXPORT.g:7587:2: ruleVersion
+            // InternalEXPORT.g:7694:1: ( ruleVersion )
+            // InternalEXPORT.g:7695:2: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2()); 
@@ -23560,14 +23886,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3"
-    // InternalEXPORT.g:7596:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
+    // InternalEXPORT.g:7704:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
     public final void rule__VersionedQualifiedName__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7600:1: ( rule__VersionedQualifiedName__Group__3__Impl )
-            // InternalEXPORT.g:7601:2: rule__VersionedQualifiedName__Group__3__Impl
+            // InternalEXPORT.g:7708:1: ( rule__VersionedQualifiedName__Group__3__Impl )
+            // InternalEXPORT.g:7709:2: rule__VersionedQualifiedName__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedName__Group__3__Impl();
@@ -23593,17 +23919,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3__Impl"
-    // InternalEXPORT.g:7607:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
+    // InternalEXPORT.g:7715:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
     public final void rule__VersionedQualifiedName__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7611:1: ( ( ')' ) )
-            // InternalEXPORT.g:7612:1: ( ')' )
+            // InternalEXPORT.g:7719:1: ( ( ')' ) )
+            // InternalEXPORT.g:7720:1: ( ')' )
             {
-            // InternalEXPORT.g:7612:1: ( ')' )
-            // InternalEXPORT.g:7613:2: ')'
+            // InternalEXPORT.g:7720:1: ( ')' )
+            // InternalEXPORT.g:7721:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
@@ -23634,14 +23960,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__0"
-    // InternalEXPORT.g:7623:1: rule__VersionedQualifiedReferenceName__Group__0 : rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1 ;
+    // InternalEXPORT.g:7731:1: rule__VersionedQualifiedReferenceName__Group__0 : rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1 ;
     public final void rule__VersionedQualifiedReferenceName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7627:1: ( rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1 )
-            // InternalEXPORT.g:7628:2: rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1
+            // InternalEXPORT.g:7735:1: ( rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1 )
+            // InternalEXPORT.g:7736:2: rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__VersionedQualifiedReferenceName__Group__0__Impl();
@@ -23672,22 +23998,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__0__Impl"
-    // InternalEXPORT.g:7635:1: rule__VersionedQualifiedReferenceName__Group__0__Impl : ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? ) ;
+    // InternalEXPORT.g:7743:1: rule__VersionedQualifiedReferenceName__Group__0__Impl : ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? ) ;
     public final void rule__VersionedQualifiedReferenceName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7639:1: ( ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? ) )
-            // InternalEXPORT.g:7640:1: ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? )
+            // InternalEXPORT.g:7747:1: ( ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? ) )
+            // InternalEXPORT.g:7748:1: ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? )
             {
-            // InternalEXPORT.g:7640:1: ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? )
-            // InternalEXPORT.g:7641:2: ( rule__VersionedQualifiedReferenceName__Group_0__0 )?
+            // InternalEXPORT.g:7748:1: ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? )
+            // InternalEXPORT.g:7749:2: ( rule__VersionedQualifiedReferenceName__Group_0__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_0()); 
             }
-            // InternalEXPORT.g:7642:2: ( rule__VersionedQualifiedReferenceName__Group_0__0 )?
+            // InternalEXPORT.g:7750:2: ( rule__VersionedQualifiedReferenceName__Group_0__0 )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -23700,7 +24026,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             }
             switch (alt30) {
                 case 1 :
-                    // InternalEXPORT.g:7642:3: rule__VersionedQualifiedReferenceName__Group_0__0
+                    // InternalEXPORT.g:7750:3: rule__VersionedQualifiedReferenceName__Group_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__VersionedQualifiedReferenceName__Group_0__0();
@@ -23738,14 +24064,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__1"
-    // InternalEXPORT.g:7650:1: rule__VersionedQualifiedReferenceName__Group__1 : rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2 ;
+    // InternalEXPORT.g:7758:1: rule__VersionedQualifiedReferenceName__Group__1 : rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2 ;
     public final void rule__VersionedQualifiedReferenceName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7654:1: ( rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2 )
-            // InternalEXPORT.g:7655:2: rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2
+            // InternalEXPORT.g:7762:1: ( rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2 )
+            // InternalEXPORT.g:7763:2: rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_44);
             rule__VersionedQualifiedReferenceName__Group__1__Impl();
@@ -23776,17 +24102,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__1__Impl"
-    // InternalEXPORT.g:7662:1: rule__VersionedQualifiedReferenceName__Group__1__Impl : ( RULE_ID ) ;
+    // InternalEXPORT.g:7770:1: rule__VersionedQualifiedReferenceName__Group__1__Impl : ( RULE_ID ) ;
     public final void rule__VersionedQualifiedReferenceName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7666:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:7667:1: ( RULE_ID )
+            // InternalEXPORT.g:7774:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:7775:1: ( RULE_ID )
             {
-            // InternalEXPORT.g:7667:1: ( RULE_ID )
-            // InternalEXPORT.g:7668:2: RULE_ID
+            // InternalEXPORT.g:7775:1: ( RULE_ID )
+            // InternalEXPORT.g:7776:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1()); 
@@ -23817,14 +24143,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__2"
-    // InternalEXPORT.g:7677:1: rule__VersionedQualifiedReferenceName__Group__2 : rule__VersionedQualifiedReferenceName__Group__2__Impl ;
+    // InternalEXPORT.g:7785:1: rule__VersionedQualifiedReferenceName__Group__2 : rule__VersionedQualifiedReferenceName__Group__2__Impl ;
     public final void rule__VersionedQualifiedReferenceName__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7681:1: ( rule__VersionedQualifiedReferenceName__Group__2__Impl )
-            // InternalEXPORT.g:7682:2: rule__VersionedQualifiedReferenceName__Group__2__Impl
+            // InternalEXPORT.g:7789:1: ( rule__VersionedQualifiedReferenceName__Group__2__Impl )
+            // InternalEXPORT.g:7790:2: rule__VersionedQualifiedReferenceName__Group__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedReferenceName__Group__2__Impl();
@@ -23850,22 +24176,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__2__Impl"
-    // InternalEXPORT.g:7688:1: rule__VersionedQualifiedReferenceName__Group__2__Impl : ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* ) ;
+    // InternalEXPORT.g:7796:1: rule__VersionedQualifiedReferenceName__Group__2__Impl : ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* ) ;
     public final void rule__VersionedQualifiedReferenceName__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7692:1: ( ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* ) )
-            // InternalEXPORT.g:7693:1: ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* )
+            // InternalEXPORT.g:7800:1: ( ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* ) )
+            // InternalEXPORT.g:7801:1: ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* )
             {
-            // InternalEXPORT.g:7693:1: ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* )
-            // InternalEXPORT.g:7694:2: ( rule__VersionedQualifiedReferenceName__Group_2__0 )*
+            // InternalEXPORT.g:7801:1: ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* )
+            // InternalEXPORT.g:7802:2: ( rule__VersionedQualifiedReferenceName__Group_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_2()); 
             }
-            // InternalEXPORT.g:7695:2: ( rule__VersionedQualifiedReferenceName__Group_2__0 )*
+            // InternalEXPORT.g:7803:2: ( rule__VersionedQualifiedReferenceName__Group_2__0 )*
             loop31:
             do {
                 int alt31=2;
@@ -23878,7 +24204,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
                 switch (alt31) {
             	case 1 :
-            	    // InternalEXPORT.g:7695:3: rule__VersionedQualifiedReferenceName__Group_2__0
+            	    // InternalEXPORT.g:7803:3: rule__VersionedQualifiedReferenceName__Group_2__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_45);
             	    rule__VersionedQualifiedReferenceName__Group_2__0();
@@ -23919,14 +24245,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_0__0"
-    // InternalEXPORT.g:7704:1: rule__VersionedQualifiedReferenceName__Group_0__0 : rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1 ;
+    // InternalEXPORT.g:7812:1: rule__VersionedQualifiedReferenceName__Group_0__0 : rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1 ;
     public final void rule__VersionedQualifiedReferenceName__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7708:1: ( rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1 )
-            // InternalEXPORT.g:7709:2: rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1
+            // InternalEXPORT.g:7816:1: ( rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1 )
+            // InternalEXPORT.g:7817:2: rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1
             {
             pushFollow(FollowSets000.FOLLOW_44);
             rule__VersionedQualifiedReferenceName__Group_0__0__Impl();
@@ -23957,17 +24283,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_0__0__Impl"
-    // InternalEXPORT.g:7716:1: rule__VersionedQualifiedReferenceName__Group_0__0__Impl : ( ruleVersionedQualifiedName ) ;
+    // InternalEXPORT.g:7824:1: rule__VersionedQualifiedReferenceName__Group_0__0__Impl : ( ruleVersionedQualifiedName ) ;
     public final void rule__VersionedQualifiedReferenceName__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7720:1: ( ( ruleVersionedQualifiedName ) )
-            // InternalEXPORT.g:7721:1: ( ruleVersionedQualifiedName )
+            // InternalEXPORT.g:7828:1: ( ( ruleVersionedQualifiedName ) )
+            // InternalEXPORT.g:7829:1: ( ruleVersionedQualifiedName )
             {
-            // InternalEXPORT.g:7721:1: ( ruleVersionedQualifiedName )
-            // InternalEXPORT.g:7722:2: ruleVersionedQualifiedName
+            // InternalEXPORT.g:7829:1: ( ruleVersionedQualifiedName )
+            // InternalEXPORT.g:7830:2: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0()); 
@@ -24002,14 +24328,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_0__1"
-    // InternalEXPORT.g:7731:1: rule__VersionedQualifiedReferenceName__Group_0__1 : rule__VersionedQualifiedReferenceName__Group_0__1__Impl ;
+    // InternalEXPORT.g:7839:1: rule__VersionedQualifiedReferenceName__Group_0__1 : rule__VersionedQualifiedReferenceName__Group_0__1__Impl ;
     public final void rule__VersionedQualifiedReferenceName__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7735:1: ( rule__VersionedQualifiedReferenceName__Group_0__1__Impl )
-            // InternalEXPORT.g:7736:2: rule__VersionedQualifiedReferenceName__Group_0__1__Impl
+            // InternalEXPORT.g:7843:1: ( rule__VersionedQualifiedReferenceName__Group_0__1__Impl )
+            // InternalEXPORT.g:7844:2: rule__VersionedQualifiedReferenceName__Group_0__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedReferenceName__Group_0__1__Impl();
@@ -24035,17 +24361,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_0__1__Impl"
-    // InternalEXPORT.g:7742:1: rule__VersionedQualifiedReferenceName__Group_0__1__Impl : ( '::' ) ;
+    // InternalEXPORT.g:7850:1: rule__VersionedQualifiedReferenceName__Group_0__1__Impl : ( '::' ) ;
     public final void rule__VersionedQualifiedReferenceName__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7746:1: ( ( '::' ) )
-            // InternalEXPORT.g:7747:1: ( '::' )
+            // InternalEXPORT.g:7854:1: ( ( '::' ) )
+            // InternalEXPORT.g:7855:1: ( '::' )
             {
-            // InternalEXPORT.g:7747:1: ( '::' )
-            // InternalEXPORT.g:7748:2: '::'
+            // InternalEXPORT.g:7855:1: ( '::' )
+            // InternalEXPORT.g:7856:2: '::'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1()); 
@@ -24076,14 +24402,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_2__0"
-    // InternalEXPORT.g:7758:1: rule__VersionedQualifiedReferenceName__Group_2__0 : rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1 ;
+    // InternalEXPORT.g:7866:1: rule__VersionedQualifiedReferenceName__Group_2__0 : rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1 ;
     public final void rule__VersionedQualifiedReferenceName__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7762:1: ( rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1 )
-            // InternalEXPORT.g:7763:2: rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1
+            // InternalEXPORT.g:7870:1: ( rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1 )
+            // InternalEXPORT.g:7871:2: rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__VersionedQualifiedReferenceName__Group_2__0__Impl();
@@ -24114,17 +24440,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_2__0__Impl"
-    // InternalEXPORT.g:7770:1: rule__VersionedQualifiedReferenceName__Group_2__0__Impl : ( '::' ) ;
+    // InternalEXPORT.g:7878:1: rule__VersionedQualifiedReferenceName__Group_2__0__Impl : ( '::' ) ;
     public final void rule__VersionedQualifiedReferenceName__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7774:1: ( ( '::' ) )
-            // InternalEXPORT.g:7775:1: ( '::' )
+            // InternalEXPORT.g:7882:1: ( ( '::' ) )
+            // InternalEXPORT.g:7883:1: ( '::' )
             {
-            // InternalEXPORT.g:7775:1: ( '::' )
-            // InternalEXPORT.g:7776:2: '::'
+            // InternalEXPORT.g:7883:1: ( '::' )
+            // InternalEXPORT.g:7884:2: '::'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0()); 
@@ -24155,14 +24481,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_2__1"
-    // InternalEXPORT.g:7785:1: rule__VersionedQualifiedReferenceName__Group_2__1 : rule__VersionedQualifiedReferenceName__Group_2__1__Impl ;
+    // InternalEXPORT.g:7893:1: rule__VersionedQualifiedReferenceName__Group_2__1 : rule__VersionedQualifiedReferenceName__Group_2__1__Impl ;
     public final void rule__VersionedQualifiedReferenceName__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7789:1: ( rule__VersionedQualifiedReferenceName__Group_2__1__Impl )
-            // InternalEXPORT.g:7790:2: rule__VersionedQualifiedReferenceName__Group_2__1__Impl
+            // InternalEXPORT.g:7897:1: ( rule__VersionedQualifiedReferenceName__Group_2__1__Impl )
+            // InternalEXPORT.g:7898:2: rule__VersionedQualifiedReferenceName__Group_2__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedReferenceName__Group_2__1__Impl();
@@ -24188,17 +24514,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_2__1__Impl"
-    // InternalEXPORT.g:7796:1: rule__VersionedQualifiedReferenceName__Group_2__1__Impl : ( RULE_ID ) ;
+    // InternalEXPORT.g:7904:1: rule__VersionedQualifiedReferenceName__Group_2__1__Impl : ( RULE_ID ) ;
     public final void rule__VersionedQualifiedReferenceName__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7800:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:7801:1: ( RULE_ID )
+            // InternalEXPORT.g:7908:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:7909:1: ( RULE_ID )
             {
-            // InternalEXPORT.g:7801:1: ( RULE_ID )
-            // InternalEXPORT.g:7802:2: RULE_ID
+            // InternalEXPORT.g:7909:1: ( RULE_ID )
+            // InternalEXPORT.g:7910:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1()); 
@@ -24229,14 +24555,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0"
-    // InternalEXPORT.g:7812:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
+    // InternalEXPORT.g:7920:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
     public final void rule__INTEGER__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7816:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
-            // InternalEXPORT.g:7817:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
+            // InternalEXPORT.g:7924:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
+            // InternalEXPORT.g:7925:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
             {
             pushFollow(FollowSets000.FOLLOW_46);
             rule__INTEGER__Group_0__0__Impl();
@@ -24267,22 +24593,22 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0__Impl"
-    // InternalEXPORT.g:7824:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
+    // InternalEXPORT.g:7932:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
     public final void rule__INTEGER__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7828:1: ( ( ( '-' )? ) )
-            // InternalEXPORT.g:7829:1: ( ( '-' )? )
+            // InternalEXPORT.g:7936:1: ( ( ( '-' )? ) )
+            // InternalEXPORT.g:7937:1: ( ( '-' )? )
             {
-            // InternalEXPORT.g:7829:1: ( ( '-' )? )
-            // InternalEXPORT.g:7830:2: ( '-' )?
+            // InternalEXPORT.g:7937:1: ( ( '-' )? )
+            // InternalEXPORT.g:7938:2: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getHyphenMinusKeyword_0_0()); 
             }
-            // InternalEXPORT.g:7831:2: ( '-' )?
+            // InternalEXPORT.g:7939:2: ( '-' )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -24291,7 +24617,7 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             }
             switch (alt32) {
                 case 1 :
-                    // InternalEXPORT.g:7831:3: '-'
+                    // InternalEXPORT.g:7939:3: '-'
                     {
                     match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -24325,14 +24651,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1"
-    // InternalEXPORT.g:7839:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
+    // InternalEXPORT.g:7947:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
     public final void rule__INTEGER__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7843:1: ( rule__INTEGER__Group_0__1__Impl )
-            // InternalEXPORT.g:7844:2: rule__INTEGER__Group_0__1__Impl
+            // InternalEXPORT.g:7951:1: ( rule__INTEGER__Group_0__1__Impl )
+            // InternalEXPORT.g:7952:2: rule__INTEGER__Group_0__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__INTEGER__Group_0__1__Impl();
@@ -24358,17 +24684,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1__Impl"
-    // InternalEXPORT.g:7850:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
+    // InternalEXPORT.g:7958:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
     public final void rule__INTEGER__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7854:1: ( ( RULE_INT ) )
-            // InternalEXPORT.g:7855:1: ( RULE_INT )
+            // InternalEXPORT.g:7962:1: ( ( RULE_INT ) )
+            // InternalEXPORT.g:7963:1: ( RULE_INT )
             {
-            // InternalEXPORT.g:7855:1: ( RULE_INT )
-            // InternalEXPORT.g:7856:2: RULE_INT
+            // InternalEXPORT.g:7963:1: ( RULE_INT )
+            // InternalEXPORT.g:7964:2: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getINTTerminalRuleCall_0_1()); 
@@ -24399,15 +24725,15 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__UnorderedGroup_3"
-    // InternalEXPORT.g:7866:1: rule__TMTCIFExportExport__UnorderedGroup_3 : rule__TMTCIFExportExport__UnorderedGroup_3__0 {...}?;
+    // InternalEXPORT.g:7974:1: rule__TMTCIFExportExport__UnorderedGroup_3 : rule__TMTCIFExportExport__UnorderedGroup_3__0 {...}?;
     public final void rule__TMTCIFExportExport__UnorderedGroup_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3());
         	
         try {
-            // InternalEXPORT.g:7871:1: ( rule__TMTCIFExportExport__UnorderedGroup_3__0 {...}?)
-            // InternalEXPORT.g:7872:2: rule__TMTCIFExportExport__UnorderedGroup_3__0 {...}?
+            // InternalEXPORT.g:7979:1: ( rule__TMTCIFExportExport__UnorderedGroup_3__0 {...}?)
+            // InternalEXPORT.g:7980:2: rule__TMTCIFExportExport__UnorderedGroup_3__0 {...}?
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportExport__UnorderedGroup_3__0();
@@ -24438,17 +24764,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__UnorderedGroup_3__Impl"
-    // InternalEXPORT.g:7880:1: rule__TMTCIFExportExport__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) ) ) ;
+    // InternalEXPORT.g:7988:1: rule__TMTCIFExportExport__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) ) ) ;
     public final void rule__TMTCIFExportExport__UnorderedGroup_3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalEXPORT.g:7885:1: ( ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) ) ) )
-            // InternalEXPORT.g:7886:3: ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) ) )
+            // InternalEXPORT.g:7993:1: ( ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) ) ) )
+            // InternalEXPORT.g:7994:3: ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) ) )
             {
-            // InternalEXPORT.g:7886:3: ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) ) )
+            // InternalEXPORT.g:7994:3: ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) ) )
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -24467,28 +24793,28 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             }
             switch (alt33) {
                 case 1 :
-                    // InternalEXPORT.g:7887:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) )
+                    // InternalEXPORT.g:7995:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) )
                     {
-                    // InternalEXPORT.g:7887:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) )
-                    // InternalEXPORT.g:7888:4: {...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) )
+                    // InternalEXPORT.g:7995:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) )
+                    // InternalEXPORT.g:7996:4: {...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 0) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__TMTCIFExportExport__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 0)");
                     }
-                    // InternalEXPORT.g:7888:114: ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) )
-                    // InternalEXPORT.g:7889:5: ( ( rule__TMTCIFExportExport__Group_3_0__0 ) )
+                    // InternalEXPORT.g:7996:114: ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) )
+                    // InternalEXPORT.g:7997:5: ( ( rule__TMTCIFExportExport__Group_3_0__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 0);
                     selected = true;
-                    // InternalEXPORT.g:7895:5: ( ( rule__TMTCIFExportExport__Group_3_0__0 ) )
-                    // InternalEXPORT.g:7896:6: ( rule__TMTCIFExportExport__Group_3_0__0 )
+                    // InternalEXPORT.g:8003:5: ( ( rule__TMTCIFExportExport__Group_3_0__0 ) )
+                    // InternalEXPORT.g:8004:6: ( rule__TMTCIFExportExport__Group_3_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTMTCIFExportExportAccess().getGroup_3_0()); 
                     }
-                    // InternalEXPORT.g:7897:6: ( rule__TMTCIFExportExport__Group_3_0__0 )
-                    // InternalEXPORT.g:7897:7: rule__TMTCIFExportExport__Group_3_0__0
+                    // InternalEXPORT.g:8005:6: ( rule__TMTCIFExportExport__Group_3_0__0 )
+                    // InternalEXPORT.g:8005:7: rule__TMTCIFExportExport__Group_3_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__TMTCIFExportExport__Group_3_0__0();
@@ -24514,28 +24840,28 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalEXPORT.g:7902:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) )
+                    // InternalEXPORT.g:8010:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) )
                     {
-                    // InternalEXPORT.g:7902:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) )
-                    // InternalEXPORT.g:7903:4: {...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) )
+                    // InternalEXPORT.g:8010:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) ) )
+                    // InternalEXPORT.g:8011:4: {...}? => ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 1) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__TMTCIFExportExport__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 1)");
                     }
-                    // InternalEXPORT.g:7903:114: ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) )
-                    // InternalEXPORT.g:7904:5: ( ( rule__TMTCIFExportExport__Group_3_1__0 ) )
+                    // InternalEXPORT.g:8011:114: ( ( ( rule__TMTCIFExportExport__Group_3_1__0 ) ) )
+                    // InternalEXPORT.g:8012:5: ( ( rule__TMTCIFExportExport__Group_3_1__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 1);
                     selected = true;
-                    // InternalEXPORT.g:7910:5: ( ( rule__TMTCIFExportExport__Group_3_1__0 ) )
-                    // InternalEXPORT.g:7911:6: ( rule__TMTCIFExportExport__Group_3_1__0 )
+                    // InternalEXPORT.g:8018:5: ( ( rule__TMTCIFExportExport__Group_3_1__0 ) )
+                    // InternalEXPORT.g:8019:6: ( rule__TMTCIFExportExport__Group_3_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTMTCIFExportExportAccess().getGroup_3_1()); 
                     }
-                    // InternalEXPORT.g:7912:6: ( rule__TMTCIFExportExport__Group_3_1__0 )
-                    // InternalEXPORT.g:7912:7: rule__TMTCIFExportExport__Group_3_1__0
+                    // InternalEXPORT.g:8020:6: ( rule__TMTCIFExportExport__Group_3_1__0 )
+                    // InternalEXPORT.g:8020:7: rule__TMTCIFExportExport__Group_3_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__TMTCIFExportExport__Group_3_1__0();
@@ -24584,21 +24910,21 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__UnorderedGroup_3__0"
-    // InternalEXPORT.g:7925:1: rule__TMTCIFExportExport__UnorderedGroup_3__0 : rule__TMTCIFExportExport__UnorderedGroup_3__Impl ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )? ;
+    // InternalEXPORT.g:8033:1: rule__TMTCIFExportExport__UnorderedGroup_3__0 : rule__TMTCIFExportExport__UnorderedGroup_3__Impl ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )? ;
     public final void rule__TMTCIFExportExport__UnorderedGroup_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7929:1: ( rule__TMTCIFExportExport__UnorderedGroup_3__Impl ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )? )
-            // InternalEXPORT.g:7930:2: rule__TMTCIFExportExport__UnorderedGroup_3__Impl ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )?
+            // InternalEXPORT.g:8037:1: ( rule__TMTCIFExportExport__UnorderedGroup_3__Impl ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )? )
+            // InternalEXPORT.g:8038:2: rule__TMTCIFExportExport__UnorderedGroup_3__Impl ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )?
             {
             pushFollow(FollowSets000.FOLLOW_47);
             rule__TMTCIFExportExport__UnorderedGroup_3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            // InternalEXPORT.g:7931:2: ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )?
+            // InternalEXPORT.g:8039:2: ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -24642,14 +24968,14 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__UnorderedGroup_3__1"
-    // InternalEXPORT.g:7937:1: rule__TMTCIFExportExport__UnorderedGroup_3__1 : rule__TMTCIFExportExport__UnorderedGroup_3__Impl ;
+    // InternalEXPORT.g:8045:1: rule__TMTCIFExportExport__UnorderedGroup_3__1 : rule__TMTCIFExportExport__UnorderedGroup_3__Impl ;
     public final void rule__TMTCIFExportExport__UnorderedGroup_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7941:1: ( rule__TMTCIFExportExport__UnorderedGroup_3__Impl )
-            // InternalEXPORT.g:7942:2: rule__TMTCIFExportExport__UnorderedGroup_3__Impl
+            // InternalEXPORT.g:8049:1: ( rule__TMTCIFExportExport__UnorderedGroup_3__Impl )
+            // InternalEXPORT.g:8050:2: rule__TMTCIFExportExport__UnorderedGroup_3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFExportExport__UnorderedGroup_3__Impl();
@@ -24675,17 +25001,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFModelFile__ImportsAssignment_0"
-    // InternalEXPORT.g:7949:1: rule__TMTCIFModelFile__ImportsAssignment_0 : ( ruleTMTCIFModelFileImport ) ;
+    // InternalEXPORT.g:8057:1: rule__TMTCIFModelFile__ImportsAssignment_0 : ( ruleTMTCIFModelFileImport ) ;
     public final void rule__TMTCIFModelFile__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7953:1: ( ( ruleTMTCIFModelFileImport ) )
-            // InternalEXPORT.g:7954:2: ( ruleTMTCIFModelFileImport )
+            // InternalEXPORT.g:8061:1: ( ( ruleTMTCIFModelFileImport ) )
+            // InternalEXPORT.g:8062:2: ( ruleTMTCIFModelFileImport )
             {
-            // InternalEXPORT.g:7954:2: ( ruleTMTCIFModelFileImport )
-            // InternalEXPORT.g:7955:3: ruleTMTCIFModelFileImport
+            // InternalEXPORT.g:8062:2: ( ruleTMTCIFModelFileImport )
+            // InternalEXPORT.g:8063:3: ruleTMTCIFModelFileImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFModelFileAccess().getImportsTMTCIFModelFileImportParserRuleCall_0_0()); 
@@ -24720,17 +25046,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFModelFile__ElementAssignment_1"
-    // InternalEXPORT.g:7964:1: rule__TMTCIFModelFile__ElementAssignment_1 : ( ruleTMTCIFExportExport ) ;
+    // InternalEXPORT.g:8072:1: rule__TMTCIFModelFile__ElementAssignment_1 : ( ruleTMTCIFExportExport ) ;
     public final void rule__TMTCIFModelFile__ElementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7968:1: ( ( ruleTMTCIFExportExport ) )
-            // InternalEXPORT.g:7969:2: ( ruleTMTCIFExportExport )
+            // InternalEXPORT.g:8076:1: ( ( ruleTMTCIFExportExport ) )
+            // InternalEXPORT.g:8077:2: ( ruleTMTCIFExportExport )
             {
-            // InternalEXPORT.g:7969:2: ( ruleTMTCIFExportExport )
-            // InternalEXPORT.g:7970:3: ruleTMTCIFExportExport
+            // InternalEXPORT.g:8077:2: ( ruleTMTCIFExportExport )
+            // InternalEXPORT.g:8078:3: ruleTMTCIFExportExport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFModelFileAccess().getElementTMTCIFExportExportParserRuleCall_1_0()); 
@@ -24765,17 +25091,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFModelFileImport__ImportURIAssignment_2"
-    // InternalEXPORT.g:7979:1: rule__TMTCIFModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
+    // InternalEXPORT.g:8087:1: rule__TMTCIFModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
     public final void rule__TMTCIFModelFileImport__ImportURIAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7983:1: ( ( RULE_STRING ) )
-            // InternalEXPORT.g:7984:2: ( RULE_STRING )
+            // InternalEXPORT.g:8091:1: ( ( RULE_STRING ) )
+            // InternalEXPORT.g:8092:2: ( RULE_STRING )
             {
-            // InternalEXPORT.g:7984:2: ( RULE_STRING )
-            // InternalEXPORT.g:7985:3: RULE_STRING
+            // InternalEXPORT.g:8092:2: ( RULE_STRING )
+            // InternalEXPORT.g:8093:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
@@ -24806,17 +25132,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__NameAssignment_1"
-    // InternalEXPORT.g:7994:1: rule__TMTCIFExportExport__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalEXPORT.g:8102:1: rule__TMTCIFExportExport__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__TMTCIFExportExport__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:7998:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:7999:2: ( RULE_ID )
+            // InternalEXPORT.g:8106:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:8107:2: ( RULE_ID )
             {
-            // InternalEXPORT.g:7999:2: ( RULE_ID )
-            // InternalEXPORT.g:8000:3: RULE_ID
+            // InternalEXPORT.g:8107:2: ( RULE_ID )
+            // InternalEXPORT.g:8108:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -24847,17 +25173,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__UriAssignment_3_0_2"
-    // InternalEXPORT.g:8009:1: rule__TMTCIFExportExport__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
+    // InternalEXPORT.g:8117:1: rule__TMTCIFExportExport__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
     public final void rule__TMTCIFExportExport__UriAssignment_3_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8013:1: ( ( ruleQualifiedName ) )
-            // InternalEXPORT.g:8014:2: ( ruleQualifiedName )
+            // InternalEXPORT.g:8121:1: ( ( ruleQualifiedName ) )
+            // InternalEXPORT.g:8122:2: ( ruleQualifiedName )
             {
-            // InternalEXPORT.g:8014:2: ( ruleQualifiedName )
-            // InternalEXPORT.g:8015:3: ruleQualifiedName
+            // InternalEXPORT.g:8122:2: ( ruleQualifiedName )
+            // InternalEXPORT.g:8123:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); 
@@ -24892,17 +25218,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__VersionAssignment_3_1_2"
-    // InternalEXPORT.g:8024:1: rule__TMTCIFExportExport__VersionAssignment_3_1_2 : ( ruleVersion ) ;
+    // InternalEXPORT.g:8132:1: rule__TMTCIFExportExport__VersionAssignment_3_1_2 : ( ruleVersion ) ;
     public final void rule__TMTCIFExportExport__VersionAssignment_3_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8028:1: ( ( ruleVersion ) )
-            // InternalEXPORT.g:8029:2: ( ruleVersion )
+            // InternalEXPORT.g:8136:1: ( ( ruleVersion ) )
+            // InternalEXPORT.g:8137:2: ( ruleVersion )
             {
-            // InternalEXPORT.g:8029:2: ( ruleVersion )
-            // InternalEXPORT.g:8030:3: ruleVersion
+            // InternalEXPORT.g:8137:2: ( ruleVersion )
+            // InternalEXPORT.g:8138:3: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getVersionVersionParserRuleCall_3_1_2_0()); 
@@ -24937,23 +25263,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__FromAssignment_6_1"
-    // InternalEXPORT.g:8039:1: rule__TMTCIFExportExport__FromAssignment_6_1 : ( ( ruleVersionedQualifiedName ) ) ;
+    // InternalEXPORT.g:8147:1: rule__TMTCIFExportExport__FromAssignment_6_1 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__TMTCIFExportExport__FromAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8043:1: ( ( ( ruleVersionedQualifiedName ) ) )
-            // InternalEXPORT.g:8044:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalEXPORT.g:8151:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalEXPORT.g:8152:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalEXPORT.g:8044:2: ( ( ruleVersionedQualifiedName ) )
-            // InternalEXPORT.g:8045:3: ( ruleVersionedQualifiedName )
+            // InternalEXPORT.g:8152:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalEXPORT.g:8153:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getFromTMTCIFFormatFormatCrossReference_6_1_0()); 
             }
-            // InternalEXPORT.g:8046:3: ( ruleVersionedQualifiedName )
-            // InternalEXPORT.g:8047:4: ruleVersionedQualifiedName
+            // InternalEXPORT.g:8154:3: ( ruleVersionedQualifiedName )
+            // InternalEXPORT.g:8155:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getFromTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_6_1_0_1()); 
@@ -24994,23 +25320,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__ToAssignment_10"
-    // InternalEXPORT.g:8058:1: rule__TMTCIFExportExport__ToAssignment_10 : ( ( ruleVersionedQualifiedName ) ) ;
+    // InternalEXPORT.g:8166:1: rule__TMTCIFExportExport__ToAssignment_10 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__TMTCIFExportExport__ToAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8062:1: ( ( ( ruleVersionedQualifiedName ) ) )
-            // InternalEXPORT.g:8063:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalEXPORT.g:8170:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalEXPORT.g:8171:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalEXPORT.g:8063:2: ( ( ruleVersionedQualifiedName ) )
-            // InternalEXPORT.g:8064:3: ( ruleVersionedQualifiedName )
+            // InternalEXPORT.g:8171:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalEXPORT.g:8172:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getToTMTCIFFormatFormatCrossReference_10_0()); 
             }
-            // InternalEXPORT.g:8065:3: ( ruleVersionedQualifiedName )
-            // InternalEXPORT.g:8066:4: ruleVersionedQualifiedName
+            // InternalEXPORT.g:8173:3: ( ruleVersionedQualifiedName )
+            // InternalEXPORT.g:8174:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getToTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
@@ -25051,17 +25377,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__SizesAssignment_12"
-    // InternalEXPORT.g:8077:1: rule__TMTCIFExportExport__SizesAssignment_12 : ( ruleTMTCIFExportSizes ) ;
+    // InternalEXPORT.g:8185:1: rule__TMTCIFExportExport__SizesAssignment_12 : ( ruleTMTCIFExportSizes ) ;
     public final void rule__TMTCIFExportExport__SizesAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8081:1: ( ( ruleTMTCIFExportSizes ) )
-            // InternalEXPORT.g:8082:2: ( ruleTMTCIFExportSizes )
+            // InternalEXPORT.g:8189:1: ( ( ruleTMTCIFExportSizes ) )
+            // InternalEXPORT.g:8190:2: ( ruleTMTCIFExportSizes )
             {
-            // InternalEXPORT.g:8082:2: ( ruleTMTCIFExportSizes )
-            // InternalEXPORT.g:8083:3: ruleTMTCIFExportSizes
+            // InternalEXPORT.g:8190:2: ( ruleTMTCIFExportSizes )
+            // InternalEXPORT.g:8191:3: ruleTMTCIFExportSizes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getSizesTMTCIFExportSizesParserRuleCall_12_0()); 
@@ -25096,17 +25422,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__SettingsAssignment_13"
-    // InternalEXPORT.g:8092:1: rule__TMTCIFExportExport__SettingsAssignment_13 : ( ruleTMTCIFExportSettings ) ;
+    // InternalEXPORT.g:8200:1: rule__TMTCIFExportExport__SettingsAssignment_13 : ( ruleTMTCIFExportSettings ) ;
     public final void rule__TMTCIFExportExport__SettingsAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8096:1: ( ( ruleTMTCIFExportSettings ) )
-            // InternalEXPORT.g:8097:2: ( ruleTMTCIFExportSettings )
+            // InternalEXPORT.g:8204:1: ( ( ruleTMTCIFExportSettings ) )
+            // InternalEXPORT.g:8205:2: ( ruleTMTCIFExportSettings )
             {
-            // InternalEXPORT.g:8097:2: ( ruleTMTCIFExportSettings )
-            // InternalEXPORT.g:8098:3: ruleTMTCIFExportSettings
+            // InternalEXPORT.g:8205:2: ( ruleTMTCIFExportSettings )
+            // InternalEXPORT.g:8206:3: ruleTMTCIFExportSettings
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getSettingsTMTCIFExportSettingsParserRuleCall_13_0()); 
@@ -25141,17 +25467,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportExport__ActivateDICsAssignment_14"
-    // InternalEXPORT.g:8107:1: rule__TMTCIFExportExport__ActivateDICsAssignment_14 : ( ruleTMTCIFExportActivateDICs ) ;
+    // InternalEXPORT.g:8215:1: rule__TMTCIFExportExport__ActivateDICsAssignment_14 : ( ruleTMTCIFExportActivateDICs ) ;
     public final void rule__TMTCIFExportExport__ActivateDICsAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8111:1: ( ( ruleTMTCIFExportActivateDICs ) )
-            // InternalEXPORT.g:8112:2: ( ruleTMTCIFExportActivateDICs )
+            // InternalEXPORT.g:8219:1: ( ( ruleTMTCIFExportActivateDICs ) )
+            // InternalEXPORT.g:8220:2: ( ruleTMTCIFExportActivateDICs )
             {
-            // InternalEXPORT.g:8112:2: ( ruleTMTCIFExportActivateDICs )
-            // InternalEXPORT.g:8113:3: ruleTMTCIFExportActivateDICs
+            // InternalEXPORT.g:8220:2: ( ruleTMTCIFExportActivateDICs )
+            // InternalEXPORT.g:8221:3: ruleTMTCIFExportActivateDICs
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportExportAccess().getActivateDICsTMTCIFExportActivateDICsParserRuleCall_14_0()); 
@@ -25186,17 +25512,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizes__SizeFromFileLengthAssignment_3_0"
-    // InternalEXPORT.g:8122:1: rule__TMTCIFExportSizes__SizeFromFileLengthAssignment_3_0 : ( ruleTMTCIFExportSizeFromFileLength ) ;
+    // InternalEXPORT.g:8230:1: rule__TMTCIFExportSizes__SizeFromFileLengthAssignment_3_0 : ( ruleTMTCIFExportSizeFromFileLength ) ;
     public final void rule__TMTCIFExportSizes__SizeFromFileLengthAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8126:1: ( ( ruleTMTCIFExportSizeFromFileLength ) )
-            // InternalEXPORT.g:8127:2: ( ruleTMTCIFExportSizeFromFileLength )
+            // InternalEXPORT.g:8234:1: ( ( ruleTMTCIFExportSizeFromFileLength ) )
+            // InternalEXPORT.g:8235:2: ( ruleTMTCIFExportSizeFromFileLength )
             {
-            // InternalEXPORT.g:8127:2: ( ruleTMTCIFExportSizeFromFileLength )
-            // InternalEXPORT.g:8128:3: ruleTMTCIFExportSizeFromFileLength
+            // InternalEXPORT.g:8235:2: ( ruleTMTCIFExportSizeFromFileLength )
+            // InternalEXPORT.g:8236:3: ruleTMTCIFExportSizeFromFileLength
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizesAccess().getSizeFromFileLengthTMTCIFExportSizeFromFileLengthParserRuleCall_3_0_0()); 
@@ -25231,17 +25557,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizes__SizeFromFileLineAssignment_3_1"
-    // InternalEXPORT.g:8137:1: rule__TMTCIFExportSizes__SizeFromFileLineAssignment_3_1 : ( ruleTMTCIFExportSizeFromFileLine ) ;
+    // InternalEXPORT.g:8245:1: rule__TMTCIFExportSizes__SizeFromFileLineAssignment_3_1 : ( ruleTMTCIFExportSizeFromFileLine ) ;
     public final void rule__TMTCIFExportSizes__SizeFromFileLineAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8141:1: ( ( ruleTMTCIFExportSizeFromFileLine ) )
-            // InternalEXPORT.g:8142:2: ( ruleTMTCIFExportSizeFromFileLine )
+            // InternalEXPORT.g:8249:1: ( ( ruleTMTCIFExportSizeFromFileLine ) )
+            // InternalEXPORT.g:8250:2: ( ruleTMTCIFExportSizeFromFileLine )
             {
-            // InternalEXPORT.g:8142:2: ( ruleTMTCIFExportSizeFromFileLine )
-            // InternalEXPORT.g:8143:3: ruleTMTCIFExportSizeFromFileLine
+            // InternalEXPORT.g:8250:2: ( ruleTMTCIFExportSizeFromFileLine )
+            // InternalEXPORT.g:8251:3: ruleTMTCIFExportSizeFromFileLine
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizesAccess().getSizeFromFileLineTMTCIFExportSizeFromFileLineParserRuleCall_3_1_0()); 
@@ -25276,17 +25602,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizes__SizeInBitsAssignment_3_2"
-    // InternalEXPORT.g:8152:1: rule__TMTCIFExportSizes__SizeInBitsAssignment_3_2 : ( ruleTMTCIFExportSizeInBits ) ;
+    // InternalEXPORT.g:8260:1: rule__TMTCIFExportSizes__SizeInBitsAssignment_3_2 : ( ruleTMTCIFExportSizeInBits ) ;
     public final void rule__TMTCIFExportSizes__SizeInBitsAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8156:1: ( ( ruleTMTCIFExportSizeInBits ) )
-            // InternalEXPORT.g:8157:2: ( ruleTMTCIFExportSizeInBits )
+            // InternalEXPORT.g:8264:1: ( ( ruleTMTCIFExportSizeInBits ) )
+            // InternalEXPORT.g:8265:2: ( ruleTMTCIFExportSizeInBits )
             {
-            // InternalEXPORT.g:8157:2: ( ruleTMTCIFExportSizeInBits )
-            // InternalEXPORT.g:8158:3: ruleTMTCIFExportSizeInBits
+            // InternalEXPORT.g:8265:2: ( ruleTMTCIFExportSizeInBits )
+            // InternalEXPORT.g:8266:3: ruleTMTCIFExportSizeInBits
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizesAccess().getSizeInBitsTMTCIFExportSizeInBitsParserRuleCall_3_2_0()); 
@@ -25321,17 +25647,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLength__IdAssignment_4"
-    // InternalEXPORT.g:8167:1: rule__TMTCIFExportSizeFromFileLength__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8275:1: rule__TMTCIFExportSizeFromFileLength__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSizeFromFileLength__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8171:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8172:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8279:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8280:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8172:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8173:3: ruleINTEGER
+            // InternalEXPORT.g:8280:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8281:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLengthAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -25366,17 +25692,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLength__FromFileAssignment_8"
-    // InternalEXPORT.g:8182:1: rule__TMTCIFExportSizeFromFileLength__FromFileAssignment_8 : ( RULE_ID ) ;
+    // InternalEXPORT.g:8290:1: rule__TMTCIFExportSizeFromFileLength__FromFileAssignment_8 : ( RULE_ID ) ;
     public final void rule__TMTCIFExportSizeFromFileLength__FromFileAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8186:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:8187:2: ( RULE_ID )
+            // InternalEXPORT.g:8294:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:8295:2: ( RULE_ID )
             {
-            // InternalEXPORT.g:8187:2: ( RULE_ID )
-            // InternalEXPORT.g:8188:3: RULE_ID
+            // InternalEXPORT.g:8295:2: ( RULE_ID )
+            // InternalEXPORT.g:8296:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLengthAccess().getFromFileIDTerminalRuleCall_8_0()); 
@@ -25407,17 +25733,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLength__AddSizeAssignment_10_2"
-    // InternalEXPORT.g:8197:1: rule__TMTCIFExportSizeFromFileLength__AddSizeAssignment_10_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8305:1: rule__TMTCIFExportSizeFromFileLength__AddSizeAssignment_10_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSizeFromFileLength__AddSizeAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8201:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8202:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8309:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8310:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8202:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8203:3: ruleINTEGER
+            // InternalEXPORT.g:8310:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8311:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLengthAccess().getAddSizeINTEGERParserRuleCall_10_2_0()); 
@@ -25452,17 +25778,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLength__UnitAssignment_11_2"
-    // InternalEXPORT.g:8212:1: rule__TMTCIFExportSizeFromFileLength__UnitAssignment_11_2 : ( ruleTMTCIFExportUnit ) ;
+    // InternalEXPORT.g:8320:1: rule__TMTCIFExportSizeFromFileLength__UnitAssignment_11_2 : ( ruleTMTCIFExportUnit ) ;
     public final void rule__TMTCIFExportSizeFromFileLength__UnitAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8216:1: ( ( ruleTMTCIFExportUnit ) )
-            // InternalEXPORT.g:8217:2: ( ruleTMTCIFExportUnit )
+            // InternalEXPORT.g:8324:1: ( ( ruleTMTCIFExportUnit ) )
+            // InternalEXPORT.g:8325:2: ( ruleTMTCIFExportUnit )
             {
-            // InternalEXPORT.g:8217:2: ( ruleTMTCIFExportUnit )
-            // InternalEXPORT.g:8218:3: ruleTMTCIFExportUnit
+            // InternalEXPORT.g:8325:2: ( ruleTMTCIFExportUnit )
+            // InternalEXPORT.g:8326:3: ruleTMTCIFExportUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLengthAccess().getUnitTMTCIFExportUnitEnumRuleCall_11_2_0()); 
@@ -25497,17 +25823,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLine__IdAssignment_4"
-    // InternalEXPORT.g:8227:1: rule__TMTCIFExportSizeFromFileLine__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8335:1: rule__TMTCIFExportSizeFromFileLine__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSizeFromFileLine__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8231:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8232:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8339:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8340:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8232:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8233:3: ruleINTEGER
+            // InternalEXPORT.g:8340:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8341:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLineAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -25542,17 +25868,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLine__FromFileAssignment_8"
-    // InternalEXPORT.g:8242:1: rule__TMTCIFExportSizeFromFileLine__FromFileAssignment_8 : ( RULE_ID ) ;
+    // InternalEXPORT.g:8350:1: rule__TMTCIFExportSizeFromFileLine__FromFileAssignment_8 : ( RULE_ID ) ;
     public final void rule__TMTCIFExportSizeFromFileLine__FromFileAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8246:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:8247:2: ( RULE_ID )
+            // InternalEXPORT.g:8354:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:8355:2: ( RULE_ID )
             {
-            // InternalEXPORT.g:8247:2: ( RULE_ID )
-            // InternalEXPORT.g:8248:3: RULE_ID
+            // InternalEXPORT.g:8355:2: ( RULE_ID )
+            // InternalEXPORT.g:8356:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLineAccess().getFromFileIDTerminalRuleCall_8_0()); 
@@ -25583,17 +25909,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLine__LineAssignment_12"
-    // InternalEXPORT.g:8257:1: rule__TMTCIFExportSizeFromFileLine__LineAssignment_12 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8365:1: rule__TMTCIFExportSizeFromFileLine__LineAssignment_12 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSizeFromFileLine__LineAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8261:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8262:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8369:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8370:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8262:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8263:3: ruleINTEGER
+            // InternalEXPORT.g:8370:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8371:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLineAccess().getLineINTEGERParserRuleCall_12_0()); 
@@ -25628,17 +25954,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLine__AddSizeAssignment_14_2"
-    // InternalEXPORT.g:8272:1: rule__TMTCIFExportSizeFromFileLine__AddSizeAssignment_14_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8380:1: rule__TMTCIFExportSizeFromFileLine__AddSizeAssignment_14_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSizeFromFileLine__AddSizeAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8276:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8277:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8384:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8385:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8277:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8278:3: ruleINTEGER
+            // InternalEXPORT.g:8385:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8386:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLineAccess().getAddSizeINTEGERParserRuleCall_14_2_0()); 
@@ -25673,17 +25999,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeFromFileLine__UnitAssignment_15_2"
-    // InternalEXPORT.g:8287:1: rule__TMTCIFExportSizeFromFileLine__UnitAssignment_15_2 : ( ruleTMTCIFExportUnit ) ;
+    // InternalEXPORT.g:8395:1: rule__TMTCIFExportSizeFromFileLine__UnitAssignment_15_2 : ( ruleTMTCIFExportUnit ) ;
     public final void rule__TMTCIFExportSizeFromFileLine__UnitAssignment_15_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8291:1: ( ( ruleTMTCIFExportUnit ) )
-            // InternalEXPORT.g:8292:2: ( ruleTMTCIFExportUnit )
+            // InternalEXPORT.g:8399:1: ( ( ruleTMTCIFExportUnit ) )
+            // InternalEXPORT.g:8400:2: ( ruleTMTCIFExportUnit )
             {
-            // InternalEXPORT.g:8292:2: ( ruleTMTCIFExportUnit )
-            // InternalEXPORT.g:8293:3: ruleTMTCIFExportUnit
+            // InternalEXPORT.g:8400:2: ( ruleTMTCIFExportUnit )
+            // InternalEXPORT.g:8401:3: ruleTMTCIFExportUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeFromFileLineAccess().getUnitTMTCIFExportUnitEnumRuleCall_15_2_0()); 
@@ -25718,17 +26044,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeInBits__IdAssignment_4"
-    // InternalEXPORT.g:8302:1: rule__TMTCIFExportSizeInBits__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8410:1: rule__TMTCIFExportSizeInBits__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSizeInBits__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8306:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8307:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8414:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8415:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8307:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8308:3: ruleINTEGER
+            // InternalEXPORT.g:8415:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8416:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeInBitsAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -25763,17 +26089,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeInBits__FromAssignment_8"
-    // InternalEXPORT.g:8317:1: rule__TMTCIFExportSizeInBits__FromAssignment_8 : ( RULE_ID ) ;
+    // InternalEXPORT.g:8425:1: rule__TMTCIFExportSizeInBits__FromAssignment_8 : ( RULE_ID ) ;
     public final void rule__TMTCIFExportSizeInBits__FromAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8321:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:8322:2: ( RULE_ID )
+            // InternalEXPORT.g:8429:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:8430:2: ( RULE_ID )
             {
-            // InternalEXPORT.g:8322:2: ( RULE_ID )
-            // InternalEXPORT.g:8323:3: RULE_ID
+            // InternalEXPORT.g:8430:2: ( RULE_ID )
+            // InternalEXPORT.g:8431:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeInBitsAccess().getFromIDTerminalRuleCall_8_0()); 
@@ -25804,17 +26130,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeInBits__AddSizeAssignment_10_2"
-    // InternalEXPORT.g:8332:1: rule__TMTCIFExportSizeInBits__AddSizeAssignment_10_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8440:1: rule__TMTCIFExportSizeInBits__AddSizeAssignment_10_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSizeInBits__AddSizeAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8336:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8337:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8444:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8445:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8337:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8338:3: ruleINTEGER
+            // InternalEXPORT.g:8445:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8446:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeInBitsAccess().getAddSizeINTEGERParserRuleCall_10_2_0()); 
@@ -25849,17 +26175,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSizeInBits__UnitAssignment_11_2"
-    // InternalEXPORT.g:8347:1: rule__TMTCIFExportSizeInBits__UnitAssignment_11_2 : ( ruleTMTCIFExportUnit ) ;
+    // InternalEXPORT.g:8455:1: rule__TMTCIFExportSizeInBits__UnitAssignment_11_2 : ( ruleTMTCIFExportUnit ) ;
     public final void rule__TMTCIFExportSizeInBits__UnitAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8351:1: ( ( ruleTMTCIFExportUnit ) )
-            // InternalEXPORT.g:8352:2: ( ruleTMTCIFExportUnit )
+            // InternalEXPORT.g:8459:1: ( ( ruleTMTCIFExportUnit ) )
+            // InternalEXPORT.g:8460:2: ( ruleTMTCIFExportUnit )
             {
-            // InternalEXPORT.g:8352:2: ( ruleTMTCIFExportUnit )
-            // InternalEXPORT.g:8353:3: ruleTMTCIFExportUnit
+            // InternalEXPORT.g:8460:2: ( ruleTMTCIFExportUnit )
+            // InternalEXPORT.g:8461:3: ruleTMTCIFExportUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSizeInBitsAccess().getUnitTMTCIFExportUnitEnumRuleCall_11_2_0()); 
@@ -25894,17 +26220,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettings__SettingFromConstAssignment_3_0"
-    // InternalEXPORT.g:8362:1: rule__TMTCIFExportSettings__SettingFromConstAssignment_3_0 : ( ruleTMTCIFExportSettingFromConst ) ;
+    // InternalEXPORT.g:8470:1: rule__TMTCIFExportSettings__SettingFromConstAssignment_3_0 : ( ruleTMTCIFExportSettingFromConst ) ;
     public final void rule__TMTCIFExportSettings__SettingFromConstAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8366:1: ( ( ruleTMTCIFExportSettingFromConst ) )
-            // InternalEXPORT.g:8367:2: ( ruleTMTCIFExportSettingFromConst )
+            // InternalEXPORT.g:8474:1: ( ( ruleTMTCIFExportSettingFromConst ) )
+            // InternalEXPORT.g:8475:2: ( ruleTMTCIFExportSettingFromConst )
             {
-            // InternalEXPORT.g:8367:2: ( ruleTMTCIFExportSettingFromConst )
-            // InternalEXPORT.g:8368:3: ruleTMTCIFExportSettingFromConst
+            // InternalEXPORT.g:8475:2: ( ruleTMTCIFExportSettingFromConst )
+            // InternalEXPORT.g:8476:3: ruleTMTCIFExportSettingFromConst
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingsAccess().getSettingFromConstTMTCIFExportSettingFromConstParserRuleCall_3_0_0()); 
@@ -25939,17 +26265,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettings__SettingFromSizeAssignment_3_1"
-    // InternalEXPORT.g:8377:1: rule__TMTCIFExportSettings__SettingFromSizeAssignment_3_1 : ( ruleTMTCIFExportSettingFromSize ) ;
+    // InternalEXPORT.g:8485:1: rule__TMTCIFExportSettings__SettingFromSizeAssignment_3_1 : ( ruleTMTCIFExportSettingFromSize ) ;
     public final void rule__TMTCIFExportSettings__SettingFromSizeAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8381:1: ( ( ruleTMTCIFExportSettingFromSize ) )
-            // InternalEXPORT.g:8382:2: ( ruleTMTCIFExportSettingFromSize )
+            // InternalEXPORT.g:8489:1: ( ( ruleTMTCIFExportSettingFromSize ) )
+            // InternalEXPORT.g:8490:2: ( ruleTMTCIFExportSettingFromSize )
             {
-            // InternalEXPORT.g:8382:2: ( ruleTMTCIFExportSettingFromSize )
-            // InternalEXPORT.g:8383:3: ruleTMTCIFExportSettingFromSize
+            // InternalEXPORT.g:8490:2: ( ruleTMTCIFExportSettingFromSize )
+            // InternalEXPORT.g:8491:3: ruleTMTCIFExportSettingFromSize
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingsAccess().getSettingFromSizeTMTCIFExportSettingFromSizeParserRuleCall_3_1_0()); 
@@ -25984,17 +26310,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettings__SettingFromFileAssignment_3_2"
-    // InternalEXPORT.g:8392:1: rule__TMTCIFExportSettings__SettingFromFileAssignment_3_2 : ( ruleTMTCIFExportSettingFromFile ) ;
+    // InternalEXPORT.g:8500:1: rule__TMTCIFExportSettings__SettingFromFileAssignment_3_2 : ( ruleTMTCIFExportSettingFromFile ) ;
     public final void rule__TMTCIFExportSettings__SettingFromFileAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8396:1: ( ( ruleTMTCIFExportSettingFromFile ) )
-            // InternalEXPORT.g:8397:2: ( ruleTMTCIFExportSettingFromFile )
+            // InternalEXPORT.g:8504:1: ( ( ruleTMTCIFExportSettingFromFile ) )
+            // InternalEXPORT.g:8505:2: ( ruleTMTCIFExportSettingFromFile )
             {
-            // InternalEXPORT.g:8397:2: ( ruleTMTCIFExportSettingFromFile )
-            // InternalEXPORT.g:8398:3: ruleTMTCIFExportSettingFromFile
+            // InternalEXPORT.g:8505:2: ( ruleTMTCIFExportSettingFromFile )
+            // InternalEXPORT.g:8506:3: ruleTMTCIFExportSettingFromFile
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingsAccess().getSettingFromFileTMTCIFExportSettingFromFileParserRuleCall_3_2_0()); 
@@ -26029,17 +26355,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettings__SettingFromFieldAssignment_3_3"
-    // InternalEXPORT.g:8407:1: rule__TMTCIFExportSettings__SettingFromFieldAssignment_3_3 : ( ruleTMTCIFExportSettingFromField ) ;
+    // InternalEXPORT.g:8515:1: rule__TMTCIFExportSettings__SettingFromFieldAssignment_3_3 : ( ruleTMTCIFExportSettingFromField ) ;
     public final void rule__TMTCIFExportSettings__SettingFromFieldAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8411:1: ( ( ruleTMTCIFExportSettingFromField ) )
-            // InternalEXPORT.g:8412:2: ( ruleTMTCIFExportSettingFromField )
+            // InternalEXPORT.g:8519:1: ( ( ruleTMTCIFExportSettingFromField ) )
+            // InternalEXPORT.g:8520:2: ( ruleTMTCIFExportSettingFromField )
             {
-            // InternalEXPORT.g:8412:2: ( ruleTMTCIFExportSettingFromField )
-            // InternalEXPORT.g:8413:3: ruleTMTCIFExportSettingFromField
+            // InternalEXPORT.g:8520:2: ( ruleTMTCIFExportSettingFromField )
+            // InternalEXPORT.g:8521:3: ruleTMTCIFExportSettingFromField
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingsAccess().getSettingFromFieldTMTCIFExportSettingFromFieldParserRuleCall_3_3_0()); 
@@ -26074,17 +26400,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettings__SettingAIFromConstAssignment_3_4"
-    // InternalEXPORT.g:8422:1: rule__TMTCIFExportSettings__SettingAIFromConstAssignment_3_4 : ( ruleTMTCIFExportSettingAIFromConst ) ;
+    // InternalEXPORT.g:8530:1: rule__TMTCIFExportSettings__SettingAIFromConstAssignment_3_4 : ( ruleTMTCIFExportSettingAIFromConst ) ;
     public final void rule__TMTCIFExportSettings__SettingAIFromConstAssignment_3_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8426:1: ( ( ruleTMTCIFExportSettingAIFromConst ) )
-            // InternalEXPORT.g:8427:2: ( ruleTMTCIFExportSettingAIFromConst )
+            // InternalEXPORT.g:8534:1: ( ( ruleTMTCIFExportSettingAIFromConst ) )
+            // InternalEXPORT.g:8535:2: ( ruleTMTCIFExportSettingAIFromConst )
             {
-            // InternalEXPORT.g:8427:2: ( ruleTMTCIFExportSettingAIFromConst )
-            // InternalEXPORT.g:8428:3: ruleTMTCIFExportSettingAIFromConst
+            // InternalEXPORT.g:8535:2: ( ruleTMTCIFExportSettingAIFromConst )
+            // InternalEXPORT.g:8536:3: ruleTMTCIFExportSettingAIFromConst
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingsAccess().getSettingAIFromConstTMTCIFExportSettingAIFromConstParserRuleCall_3_4_0()); 
@@ -26119,17 +26445,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettings__SettingAIFromFileAssignment_3_5"
-    // InternalEXPORT.g:8437:1: rule__TMTCIFExportSettings__SettingAIFromFileAssignment_3_5 : ( ruleTMTCIFExportSettingAIFromFile ) ;
+    // InternalEXPORT.g:8545:1: rule__TMTCIFExportSettings__SettingAIFromFileAssignment_3_5 : ( ruleTMTCIFExportSettingAIFromFile ) ;
     public final void rule__TMTCIFExportSettings__SettingAIFromFileAssignment_3_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8441:1: ( ( ruleTMTCIFExportSettingAIFromFile ) )
-            // InternalEXPORT.g:8442:2: ( ruleTMTCIFExportSettingAIFromFile )
+            // InternalEXPORT.g:8549:1: ( ( ruleTMTCIFExportSettingAIFromFile ) )
+            // InternalEXPORT.g:8550:2: ( ruleTMTCIFExportSettingAIFromFile )
             {
-            // InternalEXPORT.g:8442:2: ( ruleTMTCIFExportSettingAIFromFile )
-            // InternalEXPORT.g:8443:3: ruleTMTCIFExportSettingAIFromFile
+            // InternalEXPORT.g:8550:2: ( ruleTMTCIFExportSettingAIFromFile )
+            // InternalEXPORT.g:8551:3: ruleTMTCIFExportSettingAIFromFile
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingsAccess().getSettingAIFromFileTMTCIFExportSettingAIFromFileParserRuleCall_3_5_0()); 
@@ -26164,17 +26490,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromConst__ValueAssignment_4"
-    // InternalEXPORT.g:8452:1: rule__TMTCIFExportSettingFromConst__ValueAssignment_4 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8560:1: rule__TMTCIFExportSettingFromConst__ValueAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingFromConst__ValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8456:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8457:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8564:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8565:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8457:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8458:3: ruleINTEGER
+            // InternalEXPORT.g:8565:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8566:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromConstAccess().getValueINTEGERParserRuleCall_4_0()); 
@@ -26209,23 +26535,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromConst__ToFieldRefAssignment_8"
-    // InternalEXPORT.g:8467:1: rule__TMTCIFExportSettingFromConst__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
+    // InternalEXPORT.g:8575:1: rule__TMTCIFExportSettingFromConst__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__TMTCIFExportSettingFromConst__ToFieldRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8471:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
-            // InternalEXPORT.g:8472:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8579:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalEXPORT.g:8580:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalEXPORT.g:8472:2: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalEXPORT.g:8473:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8580:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8581:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromConstAccess().getToFieldRefTMTCIFFormatFieldCrossReference_8_0()); 
             }
-            // InternalEXPORT.g:8474:3: ( ruleVersionedQualifiedReferenceName )
-            // InternalEXPORT.g:8475:4: ruleVersionedQualifiedReferenceName
+            // InternalEXPORT.g:8582:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8583:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromConstAccess().getToFieldRefTMTCIFFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
@@ -26266,17 +26592,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromSize__SizeRefAssignment_4"
-    // InternalEXPORT.g:8486:1: rule__TMTCIFExportSettingFromSize__SizeRefAssignment_4 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8594:1: rule__TMTCIFExportSettingFromSize__SizeRefAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingFromSize__SizeRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8490:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8491:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8598:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8599:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8491:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8492:3: ruleINTEGER
+            // InternalEXPORT.g:8599:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8600:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromSizeAccess().getSizeRefINTEGERParserRuleCall_4_0()); 
@@ -26311,23 +26637,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromSize__ToFieldRefAssignment_8"
-    // InternalEXPORT.g:8501:1: rule__TMTCIFExportSettingFromSize__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
+    // InternalEXPORT.g:8609:1: rule__TMTCIFExportSettingFromSize__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__TMTCIFExportSettingFromSize__ToFieldRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8505:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
-            // InternalEXPORT.g:8506:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8613:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalEXPORT.g:8614:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalEXPORT.g:8506:2: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalEXPORT.g:8507:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8614:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8615:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromSizeAccess().getToFieldRefTMTCIFFormatFieldCrossReference_8_0()); 
             }
-            // InternalEXPORT.g:8508:3: ( ruleVersionedQualifiedReferenceName )
-            // InternalEXPORT.g:8509:4: ruleVersionedQualifiedReferenceName
+            // InternalEXPORT.g:8616:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8617:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromSizeAccess().getToFieldRefTMTCIFFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
@@ -26368,17 +26694,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromFile__FileAssignment_4"
-    // InternalEXPORT.g:8520:1: rule__TMTCIFExportSettingFromFile__FileAssignment_4 : ( RULE_ID ) ;
+    // InternalEXPORT.g:8628:1: rule__TMTCIFExportSettingFromFile__FileAssignment_4 : ( RULE_ID ) ;
     public final void rule__TMTCIFExportSettingFromFile__FileAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8524:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:8525:2: ( RULE_ID )
+            // InternalEXPORT.g:8632:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:8633:2: ( RULE_ID )
             {
-            // InternalEXPORT.g:8525:2: ( RULE_ID )
-            // InternalEXPORT.g:8526:3: RULE_ID
+            // InternalEXPORT.g:8633:2: ( RULE_ID )
+            // InternalEXPORT.g:8634:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFileAccess().getFileIDTerminalRuleCall_4_0()); 
@@ -26409,23 +26735,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromFile__ToFieldRefAssignment_8"
-    // InternalEXPORT.g:8535:1: rule__TMTCIFExportSettingFromFile__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
+    // InternalEXPORT.g:8643:1: rule__TMTCIFExportSettingFromFile__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__TMTCIFExportSettingFromFile__ToFieldRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8539:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
-            // InternalEXPORT.g:8540:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8647:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalEXPORT.g:8648:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalEXPORT.g:8540:2: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalEXPORT.g:8541:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8648:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8649:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFileAccess().getToFieldRefTMTCIFFormatFieldCrossReference_8_0()); 
             }
-            // InternalEXPORT.g:8542:3: ( ruleVersionedQualifiedReferenceName )
-            // InternalEXPORT.g:8543:4: ruleVersionedQualifiedReferenceName
+            // InternalEXPORT.g:8650:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8651:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFileAccess().getToFieldRefTMTCIFFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
@@ -26466,17 +26792,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromFile__OffsetAssignment_10_2"
-    // InternalEXPORT.g:8554:1: rule__TMTCIFExportSettingFromFile__OffsetAssignment_10_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8662:1: rule__TMTCIFExportSettingFromFile__OffsetAssignment_10_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingFromFile__OffsetAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8558:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8559:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8666:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8667:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8559:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8560:3: ruleINTEGER
+            // InternalEXPORT.g:8667:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8668:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFileAccess().getOffsetINTEGERParserRuleCall_10_2_0()); 
@@ -26511,17 +26837,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromFile__SizeAssignment_11_2"
-    // InternalEXPORT.g:8569:1: rule__TMTCIFExportSettingFromFile__SizeAssignment_11_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8677:1: rule__TMTCIFExportSettingFromFile__SizeAssignment_11_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingFromFile__SizeAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8573:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8574:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8681:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8682:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8574:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8575:3: ruleINTEGER
+            // InternalEXPORT.g:8682:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8683:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFileAccess().getSizeINTEGERParserRuleCall_11_2_0()); 
@@ -26556,17 +26882,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromFile__LineAssignment_12_2"
-    // InternalEXPORT.g:8584:1: rule__TMTCIFExportSettingFromFile__LineAssignment_12_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8692:1: rule__TMTCIFExportSettingFromFile__LineAssignment_12_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingFromFile__LineAssignment_12_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8588:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8589:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8696:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8697:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8589:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8590:3: ruleINTEGER
+            // InternalEXPORT.g:8697:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8698:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFileAccess().getLineINTEGERParserRuleCall_12_2_0()); 
@@ -26601,23 +26927,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromField__FieldRefAssignment_4"
-    // InternalEXPORT.g:8599:1: rule__TMTCIFExportSettingFromField__FieldRefAssignment_4 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
+    // InternalEXPORT.g:8707:1: rule__TMTCIFExportSettingFromField__FieldRefAssignment_4 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__TMTCIFExportSettingFromField__FieldRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8603:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
-            // InternalEXPORT.g:8604:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8711:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalEXPORT.g:8712:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalEXPORT.g:8604:2: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalEXPORT.g:8605:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8712:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8713:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFieldAccess().getFieldRefTMTCIFFormatFieldCrossReference_4_0()); 
             }
-            // InternalEXPORT.g:8606:3: ( ruleVersionedQualifiedReferenceName )
-            // InternalEXPORT.g:8607:4: ruleVersionedQualifiedReferenceName
+            // InternalEXPORT.g:8714:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8715:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFieldAccess().getFieldRefTMTCIFFormatFieldVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); 
@@ -26658,23 +26984,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingFromField__ToFieldRefAssignment_8"
-    // InternalEXPORT.g:8618:1: rule__TMTCIFExportSettingFromField__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
+    // InternalEXPORT.g:8726:1: rule__TMTCIFExportSettingFromField__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__TMTCIFExportSettingFromField__ToFieldRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8622:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
-            // InternalEXPORT.g:8623:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8730:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalEXPORT.g:8731:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalEXPORT.g:8623:2: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalEXPORT.g:8624:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8731:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8732:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFieldAccess().getToFieldRefTMTCIFFormatFieldCrossReference_8_0()); 
             }
-            // InternalEXPORT.g:8625:3: ( ruleVersionedQualifiedReferenceName )
-            // InternalEXPORT.g:8626:4: ruleVersionedQualifiedReferenceName
+            // InternalEXPORT.g:8733:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8734:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingFromFieldAccess().getToFieldRefTMTCIFFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
@@ -26715,17 +27041,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__ValueAssignment_4"
-    // InternalEXPORT.g:8637:1: rule__TMTCIFExportSettingAIFromConst__ValueAssignment_4 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8745:1: rule__TMTCIFExportSettingAIFromConst__ValueAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingAIFromConst__ValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8641:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8642:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8749:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8750:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8642:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8643:3: ruleINTEGER
+            // InternalEXPORT.g:8750:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8751:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getValueINTEGERParserRuleCall_4_0()); 
@@ -26760,23 +27086,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__ToFieldRefAssignment_8"
-    // InternalEXPORT.g:8652:1: rule__TMTCIFExportSettingAIFromConst__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
+    // InternalEXPORT.g:8760:1: rule__TMTCIFExportSettingAIFromConst__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__TMTCIFExportSettingAIFromConst__ToFieldRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8656:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
-            // InternalEXPORT.g:8657:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8764:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalEXPORT.g:8765:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalEXPORT.g:8657:2: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalEXPORT.g:8658:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8765:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8766:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToFieldRefTMTCIFFormatAIFieldCrossReference_8_0()); 
             }
-            // InternalEXPORT.g:8659:3: ( ruleVersionedQualifiedReferenceName )
-            // InternalEXPORT.g:8660:4: ruleVersionedQualifiedReferenceName
+            // InternalEXPORT.g:8767:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8768:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToFieldRefTMTCIFFormatAIFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
@@ -26816,18 +27142,63 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__ToFieldRefAssignment_8"
 
 
+    // $ANTLR start "rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12"
+    // InternalEXPORT.g:8779:1: rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12 : ( ruleINTEGER ) ;
+    public final void rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalEXPORT.g:8783:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8784:2: ( ruleINTEGER )
+            {
+            // InternalEXPORT.g:8784:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8785:3: ruleINTEGER
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexINTEGERParserRuleCall_12_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleINTEGER();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexINTEGERParserRuleCall_12_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TMTCIFExportSettingAIFromConst__ToArrayIndexAssignment_12"
+
+
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__FileAssignment_4"
-    // InternalEXPORT.g:8671:1: rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 : ( RULE_ID ) ;
+    // InternalEXPORT.g:8794:1: rule__TMTCIFExportSettingAIFromFile__FileAssignment_4 : ( RULE_ID ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__FileAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8675:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:8676:2: ( RULE_ID )
+            // InternalEXPORT.g:8798:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:8799:2: ( RULE_ID )
             {
-            // InternalEXPORT.g:8676:2: ( RULE_ID )
-            // InternalEXPORT.g:8677:3: RULE_ID
+            // InternalEXPORT.g:8799:2: ( RULE_ID )
+            // InternalEXPORT.g:8800:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getFileIDTerminalRuleCall_4_0()); 
@@ -26858,23 +27229,23 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8"
-    // InternalEXPORT.g:8686:1: rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
+    // InternalEXPORT.g:8809:1: rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__ToFieldRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8690:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
-            // InternalEXPORT.g:8691:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8813:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalEXPORT.g:8814:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalEXPORT.g:8691:2: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalEXPORT.g:8692:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8814:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalEXPORT.g:8815:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToFieldRefTMTCIFFormatAIFieldCrossReference_8_0()); 
             }
-            // InternalEXPORT.g:8693:3: ( ruleVersionedQualifiedReferenceName )
-            // InternalEXPORT.g:8694:4: ruleVersionedQualifiedReferenceName
+            // InternalEXPORT.g:8816:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalEXPORT.g:8817:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToFieldRefTMTCIFFormatAIFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
@@ -26915,17 +27286,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12"
-    // InternalEXPORT.g:8705:1: rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8828:1: rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__ToArrayIndexAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8709:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8710:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8832:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8833:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8710:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8711:3: ruleINTEGER
+            // InternalEXPORT.g:8833:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8834:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getToArrayIndexINTEGERParserRuleCall_12_0()); 
@@ -26960,17 +27331,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2"
-    // InternalEXPORT.g:8720:1: rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8843:1: rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__OffsetAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8724:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8725:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8847:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8848:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8725:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8726:3: ruleINTEGER
+            // InternalEXPORT.g:8848:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8849:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getOffsetINTEGERParserRuleCall_14_2_0()); 
@@ -27005,17 +27376,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2"
-    // InternalEXPORT.g:8735:1: rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8858:1: rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__SizeAssignment_15_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8739:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8740:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8862:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8863:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8740:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8741:3: ruleINTEGER
+            // InternalEXPORT.g:8863:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8864:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getSizeINTEGERParserRuleCall_15_2_0()); 
@@ -27050,17 +27421,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2"
-    // InternalEXPORT.g:8750:1: rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8873:1: rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportSettingAIFromFile__LineAssignment_16_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8754:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8755:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8877:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8878:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8755:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8756:3: ruleINTEGER
+            // InternalEXPORT.g:8878:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8879:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportSettingAIFromFileAccess().getLineINTEGERParserRuleCall_16_2_0()); 
@@ -27095,17 +27466,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportActivateDICs__DICAssignment_3"
-    // InternalEXPORT.g:8765:1: rule__TMTCIFExportActivateDICs__DICAssignment_3 : ( ruleTMTCIFExportDIC ) ;
+    // InternalEXPORT.g:8888:1: rule__TMTCIFExportActivateDICs__DICAssignment_3 : ( ruleTMTCIFExportDIC ) ;
     public final void rule__TMTCIFExportActivateDICs__DICAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8769:1: ( ( ruleTMTCIFExportDIC ) )
-            // InternalEXPORT.g:8770:2: ( ruleTMTCIFExportDIC )
+            // InternalEXPORT.g:8892:1: ( ( ruleTMTCIFExportDIC ) )
+            // InternalEXPORT.g:8893:2: ( ruleTMTCIFExportDIC )
             {
-            // InternalEXPORT.g:8770:2: ( ruleTMTCIFExportDIC )
-            // InternalEXPORT.g:8771:3: ruleTMTCIFExportDIC
+            // InternalEXPORT.g:8893:2: ( ruleTMTCIFExportDIC )
+            // InternalEXPORT.g:8894:3: ruleTMTCIFExportDIC
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportActivateDICsAccess().getDICTMTCIFExportDICParserRuleCall_3_0()); 
@@ -27140,17 +27511,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__IdAssignment_4"
-    // InternalEXPORT.g:8780:1: rule__TMTCIFExportDIC__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalEXPORT.g:8903:1: rule__TMTCIFExportDIC__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__TMTCIFExportDIC__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8784:1: ( ( ruleINTEGER ) )
-            // InternalEXPORT.g:8785:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8907:1: ( ( ruleINTEGER ) )
+            // InternalEXPORT.g:8908:2: ( ruleINTEGER )
             {
-            // InternalEXPORT.g:8785:2: ( ruleINTEGER )
-            // InternalEXPORT.g:8786:3: ruleINTEGER
+            // InternalEXPORT.g:8908:2: ( ruleINTEGER )
+            // InternalEXPORT.g:8909:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -27185,17 +27556,17 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TMTCIFExportDIC__DICRefAssignment_8"
-    // InternalEXPORT.g:8795:1: rule__TMTCIFExportDIC__DICRefAssignment_8 : ( RULE_ID ) ;
+    // InternalEXPORT.g:8918:1: rule__TMTCIFExportDIC__DICRefAssignment_8 : ( RULE_ID ) ;
     public final void rule__TMTCIFExportDIC__DICRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEXPORT.g:8799:1: ( ( RULE_ID ) )
-            // InternalEXPORT.g:8800:2: ( RULE_ID )
+            // InternalEXPORT.g:8922:1: ( ( RULE_ID ) )
+            // InternalEXPORT.g:8923:2: ( RULE_ID )
             {
-            // InternalEXPORT.g:8800:2: ( RULE_ID )
-            // InternalEXPORT.g:8801:3: RULE_ID
+            // InternalEXPORT.g:8923:2: ( RULE_ID )
+            // InternalEXPORT.g:8924:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFExportDICAccess().getDICRefIDTerminalRuleCall_8_0()); 
@@ -27226,28 +27597,28 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred38_InternalEXPORT
     public final void synpred38_InternalEXPORT_fragment() throws RecognitionException {   
-        // InternalEXPORT.g:7887:3: ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) )
-        // InternalEXPORT.g:7887:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) )
+        // InternalEXPORT.g:7995:3: ( ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) ) )
+        // InternalEXPORT.g:7995:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) )
         {
-        // InternalEXPORT.g:7887:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) )
-        // InternalEXPORT.g:7888:4: {...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) )
+        // InternalEXPORT.g:7995:3: ({...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) ) )
+        // InternalEXPORT.g:7996:4: {...}? => ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) )
         {
         if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 0) ) {
             if (state.backtracking>0) {state.failed=true; return ;}
             throw new FailedPredicateException(input, "synpred38_InternalEXPORT", "getUnorderedGroupHelper().canSelect(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 0)");
         }
-        // InternalEXPORT.g:7888:114: ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) )
-        // InternalEXPORT.g:7889:5: ( ( rule__TMTCIFExportExport__Group_3_0__0 ) )
+        // InternalEXPORT.g:7996:114: ( ( ( rule__TMTCIFExportExport__Group_3_0__0 ) ) )
+        // InternalEXPORT.g:7997:5: ( ( rule__TMTCIFExportExport__Group_3_0__0 ) )
         {
         getUnorderedGroupHelper().select(grammarAccess.getTMTCIFExportExportAccess().getUnorderedGroup_3(), 0);
-        // InternalEXPORT.g:7895:5: ( ( rule__TMTCIFExportExport__Group_3_0__0 ) )
-        // InternalEXPORT.g:7896:6: ( rule__TMTCIFExportExport__Group_3_0__0 )
+        // InternalEXPORT.g:8003:5: ( ( rule__TMTCIFExportExport__Group_3_0__0 ) )
+        // InternalEXPORT.g:8004:6: ( rule__TMTCIFExportExport__Group_3_0__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getTMTCIFExportExportAccess().getGroup_3_0()); 
         }
-        // InternalEXPORT.g:7897:6: ( rule__TMTCIFExportExport__Group_3_0__0 )
-        // InternalEXPORT.g:7897:7: rule__TMTCIFExportExport__Group_3_0__0
+        // InternalEXPORT.g:8005:6: ( rule__TMTCIFExportExport__Group_3_0__0 )
+        // InternalEXPORT.g:8005:7: rule__TMTCIFExportExport__Group_3_0__0
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__TMTCIFExportExport__Group_3_0__0();
@@ -27273,8 +27644,8 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred39_InternalEXPORT
     public final void synpred39_InternalEXPORT_fragment() throws RecognitionException {   
-        // InternalEXPORT.g:7931:2: ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )
-        // InternalEXPORT.g:7931:2: rule__TMTCIFExportExport__UnorderedGroup_3__1
+        // InternalEXPORT.g:8039:2: ( rule__TMTCIFExportExport__UnorderedGroup_3__1 )
+        // InternalEXPORT.g:8039:2: rule__TMTCIFExportExport__UnorderedGroup_3__1
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__TMTCIFExportExport__UnorderedGroup_3__1();
@@ -27348,15 +27719,15 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000060400000L});
         public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000006000L});
         public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000D14800400000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000D14800000002L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0001514800400000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0001514800000002L});
         public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000001000000000L});
         public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000002000000000L});
         public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000008000000000L});
         public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000020000000000L});
         public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x00000C0100400000L});
         public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000200000000000L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000800000000000L});
         public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0002000000000000L});
         public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0004000000000002L});

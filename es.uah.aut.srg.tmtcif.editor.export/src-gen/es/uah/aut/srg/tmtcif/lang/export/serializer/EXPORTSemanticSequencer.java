@@ -169,7 +169,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     TMTCIFExportSettingAIFromConst returns TMTCIFExportSettingAIFromConst
 	 *
 	 * Constraint:
-	 *     (value=INTEGER toFieldRef=[TMTCIFFormatAIField|VersionedQualifiedReferenceName])
+	 *     (value=INTEGER toFieldRef=[TMTCIFFormatAIField|VersionedQualifiedReferenceName] toArrayIndex=INTEGER)
 	 */
 	protected void sequence_TMTCIFExportSettingAIFromConst(ISerializationContext context, TMTCIFExportSettingAIFromConst semanticObject) {
 		if (errorAcceptor != null) {
@@ -177,10 +177,13 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI_FROM_CONST__VALUE));
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING__TO_FIELD_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING__TO_FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getValueINTEGERParserRuleCall_4_0(), semanticObject.getValue());
 		feeder.accept(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToFieldRefTMTCIFFormatAIFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
+		feeder.accept(grammarAccess.getTMTCIFExportSettingAIFromConstAccess().getToArrayIndexINTEGERParserRuleCall_12_0(), semanticObject.getToArrayIndex());
 		feeder.finish();
 	}
 	
