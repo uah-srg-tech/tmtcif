@@ -76,12 +76,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
         eType="ecore:EClass format.ecore#//TMTCIFFormatField"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingAIFromConst" eSuperTypes="#//TMTCIFExportSetting">
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingAI">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toFieldRef" lowerBound="1"
+        eType="ecore:EClass format.ecore#//TMTCIFFormatAIField"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingAIFromConst" eSuperTypes="#//TMTCIFExportSettingAI">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toArrayIndex" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingAIFromFile" eSuperTypes="#//TMTCIFExportSetting">
+  <eClassifiers xsi:type="ecore:EClass" name="TMTCIFExportSettingAIFromFile" eSuperTypes="#//TMTCIFExportSettingAI">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toArrayIndex" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

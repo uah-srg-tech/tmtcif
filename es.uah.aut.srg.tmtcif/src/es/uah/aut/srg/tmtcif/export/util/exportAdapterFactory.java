@@ -126,6 +126,10 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 				return createTMTCIFExportSettingFromFieldAdapter();
 			}
 			@Override
+			public Adapter caseTMTCIFExportSettingAI(TMTCIFExportSettingAI object) {
+				return createTMTCIFExportSettingAIAdapter();
+			}
+			@Override
 			public Adapter caseTMTCIFExportSettingAIFromConst(TMTCIFExportSettingAIFromConst object) {
 				return createTMTCIFExportSettingAIFromConstAdapter();
 			}
@@ -330,6 +334,20 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTMTCIFExportSettingFromFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAI <em>TMTCIF Export Setting AI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAI
+	 * @generated
+	 */
+	public Adapter createTMTCIFExportSettingAIAdapter() {
 		return null;
 	}
 

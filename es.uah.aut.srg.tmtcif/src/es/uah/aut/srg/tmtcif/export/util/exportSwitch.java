@@ -156,17 +156,23 @@ public class exportSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case exportPackage.TMTCIF_EXPORT_SETTING_AI: {
+				TMTCIFExportSettingAI tmtcifExportSettingAI = (TMTCIFExportSettingAI)theEObject;
+				T result = caseTMTCIFExportSettingAI(tmtcifExportSettingAI);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case exportPackage.TMTCIF_EXPORT_SETTING_AI_FROM_CONST: {
 				TMTCIFExportSettingAIFromConst tmtcifExportSettingAIFromConst = (TMTCIFExportSettingAIFromConst)theEObject;
 				T result = caseTMTCIFExportSettingAIFromConst(tmtcifExportSettingAIFromConst);
-				if (result == null) result = caseTMTCIFExportSetting(tmtcifExportSettingAIFromConst);
+				if (result == null) result = caseTMTCIFExportSettingAI(tmtcifExportSettingAIFromConst);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.TMTCIF_EXPORT_SETTING_AI_FROM_FILE: {
 				TMTCIFExportSettingAIFromFile tmtcifExportSettingAIFromFile = (TMTCIFExportSettingAIFromFile)theEObject;
 				T result = caseTMTCIFExportSettingAIFromFile(tmtcifExportSettingAIFromFile);
-				if (result == null) result = caseTMTCIFExportSetting(tmtcifExportSettingAIFromFile);
+				if (result == null) result = caseTMTCIFExportSettingAI(tmtcifExportSettingAIFromFile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -363,6 +369,21 @@ public class exportSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTMTCIFExportSettingFromField(TMTCIFExportSettingFromField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TMTCIF Export Setting AI</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TMTCIF Export Setting AI</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTMTCIFExportSettingAI(TMTCIFExportSettingAI object) {
 		return null;
 	}
 

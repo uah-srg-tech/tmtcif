@@ -175,8 +175,8 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI_FROM_CONST__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI_FROM_CONST__VALUE));
-			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING__TO_FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING__TO_FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI__TO_FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI__TO_FIELD_REF));
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX));
 		}

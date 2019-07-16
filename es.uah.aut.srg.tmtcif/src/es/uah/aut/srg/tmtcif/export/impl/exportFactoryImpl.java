@@ -77,6 +77,7 @@ public class exportFactoryImpl extends EFactoryImpl implements exportFactory {
 			case exportPackage.TMTCIF_EXPORT_SETTING_FROM_SIZE: return createTMTCIFExportSettingFromSize();
 			case exportPackage.TMTCIF_EXPORT_SETTING_FROM_FILE: return createTMTCIFExportSettingFromFile();
 			case exportPackage.TMTCIF_EXPORT_SETTING_FROM_FIELD: return createTMTCIFExportSettingFromField();
+			case exportPackage.TMTCIF_EXPORT_SETTING_AI: return createTMTCIFExportSettingAI();
 			case exportPackage.TMTCIF_EXPORT_SETTING_AI_FROM_CONST: return createTMTCIFExportSettingAIFromConst();
 			case exportPackage.TMTCIF_EXPORT_SETTING_AI_FROM_FILE: return createTMTCIFExportSettingAIFromFile();
 			case exportPackage.TMTCIF_EXPORT_ACTIVATE_DI_CS: return createTMTCIFExportActivateDICs();
@@ -234,6 +235,16 @@ public class exportFactoryImpl extends EFactoryImpl implements exportFactory {
 	public TMTCIFExportSettingFromField createTMTCIFExportSettingFromField() {
 		TMTCIFExportSettingFromFieldImpl tmtcifExportSettingFromField = new TMTCIFExportSettingFromFieldImpl();
 		return tmtcifExportSettingFromField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TMTCIFExportSettingAI createTMTCIFExportSettingAI() {
+		TMTCIFExportSettingAIImpl tmtcifExportSettingAI = new TMTCIFExportSettingAIImpl();
+		return tmtcifExportSettingAI;
 	}
 
 	/**

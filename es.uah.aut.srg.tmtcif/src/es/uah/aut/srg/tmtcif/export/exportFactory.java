@@ -138,6 +138,15 @@ public interface exportFactory extends EFactory {
 	TMTCIFExportSettingFromField createTMTCIFExportSettingFromField();
 
 	/**
+	 * Returns a new object of class '<em>TMTCIF Export Setting AI</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TMTCIF Export Setting AI</em>'.
+	 * @generated
+	 */
+	TMTCIFExportSettingAI createTMTCIFExportSettingAI();
+
+	/**
 	 * Returns a new object of class '<em>TMTCIF Export Setting AI From Const</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

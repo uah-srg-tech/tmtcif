@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.scoping.IScope;
 
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
+import es.uah.aut.srg.tmtcif.format.TMTCIFFormatAIField;
 import es.uah.aut.srg.tmtcif.format.TMTCIFFormatField;
 import es.uah.aut.srg.tmtcif.xtext.TMTCIFAbstractScopeProvider;
 
@@ -56,18 +57,15 @@ public class EXPORTScopeProvider extends TMTCIFAbstractScopeProvider  {
 	}
 	public IScope scope_TMTCIFFormatAIField(final TMTCIFExportExport export, EReference reference) {
 
+		Set<TMTCIFFormatAIField> aifields = new HashSet<TMTCIFFormatAIField>();
+		
 		if(reference.getName() == "toFieldRef") {
 			if (export.getTo() == null) {
 				return IScope.NULLSCOPE;
 			} else {
-				return getSimpleObjectScope(export.getTo().getAIField());
-			}
-		} else {
-			if (export.getFrom() == null) {
-				return IScope.NULLSCOPE;
-			} else {
-				return getSimpleObjectScope(export.getFrom().getAIField());
+				aifields.addAll(export.getTo().getAIField());
 			}
 		}
+		return getSimpleObjectScope(aifields);
 	}
 }

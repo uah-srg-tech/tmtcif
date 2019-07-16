@@ -818,14 +818,14 @@ public interface exportPackage extends EPackage {
 	int TMTCIF_EXPORT_SETTING_FROM_FIELD_OPERATION_COUNT = TMTCIF_EXPORT_SETTING_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIFromConstImpl <em>TMTCIF Export Setting AI From Const</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIImpl <em>TMTCIF Export Setting AI</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIFromConstImpl
-	 * @see es.uah.aut.srg.tmtcif.export.impl.exportPackageImpl#getTMTCIFExportSettingAIFromConst()
+	 * @see es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIImpl
+	 * @see es.uah.aut.srg.tmtcif.export.impl.exportPackageImpl#getTMTCIFExportSettingAI()
 	 * @generated
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST = 12;
+	int TMTCIF_EXPORT_SETTING_AI = 12;
 
 	/**
 	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
@@ -834,7 +834,44 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF = TMTCIF_EXPORT_SETTING__TO_FIELD_REF;
+	int TMTCIF_EXPORT_SETTING_AI__TO_FIELD_REF = 0;
+
+	/**
+	 * The number of structural features of the '<em>TMTCIF Export Setting AI</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>TMTCIF Export Setting AI</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIF_EXPORT_SETTING_AI_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIFromConstImpl <em>TMTCIF Export Setting AI From Const</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIFromConstImpl
+	 * @see es.uah.aut.srg.tmtcif.export.impl.exportPackageImpl#getTMTCIFExportSettingAIFromConst()
+	 * @generated
+	 */
+	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST = 13;
+
+	/**
+	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF = TMTCIF_EXPORT_SETTING_AI__TO_FIELD_REF;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -843,7 +880,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST__VALUE = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 0;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST__VALUE = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>To Array Index</b></em>' attribute.
@@ -852,7 +889,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 1;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>TMTCIF Export Setting AI From Const</em>' class.
@@ -861,7 +898,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST_FEATURE_COUNT = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 2;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST_FEATURE_COUNT = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>TMTCIF Export Setting AI From Const</em>' class.
@@ -870,7 +907,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST_OPERATION_COUNT = TMTCIF_EXPORT_SETTING_OPERATION_COUNT + 0;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_CONST_OPERATION_COUNT = TMTCIF_EXPORT_SETTING_AI_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIFromFileImpl <em>TMTCIF Export Setting AI From File</em>}' class.
@@ -880,7 +917,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.tmtcif.export.impl.exportPackageImpl#getTMTCIFExportSettingAIFromFile()
 	 * @generated
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE = 13;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE = 14;
 
 	/**
 	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
@@ -889,7 +926,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF = TMTCIF_EXPORT_SETTING__TO_FIELD_REF;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF = TMTCIF_EXPORT_SETTING_AI__TO_FIELD_REF;
 
 	/**
 	 * The feature id for the '<em><b>File</b></em>' attribute.
@@ -898,7 +935,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__FILE = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 0;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__FILE = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>To Array Index</b></em>' attribute.
@@ -907,7 +944,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 1;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Offset</b></em>' attribute.
@@ -916,7 +953,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__OFFSET = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 2;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__OFFSET = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -925,7 +962,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__SIZE = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 3;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__SIZE = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Line</b></em>' attribute.
@@ -934,7 +971,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__LINE = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 4;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE__LINE = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>TMTCIF Export Setting AI From File</em>' class.
@@ -943,7 +980,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE_FEATURE_COUNT = TMTCIF_EXPORT_SETTING_FEATURE_COUNT + 5;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE_FEATURE_COUNT = TMTCIF_EXPORT_SETTING_AI_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>TMTCIF Export Setting AI From File</em>' class.
@@ -952,7 +989,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE_OPERATION_COUNT = TMTCIF_EXPORT_SETTING_OPERATION_COUNT + 0;
+	int TMTCIF_EXPORT_SETTING_AI_FROM_FILE_OPERATION_COUNT = TMTCIF_EXPORT_SETTING_AI_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportActivateDICsImpl <em>TMTCIF Export Activate DI Cs</em>}' class.
@@ -962,7 +999,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.tmtcif.export.impl.exportPackageImpl#getTMTCIFExportActivateDICs()
 	 * @generated
 	 */
-	int TMTCIF_EXPORT_ACTIVATE_DI_CS = 14;
+	int TMTCIF_EXPORT_ACTIVATE_DI_CS = 15;
 
 	/**
 	 * The feature id for the '<em><b>DIC</b></em>' containment reference list.
@@ -999,7 +1036,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.tmtcif.export.impl.exportPackageImpl#getTMTCIFExportDIC()
 	 * @generated
 	 */
-	int TMTCIF_EXPORT_DIC = 15;
+	int TMTCIF_EXPORT_DIC = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1045,7 +1082,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.tmtcif.export.impl.exportPackageImpl#getTMTCIFExportUnit()
 	 * @generated
 	 */
-	int TMTCIF_EXPORT_UNIT = 16;
+	int TMTCIF_EXPORT_UNIT = 17;
 
 
 	/**
@@ -1486,6 +1523,27 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTMTCIFExportSettingFromField_FieldRef();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAI <em>TMTCIF Export Setting AI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TMTCIF Export Setting AI</em>'.
+	 * @see es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAI
+	 * @generated
+	 */
+	EClass getTMTCIFExportSettingAI();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAI#getToFieldRef <em>To Field Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>To Field Ref</em>'.
+	 * @see es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAI#getToFieldRef()
+	 * @see #getTMTCIFExportSettingAI()
+	 * @generated
+	 */
+	EReference getTMTCIFExportSettingAI_ToFieldRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAIFromConst <em>TMTCIF Export Setting AI From Const</em>}'.
@@ -2021,6 +2079,24 @@ public interface exportPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TMTCIF_EXPORT_SETTING_FROM_FIELD__FIELD_REF = eINSTANCE.getTMTCIFExportSettingFromField_FieldRef();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIImpl <em>TMTCIF Export Setting AI</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIImpl
+		 * @see es.uah.aut.srg.tmtcif.export.impl.exportPackageImpl#getTMTCIFExportSettingAI()
+		 * @generated
+		 */
+		EClass TMTCIF_EXPORT_SETTING_AI = eINSTANCE.getTMTCIFExportSettingAI();
+
+		/**
+		 * The meta object literal for the '<em><b>To Field Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TMTCIF_EXPORT_SETTING_AI__TO_FIELD_REF = eINSTANCE.getTMTCIFExportSettingAI_ToFieldRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.tmtcif.export.impl.TMTCIFExportSettingAIFromConstImpl <em>TMTCIF Export Setting AI From Const</em>}' class.

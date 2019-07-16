@@ -28,7 +28,7 @@ package es.uah.aut.srg.tmtcif.export;
  * @model
  * @generated
  */
-public interface TMTCIFExportSettingAIFromConst extends TMTCIFExportSetting {
+public interface TMTCIFExportSettingAIFromConst extends TMTCIFExportSettingAI {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

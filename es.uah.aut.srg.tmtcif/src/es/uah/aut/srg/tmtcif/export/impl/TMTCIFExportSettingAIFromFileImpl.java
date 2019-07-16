@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TMTCIFExportSettingAIFromFileImpl extends TMTCIFExportSettingImpl implements TMTCIFExportSettingAIFromFile {
+public class TMTCIFExportSettingAIFromFileImpl extends TMTCIFExportSettingAIImpl implements TMTCIFExportSettingAIFromFile {
 	/**
 	 * The default value of the '{@link #getFile() <em>File</em>}' attribute.
 	 * <!-- begin-user-doc -->

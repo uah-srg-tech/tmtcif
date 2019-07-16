@@ -16,6 +16,7 @@ import es.uah.aut.srg.tmtcif.export.TMTCIFExportActivateDICs;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportDIC;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportSetting;
+import es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAI;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAIFromConst;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingAIFromFile;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportSettingFromConst;
@@ -132,6 +133,13 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * @generated
 	 */
 	private EClass tmtcifExportSettingFromFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tmtcifExportSettingAIEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -606,6 +614,24 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTMTCIFExportSettingAI() {
+		return tmtcifExportSettingAIEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTMTCIFExportSettingAI_ToFieldRef() {
+		return (EReference)tmtcifExportSettingAIEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTMTCIFExportSettingAIFromConst() {
 		return tmtcifExportSettingAIFromConstEClass;
 	}
@@ -817,6 +843,9 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 		tmtcifExportSettingFromFieldEClass = createEClass(TMTCIF_EXPORT_SETTING_FROM_FIELD);
 		createEReference(tmtcifExportSettingFromFieldEClass, TMTCIF_EXPORT_SETTING_FROM_FIELD__FIELD_REF);
 
+		tmtcifExportSettingAIEClass = createEClass(TMTCIF_EXPORT_SETTING_AI);
+		createEReference(tmtcifExportSettingAIEClass, TMTCIF_EXPORT_SETTING_AI__TO_FIELD_REF);
+
 		tmtcifExportSettingAIFromConstEClass = createEClass(TMTCIF_EXPORT_SETTING_AI_FROM_CONST);
 		createEAttribute(tmtcifExportSettingAIFromConstEClass, TMTCIF_EXPORT_SETTING_AI_FROM_CONST__VALUE);
 		createEAttribute(tmtcifExportSettingAIFromConstEClass, TMTCIF_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX);
@@ -879,8 +908,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 		tmtcifExportSettingFromSizeEClass.getESuperTypes().add(this.getTMTCIFExportSetting());
 		tmtcifExportSettingFromFileEClass.getESuperTypes().add(this.getTMTCIFExportSetting());
 		tmtcifExportSettingFromFieldEClass.getESuperTypes().add(this.getTMTCIFExportSetting());
-		tmtcifExportSettingAIFromConstEClass.getESuperTypes().add(this.getTMTCIFExportSetting());
-		tmtcifExportSettingAIFromFileEClass.getESuperTypes().add(this.getTMTCIFExportSetting());
+		tmtcifExportSettingAIFromConstEClass.getESuperTypes().add(this.getTMTCIFExportSettingAI());
+		tmtcifExportSettingAIFromFileEClass.getESuperTypes().add(this.getTMTCIFExportSettingAI());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(tmtcifExportExportEClass, TMTCIFExportExport.class, "TMTCIFExportExport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -935,6 +964,9 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 
 		initEClass(tmtcifExportSettingFromFieldEClass, TMTCIFExportSettingFromField.class, "TMTCIFExportSettingFromField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTMTCIFExportSettingFromField_FieldRef(), theformatPackage.getTMTCIFFormatField(), null, "fieldRef", null, 1, 1, TMTCIFExportSettingFromField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tmtcifExportSettingAIEClass, TMTCIFExportSettingAI.class, "TMTCIFExportSettingAI", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTMTCIFExportSettingAI_ToFieldRef(), theformatPackage.getTMTCIFFormatAIField(), null, "toFieldRef", null, 1, 1, TMTCIFExportSettingAI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tmtcifExportSettingAIFromConstEClass, TMTCIFExportSettingAIFromConst.class, "TMTCIFExportSettingAIFromConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFExportSettingAIFromConst_Value(), ecorePackage.getEString(), "value", null, 1, 1, TMTCIFExportSettingAIFromConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

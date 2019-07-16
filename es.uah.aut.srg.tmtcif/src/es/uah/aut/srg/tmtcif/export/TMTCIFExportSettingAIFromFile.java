@@ -31,7 +31,7 @@ package es.uah.aut.srg.tmtcif.export;
  * @model
  * @generated
  */
-public interface TMTCIFExportSettingAIFromFile extends TMTCIFExportSetting {
+public interface TMTCIFExportSettingAIFromFile extends TMTCIFExportSettingAI {
 	/**
 	 * Returns the value of the '<em><b>File</b></em>' attribute.
 	 * <!-- begin-user-doc -->
