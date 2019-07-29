@@ -29,6 +29,8 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import es.uah.aut.srg.tmtcif.common.TMTCIFModelFile;
+import es.uah.aut.srg.tmtcif.export.TMTCIFExportActivateDICs;
+import es.uah.aut.srg.tmtcif.export.TMTCIFExportDIC;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportSettings;
 import es.uah.aut.srg.tmtcif.export.TMTCIFExportSizeInBits;
@@ -124,6 +126,12 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
     	TMTCIFGenerator.createExportSettingFromConst(epdExportPusToCcsdsSettings, "3", ccsdsTcFormat.getCSField().get(9));//SequenceFlag
     	TMTCIFGenerator.createExportSettingFromSize(epdExportPusToCcsdsSettings, "0", ccsdsTcFormat.getCSField().get(11));//PacketLength
     	epdExportPusToLevel0.setSettings(epdExportPusToCcsdsSettings);
+    	TMTCIFExportActivateDICs activateDICs = exportFactory.eINSTANCE.createTMTCIFExportActivateDICs();
+    	TMTCIFExportDIC cssdsDic = exportFactory.eINSTANCE.createTMTCIFExportDIC();
+    	cssdsDic.setId("0");
+    	cssdsDic.setDICRef("CRC");
+    	activateDICs.getDIC().add(cssdsDic);
+    	epdExportPusToLevel0.setActivateDICs(activateDICs);
 		
 		TMTCIFFormatFormat ccsdsTmFormat = formatFactory.eINSTANCE.createTMTCIFFormatFormat();
 		ccsdsTmFormat.setName("CCSDS_TM");
@@ -357,40 +365,40 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 			
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 
-		if(createXMI) {
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(formatName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+			if(createXMI) {
+				// If everything went fine, we should be able to open the new file
+				
+				ResourceSet resourceSet = new ResourceSetImpl();
+				
+				IResource newFile = ((IFolder)folder).findMember(formatName);
+				
+				if (newFile == null) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+				}
+				
+				Resource xtextResource = 
+						resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+					
+				EObject model = xtextResource.getContents().get(0);
+					
+				XMLGeneratorUtil.convertReferences(model);
+	
+				EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
+				String pathName = 
+						newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+					
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+													
+				xmiResource.getContents().add(outputModel);
+				
+				try {
+					xmiResource.save(null);
+				} catch (IOException e) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+				}
 			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
-				
-			EObject model = xtextResource.getContents().get(0);
-				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
-				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
-		}
 		}
 		
 		for (TMTCIFExportExport TMTCIFExportExport : exportsToLevel0) {
@@ -413,38 +421,38 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 
 			if(createXMI) {
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(exportName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				// If everything went fine, we should be able to open the new file
 				
-			EObject model = xtextResource.getContents().get(0);
+				ResourceSet resourceSet = new ResourceSetImpl();
 				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				IResource newFile = ((IFolder)folder).findMember(exportName);
 				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
+				if (newFile == null) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+				}
+				
+				Resource xtextResource = 
+						resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+					
+				EObject model = xtextResource.getContents().get(0);
+					
+				XMLGeneratorUtil.convertReferences(model);
+	
+				EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
+				String pathName = 
+						newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+					
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+													
+				xmiResource.getContents().add(outputModel);
+				
+				try {
+					xmiResource.save(null);
+				} catch (IOException e) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+				}
 			}
 		}
 		
@@ -470,38 +478,38 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 
 			if(createXMI) {
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(exportName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				// If everything went fine, we should be able to open the new file
 				
-			EObject model = xtextResource.getContents().get(0);
+				ResourceSet resourceSet = new ResourceSetImpl();
 				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				IResource newFile = ((IFolder)folder).findMember(exportName);
 				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
+				if (newFile == null) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+				}
+				
+				Resource xtextResource = 
+						resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+					
+				EObject model = xtextResource.getContents().get(0);
+					
+				XMLGeneratorUtil.convertReferences(model);
+	
+				EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
+				String pathName = 
+						newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+					
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+													
+				xmiResource.getContents().add(outputModel);
+				
+				try {
+					xmiResource.save(null);
+				} catch (IOException e) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+				}
 			}
 		}
 		
@@ -523,38 +531,38 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 
 			if(createXMI) {
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(formatName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				// If everything went fine, we should be able to open the new file
 				
-			EObject model = xtextResource.getContents().get(0);
+				ResourceSet resourceSet = new ResourceSetImpl();
 				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				IResource newFile = ((IFolder)folder).findMember(formatName);
 				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
+				if (newFile == null) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+				}
+				
+				Resource xtextResource = 
+						resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+					
+				EObject model = xtextResource.getContents().get(0);
+					
+				XMLGeneratorUtil.convertReferences(model);
+	
+				EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
+				String pathName = 
+						newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+					
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+													
+				xmiResource.getContents().add(outputModel);
+				
+				try {
+					xmiResource.save(null);
+				} catch (IOException e) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+				}
 			}
 		}
 		
@@ -578,38 +586,38 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 
 			if(createXMI) {
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(filterName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				// If everything went fine, we should be able to open the new file
 				
-			EObject model = xtextResource.getContents().get(0);
+				ResourceSet resourceSet = new ResourceSetImpl();
 				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				IResource newFile = ((IFolder)folder).findMember(filterName);
 				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
+				if (newFile == null) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+				}
+				
+				Resource xtextResource = 
+						resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+					
+				EObject model = xtextResource.getContents().get(0);
+					
+				XMLGeneratorUtil.convertReferences(model);
+	
+				EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
+				String pathName = 
+						newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+					
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+													
+				xmiResource.getContents().add(outputModel);
+				
+				try {
+					xmiResource.save(null);
+				} catch (IOException e) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+				}
 			}
 		}
 
@@ -633,38 +641,38 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 
 			if(createXMI) {
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(filterName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				// If everything went fine, we should be able to open the new file
 				
-			EObject model = xtextResource.getContents().get(0);
+				ResourceSet resourceSet = new ResourceSetImpl();
 				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				IResource newFile = ((IFolder)folder).findMember(filterName);
 				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
+				if (newFile == null) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+				}
+				
+				Resource xtextResource = 
+						resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+					
+				EObject model = xtextResource.getContents().get(0);
+					
+				XMLGeneratorUtil.convertReferences(model);
+	
+				EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
+				String pathName = 
+						newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+					
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+													
+				xmiResource.getContents().add(outputModel);
+				
+				try {
+					xmiResource.save(null);
+				} catch (IOException e) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+				}
 			}
 		}
 		
@@ -685,38 +693,38 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 
 			if(createXMI) {
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(filterName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				// If everything went fine, we should be able to open the new file
 				
-			EObject model = xtextResource.getContents().get(0);
+				ResourceSet resourceSet = new ResourceSetImpl();
 				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				IResource newFile = ((IFolder)folder).findMember(filterName);
 				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
+				if (newFile == null) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+				}
+				
+				Resource xtextResource = 
+						resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+					
+				EObject model = xtextResource.getContents().get(0);
+					
+				XMLGeneratorUtil.convertReferences(model);
+	
+				EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
+				String pathName = 
+						newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+					
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+													
+				xmiResource.getContents().add(outputModel);
+				
+				try {
+					xmiResource.save(null);
+				} catch (IOException e) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+				}
 			}
 		}
 		
@@ -731,38 +739,38 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 
 			if(createXMI) {
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(importName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				// If everything went fine, we should be able to open the new file
 				
-			EObject model = xtextResource.getContents().get(0);
+				ResourceSet resourceSet = new ResourceSetImpl();
 				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				IResource newFile = ((IFolder)folder).findMember(importName);
 				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
+				if (newFile == null) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+				}
+				
+				Resource xtextResource = 
+						resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+					
+				EObject model = xtextResource.getContents().get(0);
+					
+				XMLGeneratorUtil.convertReferences(model);
+	
+				EObject outputModel = EcoreUtil.copy(((TMTCIFModelFile)model).getElement());
+				String pathName = 
+						newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+					
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+													
+				xmiResource.getContents().add(outputModel);
+				
+				try {
+					xmiResource.save(null);
+				} catch (IOException e) {
+					throw new CoreException(new Status(
+							IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+				}
 			}
 		}
 	}
