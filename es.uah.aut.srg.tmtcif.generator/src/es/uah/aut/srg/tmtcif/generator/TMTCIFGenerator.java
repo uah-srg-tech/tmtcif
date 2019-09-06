@@ -160,7 +160,7 @@ public class TMTCIFGenerator {
 		    		//csfields, vsfields and afields
 			    	sizeInBits = exportFactory.eINSTANCE.createTMTCIFExportSizeInBits();
 					sizeInBits.setFrom("ApplicationData");
-					sizeInBits.setAddSize("5");
+					sizeInBits.setAddSize("0");
 		    	}
 	    	}
 	    	if(sizeInBits != null) {
