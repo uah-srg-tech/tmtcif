@@ -230,7 +230,8 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 		epdPusDataFromEpdPusImport.setTo(epdPusDataDataTmFormat);
 		TMTCIFGenerator.createImportDataSource(epdPusDataFromEpdPusImport, epdPusTmFormat.getVSField().get(0), "0", "0");//SourceData
 		epdPusDataFromEpdPusImport.setVirtualSize(null);
-		
+
+		//parse database
 		String database = configuration.getAttribute(TMTCIFGeneratorLaunchConfigurationAttributes.SOURCE_DB, "");
 		String output = configuration.getAttribute(TMTCIFGeneratorLaunchConfigurationAttributes.OUTPUT_FOLDER, "");
 		
@@ -310,6 +311,7 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 					IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + output + "' not found!"));
 		}
 		
+		//get type/subtype names mapped to DB ID
 		Map<String, String> ZID_tc_type = new HashMap<String, String>();
 		Map<String, String> YID_tm_type = new HashMap<String, String>();
 		if(useTypeInsteadOfId) {
@@ -322,6 +324,14 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 				}
 				typeSubtype += TMTCIFExportExport.getSettings().getSettingFromConst().get(3).getValue() + "_"
 						 + TMTCIFExportExport.getSettings().getSettingFromConst().get(4).getValue();
+				//warning! SIS has several same type+subtype for different tcs
+				//change the name of one at least
+				if(TMTCIFExportExport.getName().compareTo("ZID52377") == 0) {//tc 129.152 1W
+					typeSubtype += "_w";
+				}
+				else if(TMTCIFExportExport.getName().compareTo("ZID52378") == 0) {//tc 129.152 1L
+					typeSubtype += "_l";
+				}
 				ZID_tc_type.put(TMTCIFExportExport.getName(), typeSubtype);
 			}
 
@@ -345,10 +355,16 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 				if(PI1_Val.get(TMTCIFFilterMintermFilter.getName()) != null) {
 					typeSubtype += "_" + PI1_Val.get(TMTCIFFilterMintermFilter.getName());
 				}
+				//warning! SIS has several same type+subtype for different tms
+				//change the name of one at least
+				if(TMTCIFFilterMintermFilter.getName().compareTo("YID52970") == 0) {//tm 129.224 ASW
+					typeSubtype += "_asw";
+				}
 				YID_tm_type.put(TMTCIFFilterMintermFilter.getName(), typeSubtype);
 			}
 		}
-		
+
+		//create final tmtcif & xmi files
 		for (TMTCIFFormatFormat TMTCIFFormatFormat : tcFormats.values()) {
 
 			if((useTypeInsteadOfId) && (TMTCIFFormatFormat.getName().compareTo("CCSDS_TC") != 0)
@@ -356,7 +372,7 @@ public class TMTCIFGeneratorLaunchConfigurationDelegate implements ILaunchConfig
 				TMTCIFFormatFormat.setName(ZID_tc_type.get(TMTCIFFormatFormat.getName()));
 			}
 			TMTCIFFormatFormat.setUri("es.uah.aut.srg." + TMTCIFFormatFormat.getName());
-			
+
 			String formatName = "tcFormats\\" + TMTCIFFormatFormat.getName() + ".tmtcif_format";
 
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), TMTCIFFormatFormat,
