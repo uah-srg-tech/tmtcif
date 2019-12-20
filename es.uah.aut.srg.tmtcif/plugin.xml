@@ -15,43 +15,51 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated import -->
+      <!-- @generated enum -->
       <package
-            uri="http://srg.aut.uah.es/tmtcif/import"
-            class="es.uah.aut.srg.tmtcif.import_.importPackage"
-            genModel="model/import.genmodel"/>
+            uri="http://srg.aut.uah.es/tmtcif/enum"
+            class="es.uah.aut.srg.tmtcif.enum_.enumPackage"
+            genModel="model/enum.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated common -->
+      <!-- @generated fieldvalue -->
       <package
-            uri="http://srg.aut.uah.es/tmtcif/common"
-            class="es.uah.aut.srg.tmtcif.common.commonPackage"
-            genModel="model/common.genmodel"/>
+            uri="http://srg.aut.uah.es/tmtcif/fieldvalue"
+            class="es.uah.aut.srg.tmtcif.fieldvalue.fieldvaluePackage"
+            genModel="model/fieldvalue.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated export -->
+      <!-- @generated tcheader -->
       <package
-            uri="http://srg.aut.uah.es/tmtcif/export"
-            class="es.uah.aut.srg.tmtcif.export.exportPackage"
-            genModel="model/export.genmodel"/>
+            uri="http://srg.aut.uah.es/tmtcif/tcheader"
+            class="es.uah.aut.srg.tmtcif.tcheader.tcheaderPackage"
+            genModel="model/tcheader.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated format -->
+      <!-- @generated tc -->
       <package
-            uri="http://srg.aut.uah.es/tmtcif/format"
-            class="es.uah.aut.srg.tmtcif.format.formatPackage"
-            genModel="model/format.genmodel"/>
+            uri="http://srg.aut.uah.es/tmtcif/tc"
+            class="es.uah.aut.srg.tmtcif.tc.tcPackage"
+            genModel="model/tc.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated filter -->
+      <!-- @generated tm -->
       <package
-            uri="http://srg.aut.uah.es/tmtcif/filter"
-            class="es.uah.aut.srg.tmtcif.filter.filterPackage"
-            genModel="model/filter.genmodel"/>
+            uri="http://srg.aut.uah.es/tmtcif/tm"
+            class="es.uah.aut.srg.tmtcif.tm.tmPackage"
+            genModel="model/tm.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmheader -->
+      <package
+            uri="http://srg.aut.uah.es/tmtcif/tmheader"
+            class="es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage"
+            genModel="model/tmheader.genmodel"/>
    </extension>
 
 </plugin>

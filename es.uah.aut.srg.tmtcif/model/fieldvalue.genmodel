@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.tmtcif/src" modelPluginID="es.uah.aut.srg.tmtcif"
+    modelName="Fieldvalue" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="enum.genmodel#//enum" operationReflection="true" importOrganizing="true">
+  <foreignModel>fieldvalue.ecore</foreignModel>
+  <genPackages prefix="fieldvalue" basePackage="es.uah.aut.srg.tmtcif" disposableProviderFactory="true"
+      ecorePackage="fieldvalue.ecore#/">
+    <genClasses image="false" ecoreClass="fieldvalue.ecore#//TMTCIFFieldValue"/>
+    <genClasses ecoreClass="fieldvalue.ecore#//TMTCIFFieldValueRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fieldvalue.ecore#//TMTCIFFieldValueRaw/value"/>
+    </genClasses>
+    <genClasses ecoreClass="fieldvalue.ecore#//TMTCIFFieldValueFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fieldvalue.ecore#//TMTCIFFieldValueFile/filename"/>
+    </genClasses>
+    <genClasses ecoreClass="fieldvalue.ecore#//TMTCIFFieldValueEnum">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fieldvalue.ecore#//TMTCIFFieldValueEnum/enumRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fieldvalue.ecore#//TMTCIFFieldValueEnum/valueRef"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
