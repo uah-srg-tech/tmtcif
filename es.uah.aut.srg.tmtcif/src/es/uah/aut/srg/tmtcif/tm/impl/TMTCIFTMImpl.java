@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.tmtcif.tm.impl;
 
+import es.uah.aut.srg.tmtcif.tm.TMTCIFPI1;
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTM;
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTMField;
 import es.uah.aut.srg.tmtcif.tm.tmPackage;
@@ -20,6 +21,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -34,7 +36,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMImpl#getSubtype <em>Subtype</em>}</li>
- *   <li>{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMImpl#getPi1_val <em>Pi1 val</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMImpl#getPi1 <em>Pi1</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMImpl#getFields <em>Fields</em>}</li>
  * </ul>
  *
@@ -100,26 +102,6 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String subtype = SUBTYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPi1_val() <em>Pi1 val</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPi1_val()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PI1_VAL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPi1_val() <em>Pi1 val</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPi1_val()
-	 * @generated
-	 * @ordered
-	 */
-	protected String pi1_val = PI1_VAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -208,8 +190,9 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPi1_val() {
-		return pi1_val;
+	public TMTCIFPI1 getPi1() {
+		TMTCIFPI1 pi1 = basicGetPi1();
+		return pi1 != null && pi1.eIsProxy() ? (TMTCIFPI1)eResolveProxy((InternalEObject)pi1) : pi1;
 	}
 
 	/**
@@ -217,11 +200,22 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPi1_val(String newPi1_val) {
-		String oldPi1_val = pi1_val;
-		pi1_val = newPi1_val;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tmPackage.TMTCIFTM__PI1_VAL, oldPi1_val, pi1_val));
+	public TMTCIFPI1 basicGetPi1() {
+		// TODO: implement this method to return the 'Pi1' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPi1(TMTCIFPI1 newPi1) {
+		// TODO: implement this method to set the 'Pi1' reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -251,8 +245,9 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 				return getType();
 			case tmPackage.TMTCIFTM__SUBTYPE:
 				return getSubtype();
-			case tmPackage.TMTCIFTM__PI1_VAL:
-				return getPi1_val();
+			case tmPackage.TMTCIFTM__PI1:
+				if (resolve) return getPi1();
+				return basicGetPi1();
 			case tmPackage.TMTCIFTM__FIELDS:
 				return getFields();
 		}
@@ -277,8 +272,8 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 			case tmPackage.TMTCIFTM__SUBTYPE:
 				setSubtype((String)newValue);
 				return;
-			case tmPackage.TMTCIFTM__PI1_VAL:
-				setPi1_val((String)newValue);
+			case tmPackage.TMTCIFTM__PI1:
+				setPi1((TMTCIFPI1)newValue);
 				return;
 			case tmPackage.TMTCIFTM__FIELDS:
 				getFields().clear();
@@ -305,8 +300,8 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 			case tmPackage.TMTCIFTM__SUBTYPE:
 				setSubtype(SUBTYPE_EDEFAULT);
 				return;
-			case tmPackage.TMTCIFTM__PI1_VAL:
-				setPi1_val(PI1_VAL_EDEFAULT);
+			case tmPackage.TMTCIFTM__PI1:
+				setPi1((TMTCIFPI1)null);
 				return;
 			case tmPackage.TMTCIFTM__FIELDS:
 				getFields().clear();
@@ -329,8 +324,8 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case tmPackage.TMTCIFTM__SUBTYPE:
 				return SUBTYPE_EDEFAULT == null ? subtype != null : !SUBTYPE_EDEFAULT.equals(subtype);
-			case tmPackage.TMTCIFTM__PI1_VAL:
-				return PI1_VAL_EDEFAULT == null ? pi1_val != null : !PI1_VAL_EDEFAULT.equals(pi1_val);
+			case tmPackage.TMTCIFTM__PI1:
+				return basicGetPi1() != null;
 			case tmPackage.TMTCIFTM__FIELDS:
 				return !getFields().isEmpty();
 		}
@@ -353,8 +348,6 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 		result.append(type);
 		result.append(", subtype: ");
 		result.append(subtype);
-		result.append(", pi1_val: ");
-		result.append(pi1_val);
 		result.append(')');
 		return result.toString();
 	}

@@ -80,6 +80,10 @@ public class tmAdapterFactory extends AdapterFactoryImpl {
 				return createTMTCIFTMAdapter();
 			}
 			@Override
+			public Adapter caseTMTCIFPI1(TMTCIFPI1 object) {
+				return createTMTCIFPI1Adapter();
+			}
+			@Override
 			public Adapter caseTMTCIFTMField(TMTCIFTMField object) {
 				return createTMTCIFTMFieldAdapter();
 			}
@@ -114,6 +118,20 @@ public class tmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTMTCIFTMAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFPI1 <em>TMTCIFPI1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFPI1
+	 * @generated
+	 */
+	public Adapter createTMTCIFPI1Adapter() {
 		return null;
 	}
 

@@ -30,6 +30,15 @@ public interface tmFactory extends EFactory {
 	tmFactory eINSTANCE = es.uah.aut.srg.tmtcif.tm.impl.tmFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>TMTCIFPI1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TMTCIFPI1</em>'.
+	 * @generated
+	 */
+	TMTCIFPI1 createTMTCIFPI1();
+
+	/**
 	 * Returns a new object of class '<em>TMTCIFTM Field</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

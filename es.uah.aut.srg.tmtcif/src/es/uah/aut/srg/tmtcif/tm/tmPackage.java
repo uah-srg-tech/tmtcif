@@ -102,13 +102,13 @@ public interface tmPackage extends EPackage {
 	int TMTCIFTM__SUBTYPE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Pi1 val</b></em>' attribute.
+	 * The feature id for the '<em><b>Pi1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIFTM__PI1_VAL = 3;
+	int TMTCIFTM__PI1 = 3;
 
 	/**
 	 * The feature id for the '<em><b>Fields</b></em>' reference list.
@@ -138,6 +138,52 @@ public interface tmPackage extends EPackage {
 	int TMTCIFTM_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFPI1Impl <em>TMTCIFPI1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.tmtcif.tm.impl.TMTCIFPI1Impl
+	 * @see es.uah.aut.srg.tmtcif.tm.impl.tmPackageImpl#getTMTCIFPI1()
+	 * @generated
+	 */
+	int TMTCIFPI1 = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIFPI1__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Val</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIFPI1__VAL = 1;
+
+	/**
+	 * The number of structural features of the '<em>TMTCIFPI1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIFPI1_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>TMTCIFPI1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIFPI1_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMFieldImpl <em>TMTCIFTM Field</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -145,7 +191,7 @@ public interface tmPackage extends EPackage {
 	 * @see es.uah.aut.srg.tmtcif.tm.impl.tmPackageImpl#getTMTCIFTMField()
 	 * @generated
 	 */
-	int TMTCIFTM_FIELD = 1;
+	int TMTCIFTM_FIELD = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -219,15 +265,15 @@ public interface tmPackage extends EPackage {
 	EAttribute getTMTCIFTM_Subtype();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1_val <em>Pi1 val</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1 <em>Pi1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pi1 val</em>'.
-	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1_val()
+	 * @return the meta object for the reference '<em>Pi1</em>'.
+	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1()
 	 * @see #getTMTCIFTM()
 	 * @generated
 	 */
-	EAttribute getTMTCIFTM_Pi1_val();
+	EReference getTMTCIFTM_Pi1();
 
 	/**
 	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getFields <em>Fields</em>}'.
@@ -239,6 +285,38 @@ public interface tmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTMTCIFTM_Fields();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFPI1 <em>TMTCIFPI1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TMTCIFPI1</em>'.
+	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFPI1
+	 * @generated
+	 */
+	EClass getTMTCIFPI1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFPI1#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFPI1#getName()
+	 * @see #getTMTCIFPI1()
+	 * @generated
+	 */
+	EAttribute getTMTCIFPI1_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFPI1#getVal <em>Val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Val</em>'.
+	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFPI1#getVal()
+	 * @see #getTMTCIFPI1()
+	 * @generated
+	 */
+	EAttribute getTMTCIFPI1_Val();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTMField <em>TMTCIFTM Field</em>}'.
@@ -319,12 +397,12 @@ public interface tmPackage extends EPackage {
 		EAttribute TMTCIFTM__SUBTYPE = eINSTANCE.getTMTCIFTM_Subtype();
 
 		/**
-		 * The meta object literal for the '<em><b>Pi1 val</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Pi1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TMTCIFTM__PI1_VAL = eINSTANCE.getTMTCIFTM_Pi1_val();
+		EReference TMTCIFTM__PI1 = eINSTANCE.getTMTCIFTM_Pi1();
 
 		/**
 		 * The meta object literal for the '<em><b>Fields</b></em>' reference list feature.
@@ -333,6 +411,32 @@ public interface tmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TMTCIFTM__FIELDS = eINSTANCE.getTMTCIFTM_Fields();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFPI1Impl <em>TMTCIFPI1</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.tmtcif.tm.impl.TMTCIFPI1Impl
+		 * @see es.uah.aut.srg.tmtcif.tm.impl.tmPackageImpl#getTMTCIFPI1()
+		 * @generated
+		 */
+		EClass TMTCIFPI1 = eINSTANCE.getTMTCIFPI1();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TMTCIFPI1__NAME = eINSTANCE.getTMTCIFPI1_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TMTCIFPI1__VAL = eINSTANCE.getTMTCIFPI1_Val();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMFieldImpl <em>TMTCIFTM Field</em>}' class.

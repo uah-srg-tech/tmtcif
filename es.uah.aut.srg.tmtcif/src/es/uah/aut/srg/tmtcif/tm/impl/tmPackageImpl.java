@@ -40,6 +40,13 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tmtcifpi1EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tmtciftmFieldEClass = null;
 
 	/**
@@ -144,8 +151,8 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTMTCIFTM_Pi1_val() {
-		return (EAttribute)tmtciftmEClass.getEStructuralFeatures().get(3);
+	public EReference getTMTCIFTM_Pi1() {
+		return (EReference)tmtciftmEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -155,6 +162,33 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 	 */
 	public EReference getTMTCIFTM_Fields() {
 		return (EReference)tmtciftmEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTMTCIFPI1() {
+		return tmtcifpi1EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTMTCIFPI1_Name() {
+		return (EAttribute)tmtcifpi1EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTMTCIFPI1_Val() {
+		return (EAttribute)tmtcifpi1EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -207,8 +241,12 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 		createEAttribute(tmtciftmEClass, TMTCIFTM__NAME);
 		createEAttribute(tmtciftmEClass, TMTCIFTM__TYPE);
 		createEAttribute(tmtciftmEClass, TMTCIFTM__SUBTYPE);
-		createEAttribute(tmtciftmEClass, TMTCIFTM__PI1_VAL);
+		createEReference(tmtciftmEClass, TMTCIFTM__PI1);
 		createEReference(tmtciftmEClass, TMTCIFTM__FIELDS);
+
+		tmtcifpi1EClass = createEClass(TMTCIFPI1);
+		createEAttribute(tmtcifpi1EClass, TMTCIFPI1__NAME);
+		createEAttribute(tmtcifpi1EClass, TMTCIFPI1__VAL);
 
 		tmtciftmFieldEClass = createEClass(TMTCIFTM_FIELD);
 		createEAttribute(tmtciftmFieldEClass, TMTCIFTM_FIELD__NAME);
@@ -248,8 +286,12 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 		initEAttribute(getTMTCIFTM_Name(), ecorePackage.getEString(), "name", null, 1, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTMTCIFTM_Type(), ecorePackage.getEString(), "type", null, 1, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTMTCIFTM_Subtype(), ecorePackage.getEString(), "subtype", null, 1, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTMTCIFTM_Pi1_val(), ecorePackage.getEString(), "pi1_val", null, 0, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTMTCIFTM_Pi1(), this.getTMTCIFPI1(), null, "pi1", null, 0, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFTM.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getTMTCIFTM_Fields(), this.getTMTCIFTMField(), null, "fields", null, 0, -1, es.uah.aut.srg.tmtcif.tm.TMTCIFTM.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(tmtcifpi1EClass, es.uah.aut.srg.tmtcif.tm.TMTCIFPI1.class, "TMTCIFPI1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTMTCIFPI1_Name(), ecorePackage.getEString(), "name", null, 1, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFPI1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTMTCIFPI1_Val(), ecorePackage.getEString(), "val", null, 0, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFPI1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tmtciftmFieldEClass, TMTCIFTMField.class, "TMTCIFTMField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFTMField_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFTMField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

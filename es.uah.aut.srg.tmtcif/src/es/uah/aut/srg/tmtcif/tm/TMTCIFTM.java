@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getSubtype <em>Subtype</em>}</li>
- *   <li>{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1_val <em>Pi1 val</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1 <em>Pi1</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getFields <em>Fields</em>}</li>
  * </ul>
  *
@@ -114,30 +114,30 @@ public interface TMTCIFTM extends EObject {
 	void setSubtype(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Pi1 val</b></em>' attribute.
+	 * Returns the value of the '<em><b>Pi1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Pi1 val</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Pi1</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pi1 val</em>' attribute.
-	 * @see #setPi1_val(String)
-	 * @see es.uah.aut.srg.tmtcif.tm.tmPackage#getTMTCIFTM_Pi1_val()
-	 * @model
+	 * @return the value of the '<em>Pi1</em>' reference.
+	 * @see #setPi1(TMTCIFPI1)
+	 * @see es.uah.aut.srg.tmtcif.tm.tmPackage#getTMTCIFTM_Pi1()
+	 * @model transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	String getPi1_val();
+	TMTCIFPI1 getPi1();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1_val <em>Pi1 val</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1 <em>Pi1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pi1 val</em>' attribute.
-	 * @see #getPi1_val()
+	 * @param value the new value of the '<em>Pi1</em>' reference.
+	 * @see #getPi1()
 	 * @generated
 	 */
-	void setPi1_val(String value);
+	void setPi1(TMTCIFPI1 value);
 
 	/**
 	 * Returns the value of the '<em><b>Fields</b></em>' reference list.
