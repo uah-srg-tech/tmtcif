@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.tmtcif.tm;
 
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnum;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTMField#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTMField#getEnumRef <em>Enum Ref</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.tmtcif.tm.tmPackage#getTMTCIFTMField()
@@ -54,5 +57,31 @@ public interface TMTCIFTMField extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Enum Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Enum Ref</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Enum Ref</em>' reference.
+	 * @see #setEnumRef(TMTCIFEnum)
+	 * @see es.uah.aut.srg.tmtcif.tm.tmPackage#getTMTCIFTMField_EnumRef()
+	 * @model
+	 * @generated
+	 */
+	TMTCIFEnum getEnumRef();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTMField#getEnumRef <em>Enum Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Enum Ref</em>' reference.
+	 * @see #getEnumRef()
+	 * @generated
+	 */
+	void setEnumRef(TMTCIFEnum value);
 
 } // TMTCIFTMField

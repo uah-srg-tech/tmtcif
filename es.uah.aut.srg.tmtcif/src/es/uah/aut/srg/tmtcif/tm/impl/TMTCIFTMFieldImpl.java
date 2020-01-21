@@ -10,12 +10,15 @@
  */
 package es.uah.aut.srg.tmtcif.tm.impl;
 
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnum;
+
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTMField;
 import es.uah.aut.srg.tmtcif.tm.tmPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -29,6 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMFieldImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMFieldImpl#getEnumRef <em>Enum Ref</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,6 +57,16 @@ public class TMTCIFTMFieldImpl extends MinimalEObjectImpl.Container implements T
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getEnumRef() <em>Enum Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnumRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected TMTCIFEnum enumRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,11 +113,52 @@ public class TMTCIFTMFieldImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TMTCIFEnum getEnumRef() {
+		if (enumRef != null && enumRef.eIsProxy()) {
+			InternalEObject oldEnumRef = (InternalEObject)enumRef;
+			enumRef = (TMTCIFEnum)eResolveProxy(oldEnumRef);
+			if (enumRef != oldEnumRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, tmPackage.TMTCIFTM_FIELD__ENUM_REF, oldEnumRef, enumRef));
+			}
+		}
+		return enumRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TMTCIFEnum basicGetEnumRef() {
+		return enumRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEnumRef(TMTCIFEnum newEnumRef) {
+		TMTCIFEnum oldEnumRef = enumRef;
+		enumRef = newEnumRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tmPackage.TMTCIFTM_FIELD__ENUM_REF, oldEnumRef, enumRef));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case tmPackage.TMTCIFTM_FIELD__NAME:
 				return getName();
+			case tmPackage.TMTCIFTM_FIELD__ENUM_REF:
+				if (resolve) return getEnumRef();
+				return basicGetEnumRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,6 +173,9 @@ public class TMTCIFTMFieldImpl extends MinimalEObjectImpl.Container implements T
 		switch (featureID) {
 			case tmPackage.TMTCIFTM_FIELD__NAME:
 				setName((String)newValue);
+				return;
+			case tmPackage.TMTCIFTM_FIELD__ENUM_REF:
+				setEnumRef((TMTCIFEnum)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,6 +192,9 @@ public class TMTCIFTMFieldImpl extends MinimalEObjectImpl.Container implements T
 			case tmPackage.TMTCIFTM_FIELD__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case tmPackage.TMTCIFTM_FIELD__ENUM_REF:
+				setEnumRef((TMTCIFEnum)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -148,6 +209,8 @@ public class TMTCIFTMFieldImpl extends MinimalEObjectImpl.Container implements T
 		switch (featureID) {
 			case tmPackage.TMTCIFTM_FIELD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case tmPackage.TMTCIFTM_FIELD__ENUM_REF:
+				return enumRef != null;
 		}
 		return super.eIsSet(featureID);
 	}

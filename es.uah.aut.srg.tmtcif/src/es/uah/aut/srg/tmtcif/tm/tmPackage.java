@@ -203,13 +203,22 @@ public interface tmPackage extends EPackage {
 	int TMTCIFTM_FIELD__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Enum Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIFTM_FIELD__ENUM_REF = 1;
+
+	/**
 	 * The number of structural features of the '<em>TMTCIFTM Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIFTM_FIELD_FEATURE_COUNT = 1;
+	int TMTCIFTM_FIELD_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>TMTCIFTM Field</em>' class.
@@ -340,6 +349,17 @@ public interface tmPackage extends EPackage {
 	EAttribute getTMTCIFTMField_Name();
 
 	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTMField#getEnumRef <em>Enum Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Enum Ref</em>'.
+	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFTMField#getEnumRef()
+	 * @see #getTMTCIFTMField()
+	 * @generated
+	 */
+	EReference getTMTCIFTMField_EnumRef();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -455,6 +475,14 @@ public interface tmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TMTCIFTM_FIELD__NAME = eINSTANCE.getTMTCIFTMField_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Enum Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TMTCIFTM_FIELD__ENUM_REF = eINSTANCE.getTMTCIFTMField_EnumRef();
 
 	}
 

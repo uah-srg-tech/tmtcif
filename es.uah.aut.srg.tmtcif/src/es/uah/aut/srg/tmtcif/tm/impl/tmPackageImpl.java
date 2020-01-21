@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.tmtcif.tm.impl;
 
+import es.uah.aut.srg.tmtcif.enum_.enumPackage;
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTMField;
 import es.uah.aut.srg.tmtcif.tm.tmFactory;
 import es.uah.aut.srg.tmtcif.tm.tmPackage;
@@ -94,6 +95,9 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 		tmPackageImpl thetmPackage = (tmPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof tmPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new tmPackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		enumPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thetmPackage.createPackageContents();
@@ -214,6 +218,15 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTMTCIFTMField_EnumRef() {
+		return (EReference)tmtciftmFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public tmFactory gettmFactory() {
 		return (tmFactory)getEFactoryInstance();
 	}
@@ -250,6 +263,7 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 
 		tmtciftmFieldEClass = createEClass(TMTCIFTM_FIELD);
 		createEAttribute(tmtciftmFieldEClass, TMTCIFTM_FIELD__NAME);
+		createEReference(tmtciftmFieldEClass, TMTCIFTM_FIELD__ENUM_REF);
 	}
 
 	/**
@@ -275,6 +289,9 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		enumPackage theenumPackage = (enumPackage)EPackage.Registry.INSTANCE.getEPackage(enumPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -295,6 +312,7 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 
 		initEClass(tmtciftmFieldEClass, TMTCIFTMField.class, "TMTCIFTMField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFTMField_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFTMField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTMTCIFTMField_EnumRef(), theenumPackage.getTMTCIFEnum(), null, "enumRef", null, 0, 1, TMTCIFTMField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

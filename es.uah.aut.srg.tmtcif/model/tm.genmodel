@@ -4,7 +4,8 @@
     modelDirectory="/es.uah.aut.srg.tmtcif/src" modelPluginID="es.uah.aut.srg.tmtcif"
     modelName="Tm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    language="" operationReflection="true" importOrganizing="true">
+    language="" usedGenPackages="enum.genmodel#//enum" operationReflection="true"
+    importOrganizing="true">
   <foreignModel>tm.ecore</foreignModel>
   <genPackages prefix="tm" basePackage="es.uah.aut.srg.tmtcif" disposableProviderFactory="true"
       ecorePackage="tm.ecore#/">
@@ -12,10 +13,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//TMTCIFTM/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//TMTCIFTM/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//TMTCIFTM/subtype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tm.ecore#//TMTCIFTM/pi1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tm.ecore#//TMTCIFTM/fields"/>
+    </genClasses>
+    <genClasses ecoreClass="tm.ecore#//TMTCIFPI1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//TMTCIFPI1/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//TMTCIFPI1/val"/>
     </genClasses>
     <genClasses ecoreClass="tm.ecore#//TMTCIFTMField">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tm.ecore#//TMTCIFTMField/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tm.ecore#//TMTCIFTMField/enumRef"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
