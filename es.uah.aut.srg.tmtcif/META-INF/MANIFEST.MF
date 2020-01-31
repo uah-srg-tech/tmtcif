@@ -24,7 +24,10 @@ Export-Package: es.uah.aut.srg.tmtcif.enum_,
  es.uah.aut.srg.tmtcif.tm.util,
  es.uah.aut.srg.tmtcif.tmheader,
  es.uah.aut.srg.tmtcif.tmheader.impl,
- es.uah.aut.srg.tmtcif.tmheader.util
+ es.uah.aut.srg.tmtcif.tmheader.util,
+ es.uah.aut.srg.tmtcif.scenario,
+ es.uah.aut.srg.tmtcif.scenario.impl,
+ es.uah.aut.srg.tmtcif.scenario.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  es.uah.aut.srg.tmtcif;visibility:=reexport

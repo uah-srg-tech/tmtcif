@@ -62,4 +62,12 @@
             genModel="model/tmheader.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated scenario -->
+      <package
+            uri="http://srg.aut.uah.es/tmtcif/scenario"
+            class="es.uah.aut.srg.tmtcif.scenario.scenarioPackage"
+            genModel="model/scenario.genmodel"/>
+   </extension>
+
 </plugin>
