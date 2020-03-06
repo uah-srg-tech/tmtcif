@@ -30,24 +30,6 @@ public interface tmheaderFactory extends EFactory {
 	tmheaderFactory eINSTANCE = es.uah.aut.srg.tmtcif.tmheader.impl.tmheaderFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>TMTCIFTM Header</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TMTCIFTM Header</em>'.
-	 * @generated
-	 */
-	TMTCIFTMHeader createTMTCIFTMHeader();
-
-	/**
-	 * Returns a new object of class '<em>TMTCIFTM Header Field</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TMTCIFTM Header Field</em>'.
-	 * @generated
-	 */
-	TMTCIFTMHeaderField createTMTCIFTMHeaderField();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

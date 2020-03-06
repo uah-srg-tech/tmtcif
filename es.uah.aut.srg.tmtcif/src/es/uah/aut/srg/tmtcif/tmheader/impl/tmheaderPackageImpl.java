@@ -233,11 +233,11 @@ public class tmheaderPackageImpl extends EPackageImpl implements tmheaderPackage
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(tmtciftmHeaderEClass, TMTCIFTMHeader.class, "TMTCIFTMHeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tmtciftmHeaderEClass, TMTCIFTMHeader.class, "TMTCIFTMHeader", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFTMHeader_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFTMHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTMTCIFTMHeader_Fields(), this.getTMTCIFTMHeaderField(), null, "fields", null, 0, -1, TMTCIFTMHeader.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(tmtciftmHeaderFieldEClass, TMTCIFTMHeaderField.class, "TMTCIFTMHeaderField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tmtciftmHeaderFieldEClass, TMTCIFTMHeaderField.class, "TMTCIFTMHeaderField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFTMHeaderField_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFTMHeaderField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTMTCIFTMHeaderField_FieldValue(), thefieldvaluePackage.getTMTCIFFieldValueRaw(), null, "fieldValue", null, 0, 1, TMTCIFTMHeaderField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

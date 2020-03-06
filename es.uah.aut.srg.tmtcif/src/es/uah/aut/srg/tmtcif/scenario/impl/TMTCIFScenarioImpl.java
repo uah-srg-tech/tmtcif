@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class TMTCIFScenarioImpl extends MinimalEObjectImpl.Container implements TMTCIFScenario {
+public abstract class TMTCIFScenarioImpl extends MinimalEObjectImpl.Container implements TMTCIFScenario {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

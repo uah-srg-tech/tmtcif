@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage#getTMTCIFTMHeaderField()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface TMTCIFTMHeaderField extends EObject {

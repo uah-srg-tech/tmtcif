@@ -233,11 +233,11 @@ public class tcheaderPackageImpl extends EPackageImpl implements tcheaderPackage
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(tmtciftcHeaderEClass, TMTCIFTCHeader.class, "TMTCIFTCHeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tmtciftcHeaderEClass, TMTCIFTCHeader.class, "TMTCIFTCHeader", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFTCHeader_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFTCHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTMTCIFTCHeader_Fields(), this.getTMTCIFTCHeaderField(), null, "fields", null, 0, -1, TMTCIFTCHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTMTCIFTCHeader_Fields(), this.getTMTCIFTCHeaderField(), null, "fields", null, 0, -1, TMTCIFTCHeader.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(tmtciftcHeaderFieldEClass, TMTCIFTCHeaderField.class, "TMTCIFTCHeaderField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tmtciftcHeaderFieldEClass, TMTCIFTCHeaderField.class, "TMTCIFTCHeaderField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFTCHeaderField_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFTCHeaderField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTMTCIFTCHeaderField_FieldValue(), thefieldvaluePackage.getTMTCIFFieldValueRaw(), null, "fieldValue", null, 0, 1, TMTCIFTCHeaderField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

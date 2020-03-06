@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see es.uah.aut.srg.tmtcif.tcheader.tcheaderPackage#getTMTCIFTCHeader()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface TMTCIFTCHeader extends EObject {
@@ -59,7 +59,7 @@ public interface TMTCIFTCHeader extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Fields</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Fields</b></em>' reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeaderField}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -67,9 +67,9 @@ public interface TMTCIFTCHeader extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fields</em>' containment reference list.
+	 * @return the value of the '<em>Fields</em>' reference list.
 	 * @see es.uah.aut.srg.tmtcif.tcheader.tcheaderPackage#getTMTCIFTCHeader_Fields()
-	 * @model containment="true"
+	 * @model transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
 	EList<TMTCIFTCHeaderField> getFields();

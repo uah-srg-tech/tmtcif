@@ -215,11 +215,11 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(tmtcifScenarioEClass, TMTCIFScenario.class, "TMTCIFScenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tmtcifScenarioEClass, TMTCIFScenario.class, "TMTCIFScenario", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFScenario_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTMTCIFScenario_ScenarioInterfaces(), this.getTMTCIFScenarioInterface(), null, "scenarioInterfaces", null, 1, -1, TMTCIFScenario.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(tmtcifScenarioInterfaceEClass, TMTCIFScenarioInterface.class, "TMTCIFScenarioInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tmtcifScenarioInterfaceEClass, TMTCIFScenarioInterface.class, "TMTCIFScenarioInterface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFScenarioInterface_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFScenarioInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

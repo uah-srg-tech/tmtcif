@@ -310,7 +310,7 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 		initEAttribute(getTMTCIFPI1_Name(), ecorePackage.getEString(), "name", null, 1, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFPI1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTMTCIFPI1_Val(), ecorePackage.getEString(), "val", null, 0, 1, es.uah.aut.srg.tmtcif.tm.TMTCIFPI1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tmtciftmFieldEClass, TMTCIFTMField.class, "TMTCIFTMField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tmtciftmFieldEClass, TMTCIFTMField.class, "TMTCIFTMField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFTMField_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFTMField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTMTCIFTMField_EnumRef(), theenumPackage.getTMTCIFEnum(), null, "enumRef", null, 0, 1, TMTCIFTMField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

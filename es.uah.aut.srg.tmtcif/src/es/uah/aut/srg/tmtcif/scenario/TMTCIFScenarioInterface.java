@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenarioInterface()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface TMTCIFScenarioInterface extends EObject {

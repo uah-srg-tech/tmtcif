@@ -84,7 +84,7 @@ public interface tcheaderPackage extends EPackage {
 	int TMTCIFTC_HEADER__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Fields</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -179,10 +179,10 @@ public interface tcheaderPackage extends EPackage {
 	EAttribute getTMTCIFTCHeader_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeader#getFields <em>Fields</em>}'.
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeader#getFields <em>Fields</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Fields</em>'.
+	 * @return the meta object for the reference list '<em>Fields</em>'.
 	 * @see es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeader#getFields()
 	 * @see #getTMTCIFTCHeader()
 	 * @generated
@@ -263,7 +263,7 @@ public interface tcheaderPackage extends EPackage {
 		EAttribute TMTCIFTC_HEADER__NAME = eINSTANCE.getTMTCIFTCHeader_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Fields</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -65,7 +65,6 @@ public class tmFactoryImpl extends EFactoryImpl implements tmFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case tmPackage.TMTCIFPI1: return createTMTCIFPI1();
-			case tmPackage.TMTCIFTM_FIELD: return createTMTCIFTMField();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -79,16 +78,6 @@ public class tmFactoryImpl extends EFactoryImpl implements tmFactory {
 	public TMTCIFPI1 createTMTCIFPI1() {
 		TMTCIFPI1Impl tmtcifpi1 = new TMTCIFPI1Impl();
 		return tmtcifpi1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TMTCIFTMField createTMTCIFTMField() {
-		TMTCIFTMFieldImpl tmtciftmField = new TMTCIFTMFieldImpl();
-		return tmtciftmField;
 	}
 
 	/**

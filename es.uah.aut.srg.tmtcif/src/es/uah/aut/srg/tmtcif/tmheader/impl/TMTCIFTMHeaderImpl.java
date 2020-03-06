@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class TMTCIFTMHeaderImpl extends MinimalEObjectImpl.Container implements TMTCIFTMHeader {
+public abstract class TMTCIFTMHeaderImpl extends MinimalEObjectImpl.Container implements TMTCIFTMHeader {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

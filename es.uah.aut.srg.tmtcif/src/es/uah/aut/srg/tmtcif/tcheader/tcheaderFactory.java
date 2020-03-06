@@ -30,24 +30,6 @@ public interface tcheaderFactory extends EFactory {
 	tcheaderFactory eINSTANCE = es.uah.aut.srg.tmtcif.tcheader.impl.tcheaderFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>TMTCIFTC Header</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TMTCIFTC Header</em>'.
-	 * @generated
-	 */
-	TMTCIFTCHeader createTMTCIFTCHeader();
-
-	/**
-	 * Returns a new object of class '<em>TMTCIFTC Header Field</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TMTCIFTC Header Field</em>'.
-	 * @generated
-	 */
-	TMTCIFTCHeaderField createTMTCIFTCHeaderField();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

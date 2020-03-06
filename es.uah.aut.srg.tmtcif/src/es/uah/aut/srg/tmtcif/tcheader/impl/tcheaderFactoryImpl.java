@@ -64,31 +64,9 @@ public class tcheaderFactoryImpl extends EFactoryImpl implements tcheaderFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case tcheaderPackage.TMTCIFTC_HEADER: return createTMTCIFTCHeader();
-			case tcheaderPackage.TMTCIFTC_HEADER_FIELD: return createTMTCIFTCHeaderField();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TMTCIFTCHeader createTMTCIFTCHeader() {
-		TMTCIFTCHeaderImpl tmtciftcHeader = new TMTCIFTCHeaderImpl();
-		return tmtciftcHeader;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TMTCIFTCHeaderField createTMTCIFTCHeaderField() {
-		TMTCIFTCHeaderFieldImpl tmtciftcHeaderField = new TMTCIFTCHeaderFieldImpl();
-		return tmtciftcHeaderField;
 	}
 
 	/**

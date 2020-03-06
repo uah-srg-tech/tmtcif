@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class TMTCIFTMFieldImpl extends MinimalEObjectImpl.Container implements TMTCIFTMField {
+public abstract class TMTCIFTMFieldImpl extends MinimalEObjectImpl.Container implements TMTCIFTMField {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
