@@ -30,6 +30,15 @@ public interface scenarioFactory extends EFactory {
 	scenarioFactory eINSTANCE = es.uah.aut.srg.tmtcif.scenario.impl.scenarioFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>TMTCIF Scenario Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TMTCIF Scenario Variable</em>'.
+	 * @generated
+	 */
+	TMTCIFScenarioVariable createTMTCIFScenarioVariable();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

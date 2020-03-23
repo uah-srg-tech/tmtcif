@@ -12,6 +12,7 @@ package es.uah.aut.srg.tmtcif.scenario.impl;
 
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
 import es.uah.aut.srg.tmtcif.scenario.scenarioFactory;
 import es.uah.aut.srg.tmtcif.scenario.scenarioPackage;
 
@@ -42,6 +43,13 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * @generated
 	 */
 	private EClass tmtcifScenarioInterfaceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tmtcifScenarioVariableEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -136,6 +144,15 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTMTCIFScenario_ScenarioVariables() {
+		return (EReference)tmtcifScenarioEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTMTCIFScenarioInterface() {
 		return tmtcifScenarioInterfaceEClass;
 	}
@@ -147,6 +164,24 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 */
 	public EAttribute getTMTCIFScenarioInterface_Name() {
 		return (EAttribute)tmtcifScenarioInterfaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTMTCIFScenarioVariable() {
+		return tmtcifScenarioVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTMTCIFScenarioVariable_Name() {
+		return (EAttribute)tmtcifScenarioVariableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -180,9 +215,13 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		tmtcifScenarioEClass = createEClass(TMTCIF_SCENARIO);
 		createEAttribute(tmtcifScenarioEClass, TMTCIF_SCENARIO__NAME);
 		createEReference(tmtcifScenarioEClass, TMTCIF_SCENARIO__SCENARIO_INTERFACES);
+		createEReference(tmtcifScenarioEClass, TMTCIF_SCENARIO__SCENARIO_VARIABLES);
 
 		tmtcifScenarioInterfaceEClass = createEClass(TMTCIF_SCENARIO_INTERFACE);
 		createEAttribute(tmtcifScenarioInterfaceEClass, TMTCIF_SCENARIO_INTERFACE__NAME);
+
+		tmtcifScenarioVariableEClass = createEClass(TMTCIF_SCENARIO_VARIABLE);
+		createEAttribute(tmtcifScenarioVariableEClass, TMTCIF_SCENARIO_VARIABLE__NAME);
 	}
 
 	/**
@@ -218,9 +257,13 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		initEClass(tmtcifScenarioEClass, TMTCIFScenario.class, "TMTCIFScenario", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFScenario_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTMTCIFScenario_ScenarioInterfaces(), this.getTMTCIFScenarioInterface(), null, "scenarioInterfaces", null, 1, -1, TMTCIFScenario.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getTMTCIFScenario_ScenarioVariables(), this.getTMTCIFScenarioVariable(), null, "scenarioVariables", null, 0, -1, TMTCIFScenario.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(tmtcifScenarioInterfaceEClass, TMTCIFScenarioInterface.class, "TMTCIFScenarioInterface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFScenarioInterface_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFScenarioInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tmtcifScenarioVariableEClass, TMTCIFScenarioVariable.class, "TMTCIFScenarioVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTMTCIFScenarioVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFScenarioVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getScenarioInterfaces <em>Scenario Interfaces</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getScenarioVariables <em>Scenario Variables</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenario()
@@ -73,5 +74,21 @@ public interface TMTCIFScenario extends EObject {
 	 * @generated
 	 */
 	EList<TMTCIFScenarioInterface> getScenarioInterfaces();
+
+	/**
+	 * Returns the value of the '<em><b>Scenario Variables</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Scenario Variables</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Scenario Variables</em>' reference list.
+	 * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenario_ScenarioVariables()
+	 * @model transient="true" volatile="true" derived="true"
+	 * @generated
+	 */
+	EList<TMTCIFScenarioVariable> getScenarioVariables();
 
 } // TMTCIFScenario

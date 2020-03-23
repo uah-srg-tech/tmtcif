@@ -14,21 +14,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>TMTCIF Scenario Interface</b></em>'.
+ * A representation of the model object '<em><b>TMTCIF Scenario Precondition</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPrecondition#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenarioInterface()
- * @model abstract="true"
+ * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenarioPrecondition()
+ * @model
  * @generated
  */
-public interface TMTCIFScenarioInterface extends EObject {
+public interface TMTCIFScenarioPrecondition extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -39,14 +39,14 @@ public interface TMTCIFScenarioInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenarioInterface_Name()
+	 * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenarioPrecondition_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPrecondition#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -55,4 +55,4 @@ public interface TMTCIFScenarioInterface extends EObject {
 	 */
 	void setName(String value);
 
-} // TMTCIFScenarioInterface
+} // TMTCIFScenarioPrecondition

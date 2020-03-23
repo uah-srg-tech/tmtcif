@@ -8,10 +8,10 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.tmtcif.enum_.impl;
+package es.uah.aut.srg.tmtcif.scenario.impl;
 
-import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnumValue;
-import es.uah.aut.srg.tmtcif.enum_.enumPackage;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
+import es.uah.aut.srg.tmtcif.scenario.scenarioPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -22,19 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>TMTCIF Enum Value</b></em>'.
+ * An implementation of the model object '<em><b>TMTCIF Scenario Variable</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.tmtcif.enum_.impl.TMTCIFEnumValueImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.tmtcif.enum_.impl.TMTCIFEnumValueImpl#getRaw <em>Raw</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioVariableImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements TMTCIFEnumValue {
+public class TMTCIFScenarioVariableImpl extends MinimalEObjectImpl.Container implements TMTCIFScenarioVariable {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,31 +55,11 @@ public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getRaw() <em>Raw</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRaw()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RAW_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRaw() <em>Raw</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRaw()
-	 * @generated
-	 * @ordered
-	 */
-	protected String raw = RAW_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TMTCIFEnumValueImpl() {
+	protected TMTCIFScenarioVariableImpl() {
 		super();
 	}
 
@@ -91,7 +70,7 @@ public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return enumPackage.Literals.TMTCIF_ENUM_VALUE;
+		return scenarioPackage.Literals.TMTCIF_SCENARIO_VARIABLE;
 	}
 
 	/**
@@ -112,28 +91,7 @@ public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, enumPackage.TMTCIF_ENUM_VALUE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRaw() {
-		return raw;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRaw(String newRaw) {
-		String oldRaw = raw;
-		raw = newRaw;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, enumPackage.TMTCIF_ENUM_VALUE__RAW, oldRaw, raw));
+			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.TMTCIF_SCENARIO_VARIABLE__NAME, oldName, name));
 	}
 
 	/**
@@ -144,10 +102,8 @@ public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case enumPackage.TMTCIF_ENUM_VALUE__NAME:
+			case scenarioPackage.TMTCIF_SCENARIO_VARIABLE__NAME:
 				return getName();
-			case enumPackage.TMTCIF_ENUM_VALUE__RAW:
-				return getRaw();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,11 +116,8 @@ public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case enumPackage.TMTCIF_ENUM_VALUE__NAME:
+			case scenarioPackage.TMTCIF_SCENARIO_VARIABLE__NAME:
 				setName((String)newValue);
-				return;
-			case enumPackage.TMTCIF_ENUM_VALUE__RAW:
-				setRaw((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,11 +131,8 @@ public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case enumPackage.TMTCIF_ENUM_VALUE__NAME:
+			case scenarioPackage.TMTCIF_SCENARIO_VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
-				return;
-			case enumPackage.TMTCIF_ENUM_VALUE__RAW:
-				setRaw(RAW_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -196,10 +146,8 @@ public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case enumPackage.TMTCIF_ENUM_VALUE__NAME:
+			case scenarioPackage.TMTCIF_SCENARIO_VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case enumPackage.TMTCIF_ENUM_VALUE__RAW:
-				return RAW_EDEFAULT == null ? raw != null : !RAW_EDEFAULT.equals(raw);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -216,10 +164,8 @@ public class TMTCIFEnumValueImpl extends MinimalEObjectImpl.Container implements
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", raw: ");
-		result.append(raw);
 		result.append(')');
 		return result.toString();
 	}
 
-} //TMTCIFEnumValueImpl
+} //TMTCIFScenarioVariableImpl

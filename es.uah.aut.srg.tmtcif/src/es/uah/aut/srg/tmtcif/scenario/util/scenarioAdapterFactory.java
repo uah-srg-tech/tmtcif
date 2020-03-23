@@ -84,6 +84,10 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 				return createTMTCIFScenarioInterfaceAdapter();
 			}
 			@Override
+			public Adapter caseTMTCIFScenarioVariable(TMTCIFScenarioVariable object) {
+				return createTMTCIFScenarioVariableAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -128,6 +132,20 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTMTCIFScenarioInterfaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable <em>TMTCIF Scenario Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable
+	 * @generated
+	 */
+	public Adapter createTMTCIFScenarioVariableAdapter() {
 		return null;
 	}
 
