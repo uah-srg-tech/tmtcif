@@ -17,11 +17,15 @@ import es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,6 +61,16 @@ public abstract class TMTCIFTMHeaderImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFields()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TMTCIFTMHeaderField> fields;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,11 +118,24 @@ public abstract class TMTCIFTMHeaderImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public EList<TMTCIFTMHeaderField> getFields() {
-		// TODO: implement this method to return the 'Fields' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		if (fields == null) {
+			fields = new EObjectContainmentEList<TMTCIFTMHeaderField>(TMTCIFTMHeaderField.class, this, tmheaderPackage.TMTCIFTM_HEADER__FIELDS);
+		}
+		return fields;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case tmheaderPackage.TMTCIFTM_HEADER__FIELDS:
+				return ((InternalEList<?>)getFields()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -176,7 +203,7 @@ public abstract class TMTCIFTMHeaderImpl extends MinimalEObjectImpl.Container im
 			case tmheaderPackage.TMTCIFTM_HEADER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case tmheaderPackage.TMTCIFTM_HEADER__FIELDS:
-				return !getFields().isEmpty();
+				return fields != null && !fields.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

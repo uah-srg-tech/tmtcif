@@ -39,6 +39,15 @@ public interface scenarioFactory extends EFactory {
 	TMTCIFScenarioVariable createTMTCIFScenarioVariable();
 
 	/**
+	 * Returns a new object of class '<em>TMTCIF Scenario Packet Config</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TMTCIF Scenario Packet Config</em>'.
+	 * @generated
+	 */
+	TMTCIFScenarioPacketConfig createTMTCIFScenarioPacketConfig();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

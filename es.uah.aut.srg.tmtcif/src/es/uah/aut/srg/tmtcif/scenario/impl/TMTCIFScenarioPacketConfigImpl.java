@@ -8,40 +8,32 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.tmtcif.tcheader.impl;
+package es.uah.aut.srg.tmtcif.scenario.impl;
 
-import es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeader;
-import es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeaderField;
-import es.uah.aut.srg.tmtcif.tcheader.tcheaderPackage;
-
-import java.util.Collection;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig;
+import es.uah.aut.srg.tmtcif.scenario.scenarioPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>TMTCIFTC Header</b></em>'.
+ * An implementation of the model object '<em><b>TMTCIF Scenario Packet Config</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.tmtcif.tcheader.impl.TMTCIFTCHeaderImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.tmtcif.tcheader.impl.TMTCIFTCHeaderImpl#getFields <em>Fields</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioPacketConfigImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container implements TMTCIFTCHeader {
+public class TMTCIFScenarioPacketConfigImpl extends MinimalEObjectImpl.Container implements TMTCIFScenarioPacketConfig {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -63,21 +55,11 @@ public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container im
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFields()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TMTCIFTCHeaderField> fields;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TMTCIFTCHeaderImpl() {
+	protected TMTCIFScenarioPacketConfigImpl() {
 		super();
 	}
 
@@ -88,7 +70,7 @@ public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return tcheaderPackage.Literals.TMTCIFTC_HEADER;
+		return scenarioPackage.Literals.TMTCIF_SCENARIO_PACKET_CONFIG;
 	}
 
 	/**
@@ -109,33 +91,7 @@ public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container im
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tcheaderPackage.TMTCIFTC_HEADER__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<TMTCIFTCHeaderField> getFields() {
-		if (fields == null) {
-			fields = new EObjectContainmentEList<TMTCIFTCHeaderField>(TMTCIFTCHeaderField.class, this, tcheaderPackage.TMTCIFTC_HEADER__FIELDS);
-		}
-		return fields;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case tcheaderPackage.TMTCIFTC_HEADER__FIELDS:
-				return ((InternalEList<?>)getFields()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG__NAME, oldName, name));
 	}
 
 	/**
@@ -146,10 +102,8 @@ public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case tcheaderPackage.TMTCIFTC_HEADER__NAME:
+			case scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG__NAME:
 				return getName();
-			case tcheaderPackage.TMTCIFTC_HEADER__FIELDS:
-				return getFields();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,16 +113,11 @@ public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case tcheaderPackage.TMTCIFTC_HEADER__NAME:
+			case scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG__NAME:
 				setName((String)newValue);
-				return;
-			case tcheaderPackage.TMTCIFTC_HEADER__FIELDS:
-				getFields().clear();
-				getFields().addAll((Collection<? extends TMTCIFTCHeaderField>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -182,11 +131,8 @@ public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case tcheaderPackage.TMTCIFTC_HEADER__NAME:
+			case scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG__NAME:
 				setName(NAME_EDEFAULT);
-				return;
-			case tcheaderPackage.TMTCIFTC_HEADER__FIELDS:
-				getFields().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -200,10 +146,8 @@ public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case tcheaderPackage.TMTCIFTC_HEADER__NAME:
+			case scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case tcheaderPackage.TMTCIFTC_HEADER__FIELDS:
-				return fields != null && !fields.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -224,4 +168,4 @@ public abstract class TMTCIFTCHeaderImpl extends MinimalEObjectImpl.Container im
 		return result.toString();
 	}
 
-} //TMTCIFTCHeaderImpl
+} //TMTCIFScenarioPacketConfigImpl

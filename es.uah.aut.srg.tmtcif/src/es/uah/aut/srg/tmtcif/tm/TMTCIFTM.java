@@ -114,33 +114,33 @@ public interface TMTCIFTM extends EObject {
 	void setSubtype(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Pi1</b></em>' reference.
+	 * Returns the value of the '<em><b>Pi1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pi1</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pi1</em>' reference.
+	 * @return the value of the '<em>Pi1</em>' containment reference.
 	 * @see #setPi1(TMTCIFPI1)
 	 * @see es.uah.aut.srg.tmtcif.tm.tmPackage#getTMTCIFTM_Pi1()
-	 * @model transient="true" volatile="true" derived="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	TMTCIFPI1 getPi1();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1 <em>Pi1</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1 <em>Pi1</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pi1</em>' reference.
+	 * @param value the new value of the '<em>Pi1</em>' containment reference.
 	 * @see #getPi1()
 	 * @generated
 	 */
 	void setPi1(TMTCIFPI1 value);
 
 	/**
-	 * Returns the value of the '<em><b>Fields</b></em>' reference list.
+	 * Returns the value of the '<em><b>Fields</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.tmtcif.tm.TMTCIFTMField}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -148,9 +148,9 @@ public interface TMTCIFTM extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fields</em>' reference list.
+	 * @return the value of the '<em>Fields</em>' containment reference list.
 	 * @see es.uah.aut.srg.tmtcif.tm.tmPackage#getTMTCIFTM_Fields()
-	 * @model transient="true" volatile="true" derived="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<TMTCIFTMField> getFields();

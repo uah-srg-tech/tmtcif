@@ -102,7 +102,7 @@ public interface tmPackage extends EPackage {
 	int TMTCIFTM__SUBTYPE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Pi1</b></em>' reference.
+	 * The feature id for the '<em><b>Pi1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -111,7 +111,7 @@ public interface tmPackage extends EPackage {
 	int TMTCIFTM__PI1 = 3;
 
 	/**
-	 * The feature id for the '<em><b>Fields</b></em>' reference list.
+	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -274,10 +274,10 @@ public interface tmPackage extends EPackage {
 	EAttribute getTMTCIFTM_Subtype();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1 <em>Pi1</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1 <em>Pi1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Pi1</em>'.
+	 * @return the meta object for the containment reference '<em>Pi1</em>'.
 	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getPi1()
 	 * @see #getTMTCIFTM()
 	 * @generated
@@ -285,10 +285,10 @@ public interface tmPackage extends EPackage {
 	EReference getTMTCIFTM_Pi1();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getFields <em>Fields</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getFields <em>Fields</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Fields</em>'.
+	 * @return the meta object for the containment reference list '<em>Fields</em>'.
 	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFTM#getFields()
 	 * @see #getTMTCIFTM()
 	 * @generated
@@ -417,7 +417,7 @@ public interface tmPackage extends EPackage {
 		EAttribute TMTCIFTM__SUBTYPE = eINSTANCE.getTMTCIFTM_Subtype();
 
 		/**
-		 * The meta object literal for the '<em><b>Pi1</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Pi1</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -425,7 +425,7 @@ public interface tmPackage extends EPackage {
 		EReference TMTCIFTM__PI1 = eINSTANCE.getTMTCIFTM_Pi1();
 
 		/**
-		 * The meta object literal for the '<em><b>Fields</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

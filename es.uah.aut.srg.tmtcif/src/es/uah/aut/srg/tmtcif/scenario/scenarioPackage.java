@@ -102,13 +102,22 @@ public interface scenarioPackage extends EPackage {
 	int TMTCIF_SCENARIO__SCENARIO_VARIABLES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Scenario Packet Configs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIF_SCENARIO__SCENARIO_PACKET_CONFIGS = 3;
+
+	/**
 	 * The number of structural features of the '<em>TMTCIF Scenario</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TMTCIF_SCENARIO_FEATURE_COUNT = 3;
+	int TMTCIF_SCENARIO_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>TMTCIF Scenario</em>' class.
@@ -195,6 +204,43 @@ public interface scenarioPackage extends EPackage {
 	int TMTCIF_SCENARIO_VARIABLE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioPacketConfigImpl <em>TMTCIF Scenario Packet Config</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioPacketConfigImpl
+	 * @see es.uah.aut.srg.tmtcif.scenario.impl.scenarioPackageImpl#getTMTCIFScenarioPacketConfig()
+	 * @generated
+	 */
+	int TMTCIF_SCENARIO_PACKET_CONFIG = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIF_SCENARIO_PACKET_CONFIG__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>TMTCIF Scenario Packet Config</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>TMTCIF Scenario Packet Config</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMTCIF_SCENARIO_PACKET_CONFIG_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario <em>TMTCIF Scenario</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -238,6 +284,17 @@ public interface scenarioPackage extends EPackage {
 	EReference getTMTCIFScenario_ScenarioVariables();
 
 	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getScenarioPacketConfigs <em>Scenario Packet Configs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Scenario Packet Configs</em>'.
+	 * @see es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getScenarioPacketConfigs()
+	 * @see #getTMTCIFScenario()
+	 * @generated
+	 */
+	EReference getTMTCIFScenario_ScenarioPacketConfigs();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface <em>TMTCIF Scenario Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -278,6 +335,27 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTMTCIFScenarioVariable_Name();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig <em>TMTCIF Scenario Packet Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TMTCIF Scenario Packet Config</em>'.
+	 * @see es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig
+	 * @generated
+	 */
+	EClass getTMTCIFScenarioPacketConfig();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig#getName()
+	 * @see #getTMTCIFScenarioPacketConfig()
+	 * @generated
+	 */
+	EAttribute getTMTCIFScenarioPacketConfig_Name();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -337,6 +415,14 @@ public interface scenarioPackage extends EPackage {
 		EReference TMTCIF_SCENARIO__SCENARIO_VARIABLES = eINSTANCE.getTMTCIFScenario_ScenarioVariables();
 
 		/**
+		 * The meta object literal for the '<em><b>Scenario Packet Configs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TMTCIF_SCENARIO__SCENARIO_PACKET_CONFIGS = eINSTANCE.getTMTCIFScenario_ScenarioPacketConfigs();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioInterfaceImpl <em>TMTCIF Scenario Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -371,6 +457,24 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TMTCIF_SCENARIO_VARIABLE__NAME = eINSTANCE.getTMTCIFScenarioVariable_Name();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioPacketConfigImpl <em>TMTCIF Scenario Packet Config</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioPacketConfigImpl
+		 * @see es.uah.aut.srg.tmtcif.scenario.impl.scenarioPackageImpl#getTMTCIFScenarioPacketConfig()
+		 * @generated
+		 */
+		EClass TMTCIF_SCENARIO_PACKET_CONFIG = eINSTANCE.getTMTCIFScenarioPacketConfig();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TMTCIF_SCENARIO_PACKET_CONFIG__NAME = eINSTANCE.getTMTCIFScenarioPacketConfig_Name();
 
 	}
 

@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getScenarioInterfaces <em>Scenario Interfaces</em>}</li>
  *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getScenarioVariables <em>Scenario Variables</em>}</li>
+ *   <li>{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario#getScenarioPacketConfigs <em>Scenario Packet Configs</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenario()
@@ -90,5 +91,21 @@ public interface TMTCIFScenario extends EObject {
 	 * @generated
 	 */
 	EList<TMTCIFScenarioVariable> getScenarioVariables();
+
+	/**
+	 * Returns the value of the '<em><b>Scenario Packet Configs</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Scenario Packet Configs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Scenario Packet Configs</em>' reference list.
+	 * @see es.uah.aut.srg.tmtcif.scenario.scenarioPackage#getTMTCIFScenario_ScenarioPacketConfigs()
+	 * @model transient="true" volatile="true" derived="true"
+	 * @generated
+	 */
+	EList<TMTCIFScenarioPacketConfig> getScenarioPacketConfigs();
 
 } // TMTCIFScenario

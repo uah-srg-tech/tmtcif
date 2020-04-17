@@ -102,7 +102,7 @@ public interface tcPackage extends EPackage {
 	int TMTCIFTC__SUBTYPE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Fields</b></em>' reference list.
+	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -219,10 +219,10 @@ public interface tcPackage extends EPackage {
 	EAttribute getTMTCIFTC_Subtype();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.tmtcif.tc.TMTCIFTC#getFields <em>Fields</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.tmtcif.tc.TMTCIFTC#getFields <em>Fields</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Fields</em>'.
+	 * @return the meta object for the containment reference list '<em>Fields</em>'.
 	 * @see es.uah.aut.srg.tmtcif.tc.TMTCIFTC#getFields()
 	 * @see #getTMTCIFTC()
 	 * @generated
@@ -319,7 +319,7 @@ public interface tcPackage extends EPackage {
 		EAttribute TMTCIFTC__SUBTYPE = eINSTANCE.getTMTCIFTC_Subtype();
 
 		/**
-		 * The meta object literal for the '<em><b>Fields</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

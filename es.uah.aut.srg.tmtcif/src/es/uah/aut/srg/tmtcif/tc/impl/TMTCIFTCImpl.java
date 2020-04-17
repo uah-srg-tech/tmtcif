@@ -15,10 +15,14 @@ import es.uah.aut.srg.tmtcif.tc.TMTCIFTCField;
 import es.uah.aut.srg.tmtcif.tc.tcPackage;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,6 +100,16 @@ public abstract class TMTCIFTCImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String subtype = SUBTYPE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFields()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TMTCIFTCField> fields;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,11 +199,24 @@ public abstract class TMTCIFTCImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public EList<TMTCIFTCField> getFields() {
-		// TODO: implement this method to return the 'Fields' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		if (fields == null) {
+			fields = new EObjectContainmentEList<TMTCIFTCField>(TMTCIFTCField.class, this, tcPackage.TMTCIFTC__FIELDS);
+		}
+		return fields;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case tcPackage.TMTCIFTC__FIELDS:
+				return ((InternalEList<?>)getFields()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -277,7 +304,7 @@ public abstract class TMTCIFTCImpl extends MinimalEObjectImpl.Container implemen
 			case tcPackage.TMTCIFTC__SUBTYPE:
 				return SUBTYPE_EDEFAULT == null ? subtype != null : !SUBTYPE_EDEFAULT.equals(subtype);
 			case tcPackage.TMTCIFTC__FIELDS:
-				return !getFields().isEmpty();
+				return fields != null && !fields.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

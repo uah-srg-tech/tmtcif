@@ -65,6 +65,7 @@ public class scenarioFactoryImpl extends EFactoryImpl implements scenarioFactory
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case scenarioPackage.TMTCIF_SCENARIO_VARIABLE: return createTMTCIFScenarioVariable();
+			case scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG: return createTMTCIFScenarioPacketConfig();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,6 +79,16 @@ public class scenarioFactoryImpl extends EFactoryImpl implements scenarioFactory
 	public TMTCIFScenarioVariable createTMTCIFScenarioVariable() {
 		TMTCIFScenarioVariableImpl tmtcifScenarioVariable = new TMTCIFScenarioVariableImpl();
 		return tmtcifScenarioVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TMTCIFScenarioPacketConfig createTMTCIFScenarioPacketConfig() {
+		TMTCIFScenarioPacketConfigImpl tmtcifScenarioPacketConfig = new TMTCIFScenarioPacketConfigImpl();
+		return tmtcifScenarioPacketConfig;
 	}
 
 	/**

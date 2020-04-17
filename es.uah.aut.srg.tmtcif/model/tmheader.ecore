@@ -4,7 +4,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="TMTCIFTMHeader" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
-        eType="#//TMTCIFTMHeaderField" volatile="true" transient="true" derived="true"/>
+        eType="#//TMTCIFTMHeaderField" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TMTCIFTMHeaderField" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

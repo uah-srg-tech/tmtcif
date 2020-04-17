@@ -256,7 +256,7 @@ public class tcPackageImpl extends EPackageImpl implements tcPackage {
 		initEAttribute(getTMTCIFTC_Name(), ecorePackage.getEString(), "name", null, 1, 1, es.uah.aut.srg.tmtcif.tc.TMTCIFTC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTMTCIFTC_Type(), ecorePackage.getEString(), "type", null, 1, 1, es.uah.aut.srg.tmtcif.tc.TMTCIFTC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTMTCIFTC_Subtype(), ecorePackage.getEString(), "subtype", null, 1, 1, es.uah.aut.srg.tmtcif.tc.TMTCIFTC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTMTCIFTC_Fields(), this.getTMTCIFTCField(), null, "fields", null, 0, -1, es.uah.aut.srg.tmtcif.tc.TMTCIFTC.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getTMTCIFTC_Fields(), this.getTMTCIFTCField(), null, "fields", null, 0, -1, es.uah.aut.srg.tmtcif.tc.TMTCIFTC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tmtciftcFieldEClass, TMTCIFTCField.class, "TMTCIFTCField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTMTCIFTCField_Name(), ecorePackage.getEString(), "name", null, 1, 1, TMTCIFTCField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

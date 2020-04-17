@@ -18,12 +18,15 @@ import es.uah.aut.srg.tmtcif.tm.tmPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,6 +105,26 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String subtype = SUBTYPE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPi1() <em>Pi1</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPi1()
+	 * @generated
+	 * @ordered
+	 */
+	protected TMTCIFPI1 pi1;
+
+	/**
+	 * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFields()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TMTCIFTMField> fields;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,8 +214,7 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public TMTCIFPI1 getPi1() {
-		TMTCIFPI1 pi1 = basicGetPi1();
-		return pi1 != null && pi1.eIsProxy() ? (TMTCIFPI1)eResolveProxy((InternalEObject)pi1) : pi1;
+		return pi1;
 	}
 
 	/**
@@ -200,11 +222,14 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFPI1 basicGetPi1() {
-		// TODO: implement this method to return the 'Pi1' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public NotificationChain basicSetPi1(TMTCIFPI1 newPi1, NotificationChain msgs) {
+		TMTCIFPI1 oldPi1 = pi1;
+		pi1 = newPi1;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tmPackage.TMTCIFTM__PI1, oldPi1, newPi1);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -213,9 +238,17 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public void setPi1(TMTCIFPI1 newPi1) {
-		// TODO: implement this method to set the 'Pi1' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (newPi1 != pi1) {
+			NotificationChain msgs = null;
+			if (pi1 != null)
+				msgs = ((InternalEObject)pi1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tmPackage.TMTCIFTM__PI1, null, msgs);
+			if (newPi1 != null)
+				msgs = ((InternalEObject)newPi1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tmPackage.TMTCIFTM__PI1, null, msgs);
+			msgs = basicSetPi1(newPi1, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tmPackage.TMTCIFTM__PI1, newPi1, newPi1));
 	}
 
 	/**
@@ -224,11 +257,26 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public EList<TMTCIFTMField> getFields() {
-		// TODO: implement this method to return the 'Fields' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		if (fields == null) {
+			fields = new EObjectContainmentEList<TMTCIFTMField>(TMTCIFTMField.class, this, tmPackage.TMTCIFTM__FIELDS);
+		}
+		return fields;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case tmPackage.TMTCIFTM__PI1:
+				return basicSetPi1(null, msgs);
+			case tmPackage.TMTCIFTM__FIELDS:
+				return ((InternalEList<?>)getFields()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -246,8 +294,7 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 			case tmPackage.TMTCIFTM__SUBTYPE:
 				return getSubtype();
 			case tmPackage.TMTCIFTM__PI1:
-				if (resolve) return getPi1();
-				return basicGetPi1();
+				return getPi1();
 			case tmPackage.TMTCIFTM__FIELDS:
 				return getFields();
 		}
@@ -325,9 +372,9 @@ public abstract class TMTCIFTMImpl extends MinimalEObjectImpl.Container implemen
 			case tmPackage.TMTCIFTM__SUBTYPE:
 				return SUBTYPE_EDEFAULT == null ? subtype != null : !SUBTYPE_EDEFAULT.equals(subtype);
 			case tmPackage.TMTCIFTM__PI1:
-				return basicGetPi1() != null;
+				return pi1 != null;
 			case tmPackage.TMTCIFTM__FIELDS:
-				return !getFields().isEmpty();
+				return fields != null && !fields.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
